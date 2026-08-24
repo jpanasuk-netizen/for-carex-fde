@@ -2,354 +2,514 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Jeremy Panasuk · Founding FDE Playbook · Carex 6273</title>
+  <title>Jeremy Panasuk · Founding FDE · Carex 6273 · Resume + Playbook</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <style>
     @page { size: letter; margin: 0; }
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     html, body { background: #fff; }
-    .sheet { width: 8.5in; height: 11in; overflow: hidden; page-break-after: always; position: relative; background: #f6f1e8; color: #122033; font-family: "Libre Baskerville", Georgia, serif; }
-    .navy { height: 8px; background: #122033; }
-    .gold { height: 4px; background: #c4a35a; }
-    .pad { padding: 0.22in 0.40in 0.36in; }
-    .nav {
-      display: flex; justify-content: space-between; gap: 6px; flex-wrap: wrap;
-      font-family: "IBM Plex Mono", monospace; font-size: 6.6pt; letter-spacing: 0.08em; text-transform: uppercase;
-      margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid #d9d0c0;
-    }
+    .sheet { width: 8.5in; height: 11in; overflow: hidden; page-break-after: always; position: relative; background: #f6f1e8; color: #122033; font-family: "Plus Jakarta Sans", Arial, sans-serif; }
+    .navy { height: 6px; background: #122033; }
+    .gold { height: 3px; background: #c4a35a; }
+    .pad { padding: 0.16in 0.32in 0.28in; }
+    .nav { display: flex; gap: 8px; flex-wrap: wrap; font-family: "IBM Plex Mono", monospace; font-size: 6.2pt; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 5px; padding-bottom: 4px; border-bottom: 1px solid #d9d0c0; }
     .nav a { color: #6a5c42; text-decoration: none; }
-    .nav a.on { color: #122033; font-weight: 600; }
-    .kicker { font-family: "IBM Plex Mono", monospace; font-size: 7.4pt; letter-spacing: 0.16em; text-transform: uppercase; color: #c4a35a; }
-    h1 { font-family: "Oswald", sans-serif; font-size: 28pt; line-height: 0.92; text-transform: uppercase; letter-spacing: 0.02em; margin: 4px 0 8px; }
-    h2 { font-family: "Oswald", sans-serif; font-size: 15pt; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 8px; }
-    h3 { font-family: "Oswald", sans-serif; font-size: 10pt; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 3px; }
-    p { font-size: 9pt; line-height: 1.34; color: #2a3340; }
-    .lede { font-style: italic; font-size: 11.5pt; line-height: 1.3; max-width: 46ch; margin: 0 0 10px; }
-    .hero { display: grid; grid-template-columns: 1fr 1.72in; gap: 16px; align-items: start; }
-    .shot { width: 1.72in; height: 2.15in; object-fit: cover; object-position: 50% 12%; border: 3px solid #122033; }
-    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 10px 0; }
-    .m { background: #122033; color: #f6f1e8; padding: 8px 9px; }
-    .m b { display: block; font-family: "Oswald", sans-serif; font-size: 16pt; color: #c4a35a; line-height: 1; }
-    .m span { display: block; font-family: "IBM Plex Mono", monospace; font-size: 6.4pt; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 3px; }
-    .toc { background: #fff; border: 1px solid #d9d0c0; }
-    .toc a { display: grid; grid-template-columns: 0.62in 1fr auto; gap: 8px; padding: 7px 11px; text-decoration: none; color: #122033; border-bottom: 1px solid #d9d0c0; font-size: 9.5pt; font-family: "Libre Baskerville", Georgia, serif; }
-    .toc a:last-child { border-bottom: 0; }
-    .toc .n { font-family: "IBM Plex Mono", monospace; color: #c4a35a; font-size: 8pt; }
-    .toc .pg { font-family: "IBM Plex Mono", monospace; color: #6a5c42; font-size: 8pt; }
-    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
-    .cell { background: #fff; border: 1px solid #d9d0c0; padding: 9px 10px; }
-    .cell p { font-size: 8.2pt; }
-    .sec { font-family: "IBM Plex Mono", monospace; font-size: 7.4pt; letter-spacing: 0.14em; text-transform: uppercase; color: #c4a35a; margin: 0 0 6px; }
-    .note { background: #122033; color: #f6f1e8; padding: 10px 12px; font-size: 8.6pt; line-height: 1.35; margin-top: 10px; }
-    .note b { color: #c4a35a; }
-    .honest { border: 2px solid #c4a35a; background: #fff; padding: 9px 11px; margin-top: 8px; }
-    .honest .t { font-family: "IBM Plex Mono", monospace; font-size: 7pt; letter-spacing: 0.12em; text-transform: uppercase; color: #c4a35a; margin-bottom: 3px; }
-    .steps { counter-reset: s; }
-    .step { background: #fff; border: 1px solid #d9d0c0; padding: 8px 10px 8px 12px; margin-bottom: 6px; display: grid; grid-template-columns: 0.42in 1fr; gap: 8px; }
-    .step .n { font-family: "Oswald", sans-serif; font-size: 16pt; color: #c4a35a; line-height: 1; }
-    .reel { display: grid; grid-template-columns: 0.78in 1fr 0.78in 1fr; gap: 3px 8px; font-size: 8pt; }
-    .reel .n { font-family: "Oswald", sans-serif; font-size: 12pt; color: #122033; }
-    .q { font-size: 8pt; font-style: italic; padding: 8px 10px; background: #fff; border-left: 3px solid #c4a35a; }
-    .q span { display: block; font-style: normal; font-family: "IBM Plex Mono", monospace; font-size: 6.6pt; letter-spacing: 0.1em; text-transform: uppercase; color: #c4a35a; margin-top: 4px; }
-    .quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
-    .foot {
-      position: absolute; left: 0.40in; right: 0.40in; bottom: 0.12in;
-      display: flex; justify-content: space-between; align-items: center;
-      font-family: "IBM Plex Mono", monospace; font-size: 6.6pt; letter-spacing: 0.08em; text-transform: uppercase; color: #6a5c42;
-    }
+    .nav a.on { color: #122033; font-weight: 700; }
+    .kicker { font-family: "IBM Plex Mono", monospace; font-size: 6.6pt; letter-spacing: 0.14em; text-transform: uppercase; color: #c4a35a; font-weight: 600; }
+    h1 { font-size: 21pt; line-height: 0.9; font-weight: 800; letter-spacing: -0.03em; margin: 2px 0 3px; }
+    h2 { font-family: "IBM Plex Mono", monospace; font-size: 6.7pt; letter-spacing: 0.12em; text-transform: uppercase; color: #c4a35a; margin: 6px 0 3px; border-bottom: 1px solid #d9d0c0; padding-bottom: 2px; font-weight: 600; }
+    h3 { font-size: 8pt; font-weight: 800; margin: 0 0 2px; }
+    p { font-size: 7.4pt; line-height: 1.26; color: #2a3340; }
+    .tag { font-size: 8.8pt; font-style: italic; color: #3a424c; margin: 2px 0 3px; max-width: 54ch; }
+    .tag em { color: #8a6d2e; }
+    .contact { font-size: 6.9pt; color: #6a5c42; line-height: 1.32; }
+    .hero { display: grid; grid-template-columns: 1fr 1.02in; gap: 10px; }
+    .shot { width: 1.02in; height: 1.28in; object-fit: cover; object-position: 50% 10%; border: 2px solid #122033; }
+    .metrics { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 6px 0 5px; }
+    .m { background: #122033; color: #f6f1e8; padding: 5px 4px; text-align: center; }
+    .m b { display: block; font-size: 12pt; color: #c4a35a; line-height: 0.92; font-weight: 800; }
+    .m span { display: block; font-size: 5.2pt; letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px; font-weight: 600; }
+    .trusted { font-size: 6pt; color: #6a5c42; margin: 0 0 5px; white-space: nowrap; }
+    .trusted b { font-family: "IBM Plex Mono", monospace; letter-spacing: 0.08em; text-transform: uppercase; font-size: 6pt; color: #c4a35a; }
+    .who { font-size: 7.5pt; color: #122033; }
+    .layers, .success, .labg, .grid2, .grid3, .quotes, .awards { display: grid; gap: 5px; }
+    .success, .layers, .grid3, .awards { grid-template-columns: 1fr 1fr 1fr; }
+    .labg, .grid2, .quotes { grid-template-columns: 1fr 1fr; }
+    .ok, .layer, .card, .cell, .award { background: #fff; border: 1px solid #d9d0c0; padding: 5px 7px; }
+    .award b { display: block; font-size: 7.2pt; color: #8a6d2e; margin-bottom: 2px; }
+    .award span { font-size: 6.7pt; }
+    .ok h3, .layer h3 { font-size: 7.3pt; text-transform: uppercase; letter-spacing: 0.04em; color: #122033; }
+    .ok p, .layer p, .card p, .cell p { font-size: 6.8pt; line-height: 1.24; }
+    .card .n { color: #8a6d2e; }
+    .jobhead { display: flex; justify-content: space-between; gap: 8px; font-size: 8pt; font-weight: 700; }
+    .jobhead .d { color: #8a6d2e; white-space: nowrap; font-size: 7pt; font-family: "IBM Plex Mono", monospace; font-weight: 500; }
+    .reel { display: grid; grid-template-columns: 0.74in 1fr 0.74in 1fr; gap: 2px 6px; font-size: 7pt; line-height: 1.22; }
+    .reel .n { font-size: 9pt; color: #8a6d2e; font-weight: 800; }
+    .q { font-size: 6.8pt; font-style: italic; line-height: 1.22; padding: 5px 7px; background: #fff; border: 1px solid #d9d0c0; border-left: 3px solid #c4a35a; }
+    .q span { display: block; font-style: normal; font-size: 5.7pt; letter-spacing: 0.1em; text-transform: uppercase; color: #8a6d2e; margin-top: 2px; font-weight: 700; }
+    .strike { margin-top: 6px; background: #122033; color: #f6f1e8; padding: 7px 9px; font-size: 7.6pt; font-weight: 700; line-height: 1.26; }
+    .strike b { color: #c4a35a; }
+    .goldbox { margin-top: 5px; border: 1px solid #c4a35a; padding: 5px 8px; background: #fff; }
+    .goldbox .t { font-size: 6.4pt; letter-spacing: 0.1em; text-transform: uppercase; color: #8a6d2e; font-weight: 700; font-family: "IBM Plex Mono", monospace; }
+    .skills { font-size: 6.8pt; line-height: 1.3; }
+    .skills strong { color: #8a6d2e; }
+    .chips { display: flex; flex-wrap: wrap; gap: 3px; margin: 3px 0 4px; }
+    .chip { background: #fff; color: #8a6d2e; border: 1px solid #e2d4b0; font-family: "IBM Plex Mono", monospace; font-size: 5.6pt; letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 5px; }
+    .fire { margin-top: 5px; border: 1px solid #c4a35a; padding: 6px 8px; background: #fff; }
+    .fire h3 { font-family: "IBM Plex Mono", monospace; font-size: 6.4pt; letter-spacing: 0.1em; text-transform: uppercase; color: #8a6d2e; margin-bottom: 2px; }
+    .pts { font-size: 7.1pt; }
+    .pts b { color: #122033; }
+    .viz { background: #fff; border: 1px solid #d9d0c0; padding: 6px 8px 7px; margin: 0 0 5px; }
+    .viz-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+    .viz-head .stamp { color: #8a6d2e; font-family: "IBM Plex Mono", monospace; font-size: 6.3pt; letter-spacing: 0.12em; text-transform: uppercase; }
+    .viz-head em { font-style: italic; font-size: 7.6pt; color: #4a5560; }
+    .span-row { display: grid; grid-template-columns: 1.05in 1fr; gap: 7px; align-items: center; margin-bottom: 3px; }
+    .span-label { font-size: 7.4pt; color: #8a6d2e; line-height: 1.08; font-weight: 800; }
+    .span-label small { display: block; font-size: 5.5pt; color: #6a5c42; letter-spacing: 0.1em; text-transform: uppercase; font-family: "IBM Plex Mono", monospace; font-weight: 400; }
+    .span-track { position: relative; height: 20px; background: #ebe4d6; }
+    .arrow { position: relative; height: 20px; background: #122033; color: #c4a35a; display: flex; align-items: center; padding: 0 8px 0 9px; font-size: 7.5pt; text-transform: uppercase; white-space: nowrap; font-weight: 800; }
+    .arrow::after { content: ""; position: absolute; right: -10px; top: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid #122033; }
+    .arrow.f4 { width: 38%; }
+    .arrow.f10 { width: calc(100% - 10px); }
+    .gantt { display: flex; gap: 2px; height: 26px; margin-top: 5px; }
+    .g { display: flex; align-items: center; justify-content: center; text-align: center; font-family: "IBM Plex Mono", monospace; font-size: 5.4pt; text-transform: uppercase; line-height: 1.05; padding: 0 2px; color: #fff; font-weight: 600; }
+    .g.shop { flex: 8; background: #6a5c42; } .g.car { flex: 3; background: #122033; } .g.pri { flex: 1.6; background: #8a6d2e; }
+    .g.inf { flex: 11; background: #c4a35a; color: #122033; } .g.tcs { flex: 2; background: #122033; } .g.mob { flex: 1.3; background: #6a5c42; } .g.lab { flex: 2; background: #ebe4d6; color: #122033; }
+    .ticks { display: flex; gap: 2px; margin-top: 2px; font-family: "IBM Plex Mono", monospace; font-size: 5.5pt; text-transform: uppercase; color: #6a5c42; }
+    .ticks span { text-align: center; }
+    .ticks .shop { flex: 8; } .ticks .car { flex: 3; } .ticks .pri { flex: 1.6; } .ticks .inf { flex: 11; } .ticks .tcs { flex: 2; } .ticks .mob { flex: 1.3; } .ticks .lab { flex: 2; }
+    .foot { position: absolute; left: 0.32in; right: 0.32in; bottom: 0.10in; display: flex; justify-content: space-between; font-size: 6.3pt; letter-spacing: 0.08em; color: #6a5c42; font-family: "IBM Plex Mono", monospace; text-transform: uppercase; }
     .foot a { color: #122033; text-decoration: none; }
-    .contact { font-size: 8pt; color: #6a5c42; line-height: 1.4; }
+    ul { margin: 2px 0 0 14px; font-size: 6.9pt; line-height: 1.26; color: #2a3340; }
+    li { margin: 0 0 1px; }
+    table { width: 100%; border-collapse: collapse; font-size: 7pt; margin: 4px 0 6px; }
+    th { text-align: left; background: #122033; color: #c4a35a; padding: 4px 6px; font-family: "IBM Plex Mono", monospace; font-size: 6.4pt; letter-spacing: 0.08em; text-transform: uppercase; }
+    td { background: #fff; border: 1px solid #d9d0c0; padding: 4px 6px; vertical-align: top; }
+    .tests { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; }
+    .toc a { display: grid; grid-template-columns: 0.5in 1fr auto; gap: 6px; padding: 4px 8px; text-decoration: none; color: #122033; border-bottom: 1px solid #d9d0c0; font-size: 7.6pt; background: #fff; }
+    .toc { border: 1px solid #d9d0c0; }
+    .toc .n { font-family: "IBM Plex Mono", monospace; color: #8a6d2e; font-size: 7pt; }
+    .toc .pg { font-family: "IBM Plex Mono", monospace; color: #6a5c42; font-size: 7pt; }
+    .loop { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin: 4px 0 6px; }
+    .loop div { background: #122033; color: #f6f1e8; padding: 5px 6px; font-size: 7pt; text-align: center; }
+    .loop b { display: block; color: #c4a35a; font-size: 11pt; }
   </style>
 </head>
 <body>
 
-  <div class="sheet" id="cover">
-    <div class="navy"></div><div class="gold"></div>
-    <div class="pad">
-      <div class="nav">
-        <a class="on" href="#cover">Cover</a>
-        <a href="#job">The job</a>
-        <a href="#embed">Embed</a>
-        <a href="#path">The path</a>
-        <a href="#agents">Agents</a>
-        <a href="#receipts">Receipts</a>
-        <a href="#founding">Founding</a>
-        <a href="#close">Close</a>
-      </div>
-      <div class="hero">
-        <div>
-          <div class="kicker">Carex 6273 · Founding Forward Deployed Engineer · Madison hybrid · Direct hire</div>
-          <h1>The founding<br>FDE playbook</h1>
-          <p class="lede">They need the first Forward Deployed Engineer. I have been that person for twenty years — customer in the room, something that runs on Tuesday, a path the next person can follow.</p>
-          <div class="contact">
-            Jeremy Panasuk · Sand Creek, WI · 715-970-0204 · jpanasuk@gmail.com<br />
-            Wisconsin. Ready for Madison 3 days onsite as posted.<br />
-            linkedin.com/in/jeremy-p-34203322
-          </div>
-        </div>
-        <img class="shot" src="assets/portrait.jpg" alt="Jeremy Panasuk" />
-      </div>
-      <div class="metrics">
-        <div class="m"><b>19/20</b><span>Crisis accounts recovered</span></div>
-        <div class="m"><b>8h→1h</b><span>Dawn · measured · used</span></div>
-        <div class="m"><b>Founding</b><span>Playbooks from a blank floor</span></div>
-      </div>
-      <div class="toc">
-        <a href="#job"><span class="n">02</span><span>The job you posted — mapped</span><span class="pg">p. 2</span></a>
-        <a href="#embed"><span class="n">03</span><span>How I embed with the customer</span><span class="pg">p. 3</span></a>
-        <a href="#path"><span class="n">04</span><span>Discover → build → measure → leave</span><span class="pg">p. 4</span></a>
-        <a href="#agents"><span class="n">05</span><span>Agents, tools, honest Epic</span><span class="pg">p. 5</span></a>
-        <a href="#receipts"><span class="n">06</span><span>Receipts from the field</span><span class="pg">p. 6</span></a>
-        <a href="#founding"><span class="n">07</span><span>Standing up the FDE function</span><span class="pg">p. 7</span></a>
-        <a href="#close"><span class="n">08</span><span>Close · the first hire</span><span class="pg">p. 8</span></a>
-      </div>
-      <div class="note"><b>Click any line.</b> Use the top strip or the bookmarks panel. This is the operating path I already run — written so the next FDE can run it too.</div>
+<!-- ========== RESUME 1 ========== -->
+<div class="sheet" id="resume">
+  <div class="navy"></div><div class="gold"></div>
+  <div class="pad">
+    <div class="nav">
+      <a class="on" href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="foot"><span>Jeremy Panasuk · Founding FDE playbook · Carex 6273</span><span>1 / 8 · <a href="#job">Next →</a></span></div>
+    <div class="hero">
+      <div>
+        <div class="kicker">Founding Forward Deployed Engineer · Carex 6273 · Madison hybrid 3 days · Direct hire</div>
+        <h1>Jeremy Panasuk</h1>
+        <p class="tag">Customer in the room. Something that runs Tuesday. <em>A path the next FDE can follow.</em></p>
+        <div class="contact">Sand Creek, WI · 715-970-0204 · jpanasuk@gmail.com · ready for Madison 3 days onsite as posted<br />github.com/jpanasuk-netizen · huggingface.co/jpanasuk · linkedin.com/in/jeremy-p-34203322</div>
+      </div>
+      <img class="shot" src="assets/portrait.jpg" alt="Jeremy Panasuk" />
+    </div>
+    <div class="metrics">
+      <div class="m"><b>19/20</b><span>Crisis recovered</span></div>
+      <div class="m"><b>8h→1h</b><span>Dawn · used</span></div>
+      <div class="m"><b>7–14</b><span>XF team led</span></div>
+      <div class="m"><b>~27×</b><span>Local decode</span></div>
+      <div class="m"><b>Founding</b><span>Write the playbook</span></div>
+      <div class="m"><b>WI</b><span>Madison hybrid</span></div>
+    </div>
+    <p class="trusted"><b>Deployed with</b> Dawn · West Bend · Navy Federal · Mercedes · Toyota · Micron · PepsiCo · Ace · Kohl’s · BNY · JPMorgan · Farmers · NWM · WR · Cargill · Harvard · Smith &amp; Nephew</p>
+    <div class="viz">
+      <div class="viz-head"><span class="stamp">Career timeline · drawn to scale</span><em>Analyst → Sr. Analyst twice in 4 yrs. Sr. Analyst → Program Manager in 10.</em></div>
+      <div class="span-row"><div class="span-label">×2 in 4 yrs<small>Prime + Informatica</small></div><div class="span-track"><div class="arrow f4">Analyst → Sr. Analyst</div></div></div>
+      <div class="span-row"><div class="span-label">in 10 yrs<small>Informatica 2008–19</small></div><div class="span-track"><div class="arrow f10">Sr. Analyst → Principal → TDM → SDM → Program Manager</div></div></div>
+      <div class="gantt"><div class="g shop">Shop</div><div class="g car">Cargill</div><div class="g pri">Prime</div><div class="g inf">Informatica IPS / SEAL · Analyst → Program Manager</div><div class="g tcs">TCS</div><div class="g mob">MOBE</div><div class="g lab">AI Lab</div></div>
+      <div class="ticks"><span class="shop">1996</span><span class="car">2004</span><span class="pri">2007</span><span class="inf">2008</span><span class="tcs">2020</span><span class="mob">2023</span><span class="lab">2024</span></div>
+    </div>
+    <p class="who">Carex is hiring the first Forward Deployed Engineer for a Madison fintech: partner with customers, design/build/configure/deploy AI workflows and agents, define the metric before, measure after, found the playbooks. Formal SWE not required. That is Informatica IPS/SEAL plus 24 months of measured agents. Epic Agent Factory preferred — I have not shipped inside Chronicles; I will take it on the floor. <a href="#job">Job map →</a></p>
+    <h2>01 — Your posting · my receipts</h2>
+    <div class="success">
+      <div class="ok"><h3>Customer + ambiguity</h3><p>Embedded until the unofficial definition is named. 19/20 recovered. Dawn featured because the load moved. No predefined playbook is the job I already wrote.</p></div>
+      <div class="ok"><h3>Build / configure / deploy</h3><p>Workflows, integrations, SOAP/REST, CDC, agents, bounded MCP. Configure first. Build when configure is a lie. Hypercare default.</p></div>
+      <div class="ok"><h3>Metric before / after</h3><p>Dawn 8h→1h. Mercedes +200%. West Bend −50%. PepsiCo zero data loss. Lab 1.39→37.47 tok/s. Number first.</p></div>
+    </div>
+    <h2>02 — How I embed · founding FDE motion</h2>
+    <div class="layers">
+      <div class="layer"><h3>01 Hear the floor</h3><p>Stand with operators. Load, journal, SKU, night workaround. Not the slide.</p></div>
+      <div class="layer"><h3>02 Wrangle what exists</h3><p>AS/400, SOAP, messy CSV, agent skills. Make it operable. Do not wait for a clean ontology.</p></div>
+      <div class="layer"><h3>03 Ship + leave a path</h3><p>Environment Summary. Six-class test. Named skill-up. If they cannot run it Tuesday, I did not finish.</p></div>
+    </div>
+    <h2>03 — Independent lab · Aug 2024 – Present · Python · agents</h2>
+    <div class="labg">
+      <div class="card"><h3><span class="n">4070</span> Tabby Tavern Stack</h3><p>Compose + CUDA: TabbyAPI EXL3, Ollama, Open WebUI, SillyTavern, SearXNG. Forced CUDA offload, VRAM pre-warm, failover. huggingface.co/jpanasuk/tabby-tavern-stack</p></div>
+      <div class="card"><h3><span class="n">27×</span> Local Grid Suite</h3><p>Discover, bench decode/prefill, GPU routing, SQLite, CLI + PDF. 1.39 → 37.47 tok/s. Warm stream ~76 tok/s. Measure before claiming.</p></div>
+      <div class="card"><h3><span class="n">MCP</span> Dockroot-MCP</h3><p>Agents see Docker/network. Not host-root. Hand the agent the boundary — how you put an agent next to a bank or a clinic without becoming the incident.</p></div>
+      <div class="card"><h3><span class="n">Agents</span> OpenClaw + pipeline</h3><p>Systems → architect → validator on local Ollama: structured output, repair retries. Production WhatsApp agents, 10+ skills. Multi-provider routing with failover.</p></div>
+    </div>
+    <p class="pts" style="margin-top:4px;"><b>Also retained through 2025</b> for Informatica production rescue: Grid/HA, PowerExchange CDC, IDQ, v9/v10, SOAP/REST, SOW/sizing, install-to-go-live. Ivy Funds · Fed Reserve Philly · Farmers Linux SOAP/REST · Giesecke REST/SOAP, VMs, GitHub, Docker.</p>
+    <div class="fire"><h3>The fire department — founding FDE still does support</h3><p>Parachuted into 20 troubled accounts. Recovered 19. Milwaukee insurer: three-month outage closed in two days — one buried IBM DB2 driver. Monitor, troubleshoot, improve reliability. That is the job after the demo. <a href="#docs">IPS artifacts →</a></p></div>
+    <div class="strike"><b>Carex 6273:</b> founding FDE — customer, agents, metric, playbook. I am not applying to learn embedding. You are hiring the first one. I already write like the second one is watching.</div>
   </div>
+  <div class="foot"><span>Jeremy Panasuk · Founding FDE · Carex 6273 · Resume</span><span>1 / 8 · <a href="#resume2">Resume 2 →</a></span></div>
+</div>
 
-  <div class="sheet" id="job">
-    <div class="navy"></div><div class="gold"></div>
-    <div class="pad">
-      <div class="nav">
-        <a href="#cover">Cover</a>
-        <a class="on" href="#job">The job</a>
-        <a href="#embed">Embed</a>
-        <a href="#path">The path</a>
-        <a href="#agents">Agents</a>
-        <a href="#receipts">Receipts</a>
-        <a href="#founding">Founding</a>
-        <a href="#close">Close</a>
-      </div>
-      <div class="sec">02 — Carex 6273 · fintech startup partner · Madison, WI</div>
-      <h2>Founding Forward Deployed Engineer</h2>
-      <p class="lede">Sit with the customer. Find the real constraint. Build, configure, deploy, measure. Leave a playbook. Formal SWE not required — delivery is.</p>
-      <div class="grid2" style="margin-top:8px;">
-        <div class="cell"><h3>Partner with customers</h3><p>IPS / SEAL: embed until the unofficial definition is named. Dawn, Navy Federal, Mercedes, West Bend — I sat with the people who had to run it Tuesday.</p></div>
-        <div class="cell"><h3>Design, build, deploy, support</h3><p>Not a slide. Mappings, Grid/HA, SOAP/REST, agents, bounded MCP. Install-to-go-live. Hypercare default. If they cannot run it, I did not finish.</p></div>
-        <div class="cell"><h3>Metrics before, measure after</h3><p>Dawn 8h→1h. Mercedes +200%. West Bend −50%. PepsiCo v9→v10 zero data loss. Local lab: 1.39 → 37.47 tok/s. I write the number first.</p></div>
-        <div class="cell"><h3>Reusable solutions</h3><p>Environment Summary. Upgrade Roadmap. Six-class test. TCS kept Mercedes docs. Named skill-up. That is how a founding FDE seeds the function.</p></div>
-        <div class="cell"><h3>Feedback to product</h3><p>BNY with senior VPs and the CEO in the room. JPM CoE roadmaps. Field → board. Recurring pain becomes the next product, not a one-off.</p></div>
-        <div class="cell"><h3>Ambiguity is the job</h3><p>No predefined playbook is the posting. I wrote the playbook on the floor for twenty years. Wisconsin. Madison hybrid 3 days as posted.</p></div>
-      </div>
-      <div class="honest">
-        <div class="t">Epic Agent Factory — honest</div>
-        <p>Preferred, not required. I have not deployed Epic’s no-code Agent Factory inside an EHR. I have deployed agents, bounded tools, and customer workflows; I have sat in regulated rooms (Navy Federal, Smith &amp; Nephew FDA, Prime Medicare). I will take Agent Factory the same way I took Grid/HA — on the customer’s floor, measured, written down.</p>
-      </div>
+<!-- ========== RESUME 2 ========== -->
+<div class="sheet" id="resume2">
+  <div class="navy"></div><div class="gold"></div>
+  <div class="pad">
+    <div class="nav">
+      <a href="#resume">Resume 1</a><a class="on" href="#resume2">Resume 2</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="foot"><span><a href="#cover">← Cover</a></span><span>2 / 8 · <a href="#embed">Embed →</a></span></div>
+    <div class="kicker">Jeremy Panasuk · 715-970-0204 · jpanasuk@gmail.com · Founding FDE · Carex 6273</div>
+    <h2>04 — Sr. Software Developer, Talend · MOBE · Minneapolis</h2>
+    <div class="jobhead"><div>Live production — mappings, pipelines, on-call, 99.99%</div><div class="d">Jul 2023 – Aug 2024</div></div>
+    <p>Talend 8 simple through complex on a live platform. GitLab CI/CD. Redshift + SQL Server. On-call incident command and root-cause writeups the next morning. Messy production, not a sandbox — the FDE motion.</p>
+    <h2>05 — Informatica Specialist · Tata Consultancy Services</h2>
+    <div class="jobhead"><div>PepsiCo · Ameriprise · Ace — follow-the-sun, virtual XF</div><div class="d">Mar 2020 – Dec 2021</div></div>
+    <p><b>PepsiCo</b> Grid/HA + DIH NA/LATAM. Led v9→v10 zero data loss. Teradata → Big Data (~40% analytics lift). Tuning written into go-live timelines. <b>Ace</b> PowerCenter → Big Data with business + QA. <b>Ameriprise</b> EDG: IDQ, EDC, Axon. 200+ CDEs. 24×7. Data quality as a control.</p>
+    <h2>06 — Consulting Manager / SEAL · Informatica · Jun 2008 – Oct 2019</h2>
+    <p>Analyst → Program Manager in ten. SEAL. Teams of 7–14. $4M+ services in two years. v7–v10 upgrade specialist. Consultant of the Year runner-up (2016). Parachute closer: 20 in, 19 recovered. Discovery, decompose, scope, implement, adopt, hypercare. Ladder: Sr. Analyst → Principal → TDM → SDM → Program Manager.</p>
+    <div class="chips"><div class="chip">SEAL</div><div class="chip">v7–v10</div><div class="chip">19/20</div><div class="chip">World-first Grid/HA+DR</div><div class="chip">Named skill-up</div><div class="chip">Env Summary</div><div class="chip">Upgrade Roadmap</div><div class="chip">Six-class test</div></div>
+    <div class="awards">
+      <div class="award"><b>Cargill CFO Award · 2005</b><span>Six / year. Horizon Milling time-dimension visibility.</span></div>
+      <div class="award"><b>Quarterly Excellence · 2006</b><span>Demantra demand planning. New domain, shipped.</span></div>
+      <div class="award"><b>Consultant of the Year runner-up · 2016</b><span>Micron 2,080→7,000h. $3M extensions. Zero downtime.</span></div>
+    </div>
+    <div class="reel">
+      <div class="n">8h→1h</div><div><b>Dawn Foods</b> — PWX CDC, AS/400 journals, Type 2 DW. Featured on informatica.com.</div>
+      <div class="n">−50%</div><div><b>West Bend Mutual</b> — live SOAP/XML quote path. Windows service enablement.</div>
+      <div class="n">+200%</div><div><b>Mercedes-Benz</b> — longest workflows. TCS trained. Playbook stayed.</div>
+      <div class="n">20–30%</div><div><b>MBFS</b> — ALFA→ODS. Cache in RAM. Cheat sheet + walked loads.</div>
+      <div class="n">7,000h</div><div><b>Micron</b> — fab EDW, PWX, Grid/HA, Fast Clone. Zero downtime.</div>
+      <div class="n">$800k</div><div><b>Toyota</b> — Engine Management go-live. All consultants 5/5.</div>
+      <div class="n">20+ nodes</div><div><b>MF Global</b> — world-first Grid/HA + DR on RHEL GFS. Four regions.</div>
+      <div class="n">$2.3M+</div><div><b>BNY Mellon</b> — Grid/HA with senior VPs and CEO Sohaib Abbasi.</div>
+      <div class="n">$10M+</div><div><b>JPMorgan Chase</b> — DW / CoE roadmaps. Field back to product.</div>
+      <div class="n">$2M</div><div><b>Kohl’s</b> — v9 Grid/HA. AIX → commodity. Through S-VPs.</div>
+      <div class="n">$600k</div><div><b>Smith &amp; Nephew</b> — FDA-validated platform. Control process.</div>
+      <div class="n">3,000h</div><div><b>Navy Federal</b> — architecture through go-live training.</div>
+      <div class="n">P1</div><div><b>Northwestern Mutual</b> — Apr 2017 Env Summary. QA twin of prod. GCS in the room.</div>
+      <div class="n">v9→v10</div><div><b>Waddell &amp; Reed</b> — Upgrade Roadmap v3. UNC is not HA. Six-class tests.</div>
+      <div class="n">Phase 2</div><div><b>Farmers</b> — Guidewire XML. 30+ repos. Skill-up named. Team praised.</div>
+      <div class="n">2 days</div><div><b>Milwaukee insurer</b> — three-month outage. One buried DB2 driver.</div>
+    </div>
+    <p class="pts" style="margin-top:4px;"><b>Also:</b> Harvard v9 / Solaris off-load · Merrill/Time Inc. SFDC · Ivy Funds Grid/HA · Fed Reserve Philly Windows→Unix · Giesecke REST/SOAP, VMs, GitHub, Docker · Micron Fast Clone + Financial Force · lectures v7–v10.</p>
+    <div style="margin-top:5px;"><div class="jobhead"><div>Sr. Integration Engineer · Prime Therapeutics</div><div class="d">Jan 2007 – Jun 2008</div></div>
+    <p>Medicare + MTM marts. EDW test lead. Analyst → Sr. Analyst 4/5. Quality first — quote is theirs.</p></div>
+    <div style="margin-top:4px;"><div class="jobhead"><div>BA Oils Plants · Integration Associate · Cargill</div><div class="d">Dec 2004 – Jan 2007</div></div>
+    <p>Live mill ERP. Demantra Quarterly Excellence Oct 2006. Horizon Milling CFO Award 2005. 24/7 across 20+ warehouses. Fireworks weekends continued after start.</p></div>
+    <div class="quotes" style="margin-top:5px;">
+      <div class="q">“His knowledge not only of the Informatica suite but also at the operating system level has been truly invaluable.”<span>Dawn Foods · client</span></div>
+      <div class="q">“He’s a rock star out at Dawn. The customer loves him and the sales team has been leaning on him hard.”<span>Informatica IPS · sales</span></div>
+      <div class="q">“You have sent one of the best that Informatica has to offer in Jeremy.”<span>MF Global · infrastructure</span></div>
+      <div class="q">“I trusted that Jeremy would deliver, with quality… exceeded the expectations at someone of his grade level.”<span>Prime Therapeutics</span></div>
+    </div>
+    <div class="goldbox"><div class="t">Origin · Secret Key / Fireworks Forever · Inventory Manager · 1996–2005</div>
+    <p>$800K+ seasonal inventory. Turnover under 3 months. Four full-time sales. Profit up six years. Class B shooter. No schema, no second take. Loyalty is the metric.</p></div>
+    <h2>07 — Stack · this posting</h2>
+    <p class="skills"><strong>FDE</strong> · customer embed · discovery / decompose / configure-or-build · metric before/after · playbooks · hypercare · Madison hybrid 3 days<br />
+    <strong>Agents</strong> · OpenClaw · Ollama · TabbyAPI EXL3 · MCP · RAG · structured pipelines · SQLite telemetry — <em>not yet Epic Agent Factory; will take it on the floor</em><br />
+    <strong>Code / data</strong> · Python · SQL · Docker · Linux/WSL2 · GitLab CI/CD · PowerCenter · Grid/HA · PWX CDC · Talend 8 · IDQ · SOAP/REST · Oracle · SQL Server · DB2<br />
+    <strong>Education</strong> · BBA MIS, UW–Eau Claire 2004 · Informatica Certified Specialist: Admin, Big Data Admin, PowerCenter Developer I &amp; II<br />
+    <strong>Operating line</strong> · Customer satisfaction is worthless. Customer loyalty is priceless. · <a href="#docs">Full IPS playbook follows →</a></p>
   </div>
+  <div class="foot"><span>Jeremy Panasuk · Founding FDE · Carex 6273 · Resume</span><span>2 / 8 · <a href="#job">Job →</a></span></div>
+</div>
 
-  <div class="sheet" id="embed">
-    <div class="navy"></div><div class="gold"></div>
-    <div class="pad">
-      <div class="nav">
-        <a href="#cover">Cover</a>
-        <a href="#job">The job</a>
-        <a class="on" href="#embed">Embed</a>
-        <a href="#path">The path</a>
-        <a href="#agents">Agents</a>
-        <a href="#receipts">Receipts</a>
-        <a href="#founding">Founding</a>
-        <a href="#close">Close</a>
-      </div>
-      <div class="sec">03 — How I embed</div>
-      <h2>Floor to board. Same facts, two rooms.</h2>
-      <p class="lede">The founding FDE is the person who hears the unofficial definition and makes it executable. That is the only work I have done.</p>
-      <div class="steps" style="margin-top:10px;">
-        <div class="step"><div class="n">01</div><div><h3>Hear the floor</h3><p>Stand with operators until the real constraint is named. Not the slide. The load, the journal, the SKU, the prior-auth pile, the night workaround from 2011.</p></div></div>
-        <div class="step"><div class="n">02</div><div><h3>Wrangle what exists</h3><p>AS/400 journals, SOAP that never matched the WSDL, messy CSVs, agent skills, local LLMs. I do not wait for a clean ontology. I make the data operable.</p></div></div>
-        <div class="step"><div class="n">03</div><div><h3>Ship the surface</h3><p>Workflow, automation, agent, lightweight app — whatever the constraint needs. Configure first, build when configure is a lie. If they cannot run it after I drive back to Sand Creek, I did not finish.</p></div></div>
-        <div class="step"><div class="n">04</div><div><h3>Brief the board</h3><p>Same facts, two rooms. BNY with senior VPs and CEO Sohaib Abbasi. JPM roadmaps. Loyalty, not a demo. Measure after. Write the playbook so hire two can start on page one.</p></div></div>
-      </div>
-      <div class="note"><b>Madison hybrid.</b> Sand Creek, WI. Three days onsite as posted. The constraint lives with the customer. I go there.</div>
+<!-- ========== JOB + TOC ========== -->
+<div class="sheet" id="job">
+  <div class="navy"></div><div class="gold"></div>
+  <div class="pad">
+    <div class="nav">
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a class="on" href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="foot"><span><a href="#job">← Job</a></span><span>3 / 8 · <a href="#path">Path →</a></span></div>
+    <div class="kicker">03 — Carex 6273 · fintech startup partner · Madison WI hybrid · click any line</div>
+    <h1 style="font-size:16pt;margin:4px 0 6px;">The playbook they asked the founding FDE to write</h1>
+    <div class="toc">
+      <a href="#resume"><span class="n">01–02</span><span>Two-page resume · timeline · lab · receipts</span><span class="pg">p. 1–2</span></a>
+      <a href="#job"><span class="n">03</span><span>Job mapped · what you’ll do / what you’ll bring</span><span class="pg">p. 3</span></a>
+      <a href="#docs"><span class="n">04</span><span>IPS documentation standards · Env Summary, Roadmap, Phase, v10 deck</span><span class="pg">p. 4</span></a>
+      <a href="#perf"><span class="n">05</span><span>Performance methodology · MBFS cheat sheet · isolation tests</span><span class="pg">p. 5</span></a>
+      <a href="#upgrade"><span class="n">06</span><span>Upgrade types · six-class tests · DVO · coaching</span><span class="pg">p. 6</span></a>
+      <a href="#floors"><span class="n">07</span><span>Four floors · NWM · MBFS · WR · Farmers · source list</span><span class="pg">p. 7</span></a>
+      <a href="#founding"><span class="n">08</span><span>Agents · Epic honesty · standing up the FDE function · close</span><span class="pg">p. 8</span></a>
+    </div>
+    <h2>What you’ll do · mapped</h2>
+    <div class="grid2">
+      <div class="cell"><h3>Partner with customers · uncover challenges</h3><p>IPS embed. Dawn, Navy Federal, Mercedes, West Bend. Unofficial definitions. Night workaround from 2011. Same facts, two rooms — BNY with VPs and CEO Abbasi.</p></div>
+      <div class="cell"><h3>Design, configure, build, deploy, support</h3><p>Workflows, agent skills, schemas, integrations, lightweight apps. Configure first. Hypercare. Monitor, troubleshoot, improve reliability. 19/20 recovered.</p></div>
+      <div class="cell"><h3>Define success before · measure after</h3><p>Posted as a requirement. Already the cover of an Environment Summary. Dawn 8h→1h. Mercedes +200%. Lab 1.39→37.47 tok/s. If the number did not move, we shipped theater.</p></div>
+      <div class="cell"><h3>Translate recurring needs into reusable kits</h3><p>Playbooks, skill-up, QA twin of production. TCS kept Mercedes. Farmers named the skill-up. Hire two starts on page 4, not Slack.</p></div>
+      <div class="cell"><h3>Feedback to product / engineering</h3><p>JPM CoE roadmaps. If three customers hit the same wall, it is the next feature. Field notes weekly.</p></div>
+      <div class="cell"><h3>Internal tools · operational efficiency</h3><p>I already build the tools I wish I had on night one. Local Grid Suite is that instinct on a GPU. Same for a customer ops queue.</p></div>
+    </div>
+    <h2>What you’ll bring · mapped</h2>
+    <div class="grid3">
+      <div class="cell"><h3>Communication / relationship</h3><p>Clients asked for me by name. “Rock star.” Loyalty talk on Dawn’s floor. Clear, honest, proactive.</p></div>
+      <div class="cell"><h3>Ambiguous → practical</h3><p>No predefined playbook is the posting. I wrote the operating path on the floor for twenty years.</p></div>
+      <div class="cell"><h3>AI agents daily</h3><p>OpenClaw, Ollama pipeline, bounded MCP. Agentic tools in day-to-day work. Not a slide about agents.</p></div>
+      <div class="cell"><h3>Configure / automate / build / simplify</h3><p>Judgment you asked for. Most “AI projects” need a better process, not another model. I say so in the room.</p></div>
+      <div class="cell"><h3>Solutions / implementation / consulting</h3><p>Consulting Manager. Formal SWE not required — you said delivery matters more. That is this résumé.</p></div>
+      <div class="cell"><h3>Madison 3 days</h3><p>Sand Creek, WI. Hybrid as posted. The constraint lives with the customer. I go there.</p></div>
+    </div>
+    <div class="goldbox" style="margin-top:6px;"><div class="t">Epic Agent Factory — preferred, not claimed</div>
+    <p>No-code builder inside Epic EHR (HIMSS 2026 preview; wider 2027). Art / Emmie / Penny personas. I have not deployed an agent inside Chronicles. I have deployed agents with boundaries, customer workflows, and go-lives in regulated rooms (Navy Federal, Smith &amp; Nephew FDA, Prime Medicare). I will take Agent Factory like Grid/HA: embed, measure, write the standard.</p></div>
   </div>
+  <div class="foot"><span>Jeremy Panasuk · Founding FDE playbook · Carex 6273</span><span>3 / 8 · <a href="#docs">Docs →</a></span></div>
+</div>
 
-  <div class="sheet" id="path">
-    <div class="navy"></div><div class="gold"></div>
-    <div class="pad">
-      <div class="nav">
-        <a href="#cover">Cover</a>
-        <a href="#job">The job</a>
-        <a href="#embed">Embed</a>
-        <a class="on" href="#path">The path</a>
-        <a href="#agents">Agents</a>
-        <a href="#receipts">Receipts</a>
-        <a href="#founding">Founding</a>
-        <a href="#close">Close</a>
-      </div>
-      <div class="sec">04 — The path · written so the next FDE can run it</div>
-      <h2>Discover. Build. Measure. Leave.</h2>
-      <div class="grid2" style="margin-top:8px;">
-        <div class="cell">
-          <h3>Discover</h3>
-          <p><b>Artifact:</b> Environment Summary. Owner, date, unofficial definitions, what is on fire, what already works. Success metric written <i>before</i> anyone touches config. You posted that line. It is already the cover of my file.</p>
-        </div>
-        <div class="cell">
-          <h3>Decompose</h3>
-          <p><b>Artifact:</b> Upgrade / build roadmap. Configure vs automate vs build vs simplify. I pick the smallest thing that moves the metric. Formal SWE is not required. Judgment is.</p>
-        </div>
-        <div class="cell">
-          <h3>Build / configure</h3>
-          <p>Workflows, agent skills, document schemas, integrations, lightweight apps. Agentic tools in daily work: OpenClaw, local Ollama pipeline, bounded MCP. Prototype on the customer’s data, not a sandbox story.</p>
-        </div>
-        <div class="cell">
-          <h3>Prove go-live</h3>
-          <p><b>Artifact:</b> Six-class test — operability, same-data, security, performance, 3rd-party, HA/DR. QA twin of production. If it only works when I am in the chair, it is not deployed.</p>
-        </div>
-        <div class="cell">
-          <h3>Measure after</h3>
-          <p>Dawn 8h→1h. Mercedes +200%. West Bend −50%. Lab: 1.39→37.47 tok/s. Write the after next to the before. If the number did not move, we did not ship value. We shipped theater.</p>
-        </div>
-        <div class="cell">
-          <h3>Leave the team</h3>
-          <p><b>Artifact:</b> Named skill-up. Cheat sheet. Playbook. Hypercare default. TCS kept Mercedes. Farmers named the skill-up in the review. Hire two starts here, not from my Slack.</p>
-        </div>
-      </div>
-      <div class="note" style="margin-top:10px;"><b>When it burns.</b> 20 troubled accounts, 19 recovered. Milwaukee insurer: three months dark, closed in two days. Founding FDE still does support. Monitoring, troubleshooting, reliability — that is the job after the demo.</div>
+<!-- ========== DOCS ========== -->
+<div class="sheet" id="docs">
+  <div class="navy"></div><div class="gold"></div>
+  <div class="pad">
+    <div class="nav">
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#job">Job</a><a class="on" href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="foot"><span><a href="#embed">← Embed</a></span><span>4 / 8 · <a href="#agents">Agents →</a></span></div>
+    <div class="kicker">04 — Real-world documentation standards · IPS artifacts 2017 floor · hostnames off this copy</div>
+    <p class="who" style="margin-bottom:5px;">The parachute was never a hero hour. It was a written operating path: what is running, what is on fire, what to change, how to prove go-live, who on the customer team can run it after you leave. Same loop the RTX lab uses now. Author: Jeremy Panasuk, Informatica Professional Services.</p>
+    <div class="grid2">
+      <div class="cell">
+        <h3>Artifact · Environment Summary</h3>
+        <p><b>PowerCenter Environment Recommendations.</b> Owner and date on the cover. How mixed internal / consultant / offshore developers actually use the platform. Numbered review of what was measured and changed — not a wish list.</p>
+        <ul>
+          <li>Utilization first: CPU, RAM, disk wait, database wait. Low utilization is a finding. 100% CPU is a finding.</li>
+          <li>Config actually applied: ulimit, heap, concurrent jobs, sorter/lookup cache, stale session-log cleanup.</li>
+          <li>Incidents closed with GCS: P1 start-delay, bulk-load sorter RAM, dispatch that would not start.</li>
+          <li>Grid/HA and TCO: Gold/Platinum SLA, QA twin of production, repository off the shared DB host.</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <h3>Artifact · Upgrade Roadmap v3</h3>
+        <p><b>Informatica Upgrade Roadmap.</b> Current-state performance review, then the product recommendation: PowerCenter with Grid and HA. Internal domain/gateway/node design. External clustering and the shared filesystem that makes or breaks Session on Grid.</p>
+        <ul>
+          <li>Graphs over a month, not a hallway anecdote. Round-robin vs adaptive. RAM idle while cache spills to disk.</li>
+          <li>Filesystem matrix: UNC, DFS, CIFS/NAS, NFS v3, GFS2, Veritas CFS, GPFS. POSIX + I/O fencing or you do not have HA.</li>
+          <li>Database HA: Oracle RAC / Data Guard, SQL Server mirroring. Source/target availability separate from the domain.</li>
+          <li>Admin of the grid: logging, restarting services, installing components. The customer can operate it.</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <h3>Artifact · Phase / architecture review</h3>
+        <p><b>Phase 2 is not “more of Phase 1.”</b> Name the product features the next workload requires, the topology that will hang, the filesystem that will plateau partitioning, the skill-up the team still needs.</p>
+        <ul>
+          <li>Advanced XML / real-time web-service consumers need Model Repository + Data Integration Service, cores, Developer-tool skill.</li>
+          <li>30+ repositories and 30+ integration services is TCP/IP overhead. Upgrades become a migration factory.</li>
+          <li>Outstanding deliverables are demos the customer can see: Proactive Monitoring, Advanced XML on their schema.</li>
+          <li>Write down that the team is good. Openness is the coaching surface.</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <h3>Deck · PowerCenter 10.0.0 Upgrade Overview</h3>
+        <p><b>Jeremy Panasuk / IPS. 28 slides.</b> Why v10, PAM, three upgrade types, six classes of test, Data Validation Option to make same-data honest. This is the coaching deck. The roadmap is the customer-specific evidence. Together they stop “just run the installer.”</p>
+        <ul>
+          <li>In-place — short cycle, no extra schemas, outage for restore. Cannot rename domain or nodes.</li>
+          <li>Parallel — snapshot the repo, install fresh, change names, no domain-install outage. Migrate users/groups.</li>
+          <li>Clone — snapshot the domain, fastest like-for-like go-live, still an outage for restore.</li>
+          <li>DVO: 50% source-to-target, 80% regression, 90% upgrade testing. Audit trail. No extra server.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pts" style="margin-top:6px;"><b>Founding FDE translation:</b> Environment Summary = customer process + unofficial definitions + metric. Roadmap = configure vs automate vs build vs simplify. Phase review = next increment, skill-up named. v10 deck = how the room chooses a path and tests it. Same three artifacts before anyone touches Agent Factory, a workflow, or a prototype. <a href="#perf">Performance loop →</a></p>
+    <h2>What every IPS document had on the cover — the FDE kit</h2>
+    <div class="grid3">
+      <div class="cell"><h3>Owner + date</h3><p>Jeremy Panasuk, IPS. Not an anonymous slide. Someone the customer can call.</p></div>
+      <div class="cell"><h3>How they actually work</h3><p>Mixed internal / consultant / offshore. Utilization first. Config that is applied, not hoped.</p></div>
+      <div class="cell"><h3>Incidents + GCS</h3><p>P1s closed with product support in the write-up. The next person sees what already burned.</p></div>
+      <div class="cell"><h3>Recommendation they can run</h3><p>Grid/HA path, QA twin, filesystem, skill-up named. Executable without me in the building.</p></div>
+      <div class="cell"><h3>What is still open</h3><p>Outstanding demos, risks, topology that will hang. Phase 2 is not more of Phase 1.</p></div>
+      <div class="cell"><h3>Hostnames stay off public copy</h3><p>xyz teaching templates exist. Named copies are the work. Capacity tables stay inside.</p></div>
+    </div>
+    <div class="strike" style="margin-top:6px;"><b>Standard:</b> Owner on the cover. Evidence, not folklore. What was already changed. What is still open. Recommendation the customer can execute without you in the building.</div>
   </div>
+  <div class="foot"><span>IPS documentation standards · hostnames off this copy</span><span>4 / 8 · <a href="#perf">Perf →</a></span></div>
+</div>
 
-  <div class="sheet" id="agents">
-    <div class="navy"></div><div class="gold"></div>
-    <div class="pad">
-      <div class="nav">
-        <a href="#cover">Cover</a>
-        <a href="#job">The job</a>
-        <a href="#embed">Embed</a>
-        <a href="#path">The path</a>
-        <a class="on" href="#agents">Agents</a>
-        <a href="#receipts">Receipts</a>
-        <a href="#founding">Founding</a>
-        <a href="#close">Close</a>
-      </div>
-      <div class="sec">05 — AI-powered platforms · workflows · automations · agent skills</div>
-      <h2>The stack I already run. The stack I will learn on the floor.</h2>
-      <div class="grid2" style="margin-top:8px;">
-        <div class="cell"><h3>4070 · private inference</h3><p>TabbyAPI EXL3, Ollama, Open WebUI, Compose + CUDA. Forced offload, VRAM pre-warm, failover. huggingface.co/jpanasuk/tabby-tavern-stack</p></div>
-        <div class="cell"><h3>27× · Local Grid Suite</h3><p>Discover, bench decode/prefill, GPU routing, SQLite, CLI + PDF. 1.39 → 37.47 tok/s. Same loop as a customer deploy: measure before claiming.</p></div>
-        <div class="cell"><h3>MCP · Dockroot</h3><p>Agents see Docker/network. They do not get host-root. Hand the agent the boundary, not the box. That is how you put an agent next to a bank or a clinic without becoming the incident.</p></div>
-        <div class="cell"><h3>OpenClaw + pipeline</h3><p>Systems → architect → validator on local Ollama: structured output, repair retries. Production WhatsApp agents, 10+ skills. Multi-provider routing with cloud failover.</p></div>
-      </div>
-      <div class="honest" style="margin-top:10px;">
-        <div class="t">Epic Agent Factory · Art · Emmie · Penny</div>
-        <p>Epic’s Agent Factory is a no-code builder inside the EHR — previewed HIMSS 2026, wider in 2027. I have not shipped an agent inside Chronicles. I have shipped agents with boundaries, customer workflows with unofficial definitions, and go-lives in regulated rooms. The founding FDE learns the customer’s platform on the customer’s floor. I will treat Agent Factory like Grid/HA: embed, measure, write the standard, leave a team that can shape the next one.</p>
-      </div>
-      <div class="note"><b>Configure, automate, build, or simplify.</b> You asked for that judgment. I have it. Most “AI projects” need a better process, not another model. I say so in the room.</div>
+<!-- ========== PERF ========== -->
+<div class="sheet" id="perf">
+  <div class="navy"></div><div class="gold"></div>
+  <div class="pad">
+    <div class="nav">
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#job">Job</a><a href="#docs">Docs</a><a class="on" href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="foot"><span><a href="#path">← Path</a></span><span>5 / 8 · <a href="#receipts">Receipts →</a></span></div>
+    <div class="kicker">05 — Real-world performance · left inside the MBFS Environment Summary · same loop as GPU routing</div>
+    <p class="who">A baseline that is allowed to be slow. A goal. One change between runs. Notes that make the next person dangerous. Thread statistics before folklore. Do not partition until a single partition is understood. The filesystem is often the real Grid/HA product.</p>
+    <div class="loop">
+      <div><b>1</b>Establish baseline</div>
+      <div><b>2</b>Set a goal</div>
+      <div><b>3</b>Find bottleneck</div>
+      <div><b>4</b>Eliminate it</div>
+      <div><b>5</b>Repeat</div>
+    </div>
+    <div class="grid2">
+      <div class="cell">
+        <h3>Performance dos</h3>
+        <ul>
+          <li>Cache as much as possible in memory. Spilling lookup / aggregator / sorter / joiner index to disk is the silent 20–30% tax.</li>
+          <li>Spread I/O across as many devices as possible. The shared filesystem is a product decision, not a mount.</li>
+          <li>Round-robin a single input file until you prove that file is the bottleneck.</li>
+          <li>Key-range partition to align the target with database partitioning. Pass-through to add CPU. Then stop.</li>
+          <li>Thread statistics first. Transformation ~100% busy → repartition point. Reader/writer ~100% busy → maybe the thread, maybe the system.</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <h3>Performance don’ts</h3>
+        <ul>
+          <li>Do not add multiple partitions until you have tested and tuned a single partition. Written three times on purpose.</li>
+          <li>Do not add partitions or repartition points if the session is already source- or target-constrained.</li>
+          <li>Do not add partitions if CPUs are already maxed (%idle under ~5%).</li>
+          <li>Do not optimize a sub-two-minute session. Why are you here?</li>
+          <li>Do not change three knobs between runs. You will not know what helped.</li>
+        </ul>
+      </div>
+    </div>
+    <h2>Isolation tests when thread statistics lie</h2>
+    <div class="grid2">
+      <div class="cell"><h3>Target</h3><p>Write to a flat file instead of the database. Filter FALSE immediately before the target. Compare to a stand-alone bulk loader. Faster = target-constrained.</p></div>
+      <div class="cell"><h3>Source</h3><p>Filter FALSE after the Source Qualifier. Read from a flat file instead of the database. FTP the remote file outside PowerCenter. Same speed = source-constrained.</p></div>
+      <div class="cell"><h3>Simple before complex</h3><p>Analyze table / runstats before optimizer hints. Source-only mapping to take transformation and target out of the experiment.</p></div>
+      <div class="cell"><h3>OS evidence</h3><p>vmstat and sar. Low %idle = CPU. Non-zero si/so or page-outs = memory. Sustained %wio = disk. Notes: session time, rows/sec, config delta, CPU and disk.</p></div>
+    </div>
+    <div class="fire" style="margin-top:6px;"><h3>MBFS · Mercedes-Benz Financial · Jun 2017 · the cheat sheet that stayed</h3>
+    <p>ALFA→ODS at 100% CPU. Cache RAM raised so large transformations stop spilling to disk — 20–30% runtime drop. PWX CDC POC vs bulk load. GFS2 flock gap. Knowledge transfer walked ALFA→ODS, ODS→flat file, ODS→warehouse — not a PDF dump after the fact. Same loop as Local Grid Suite: baseline allowed to be slow, one change, notes the next FDE can run. <a href="#upgrade">Upgrade path →</a></p></div>
+    <p class="pts" style="margin-top:5px;"><b>Founding FDE translation:</b> Agent latency, workflow duration, prior-auth cycle time, tok/s — same five steps. Measure before you add another agent. Do not change three prompts between runs.</p>
   </div>
+  <div class="foot"><span>Performance methodology · MBFS cheat sheet</span><span>5 / 8 · <a href="#upgrade">Upgrade →</a></span></div>
+</div>
 
-  <div class="sheet" id="receipts">
-    <div class="navy"></div><div class="gold"></div>
-    <div class="pad">
-      <div class="nav">
-        <a href="#cover">Cover</a>
-        <a href="#job">The job</a>
-        <a href="#embed">Embed</a>
-        <a href="#path">The path</a>
-        <a href="#agents">Agents</a>
-        <a class="on" href="#receipts">Receipts</a>
-        <a href="#founding">Founding</a>
-        <a href="#close">Close</a>
-      </div>
-      <div class="sec">06 — Field receipts · consulting · implementation · support</div>
-      <h2>Value the customer signed. Not a vibe.</h2>
-      <div class="reel" style="margin-top:8px;">
-        <div class="n">8h→1h</div><div><b>Dawn Foods</b> — CDC on AS/400 journals. Featured because it got used.</div>
-        <div class="n">−50%</div><div><b>West Bend</b> — live SOAP/XML quote path. Agent turnaround the next day.</div>
-        <div class="n">+200%</div><div><b>Mercedes</b> — longest workflows. Playbook stayed with TCS.</div>
-        <div class="n">7,000h</div><div><b>Micron</b> — 2,080 → 7,000. $3M extensions. Zero downtime.</div>
-        <div class="n">$800k</div><div><b>Toyota</b> — Engine Management go-live. Consultants 5/5.</div>
-        <div class="n">20+ nodes</div><div><b>MF Global</b> — world-first Grid/HA + DR. Four regions. Virtual team.</div>
-        <div class="n">$2.3M+</div><div><b>BNY</b> — Grid/HA with senior VPs and the CEO in the room.</div>
-        <div class="n">$10M+</div><div><b>JPMorgan</b> — DW / CoE roadmaps. Field back to product.</div>
-        <div class="n">3,000h</div><div><b>Navy Federal</b> — architecture through go-live training.</div>
-        <div class="n">P1</div><div><b>Northwestern Mutual</b> — QA twin of production. Hypercare default.</div>
-        <div class="n">Phase 2</div><div><b>Farmers</b> — Guidewire XML. Skill-up named in the review.</div>
-        <div class="n">2 days</div><div><b>Milwaukee</b> — three-month outage closed in two days.</div>
-      </div>
-      <div class="quotes" style="margin-top:10px;">
-        <div class="q">“His knowledge not only of the Informatica suite but also at the operating system level has been truly invaluable.”<span>Dawn Foods · client</span></div>
-        <div class="q">“He’s a rock star out at Dawn. The customer loves him and the sales team has been leaning on him hard.”<span>Informatica IPS · sales</span></div>
-      </div>
-      <p style="margin-top:8px;font-size:8pt;">Also: Kohl’s AIX→commodity · Harvard v9 hypercare · Smith &amp; Nephew FDA · Ace + PepsiCo Big Data · Prime Medicare/MTM · Cargill CFO Award. Retained through 2025 for production rescue.</p>
+<!-- ========== UPGRADE ========== -->
+<div class="sheet" id="upgrade">
+  <div class="navy"></div><div class="gold"></div>
+  <div class="pad">
+    <div class="nav">
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a class="on" href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="foot"><span><a href="#agents">← Agents</a></span><span>6 / 8 · <a href="#founding">Founding →</a></span></div>
+    <div class="kicker">06 — Pick the type. Then test like go-live depends on it. · PC 10 deck + coaching</div>
+    <p class="who">The v10 overview is the coaching deck. The roadmap is the customer-specific evidence. Together they stop an account from “just running the installer.” Founding FDE: stop a fintech from “just turning on the agent.”</p>
+    <table>
+      <thead><tr><th>When</th><th>Type</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Very short cycle, many installs already certified in a sandbox</td><td><b>In-place</b></td><td>No extra schemas. Users/groups stay. Outage for domain restore. Cannot change domain or node names.</td></tr>
+        <tr><td>Longer cycle, tight outage, want new names</td><td><b>Parallel</b></td><td>Fresh server + repo snapshot. No domain-install outage. Migrate users/groups. Small settings-drift risk.</td></tr>
+        <tr><td>Pre-prod go-live, minimize settings drift</td><td><b>Clone</b></td><td>Identical domain snapshot. Fast like-for-like. Still an outage. Cannot rename. Extra HTTPS caveats.</td></tr>
+      </tbody>
+    </table>
+    <h2>Six classes of test</h2>
+    <div class="tests">
+      <div class="cell"><h3>Operability</h3><p>Smoke: installer, domain start, repo wizard, services, connectivity, a workflow runs, client login.</p></div>
+      <div class="cell"><h3>Same data</h3><p>Full, partial, or automated regression. Longest bar. DVO so you test all rows, not a sample. 50% S→T, 80% regression, 90% upgrade.</p></div>
+      <div class="cell"><h3>Security</h3><p>External: injection, SSL, DB grants, open ports. Internal: admin passwords, folder / connection / tool rights.</p></div>
+      <div class="cell"><h3>Performance</h3><p>Client, integration service, server, network. Equal or better than legacy — with numbers.</p></div>
+      <div class="cell"><h3>3rd-party</h3><p>Schedulers, SVN, deploy frameworks, encryption, file transfer, customer monitors. The item people skip.</p></div>
+      <div class="cell"><h3>HA / DR</h3><p>HA = single-instance failover, uptime. DR = data-center loss, recovery time and stagnation.</p></div>
+    </div>
+    <h2>Customer coaching · leave the team dangerous</h2>
+    <p style="margin-bottom:4px;font-style:italic;">“Customer satisfaction is worthless; customer loyalty is priceless.” — operating line · Gitomer / Carnegie / Greene. Talk given at Informatica while still on Dawn’s floor.</p>
+    <div class="grid2">
+      <div class="cell">
+        <h3>How coaching showed up in the documents</h3>
+        <ul>
+          <li><b>Named skill-up.</b> Farmers: Developer tool and Advanced XML for Guidewire. Navy Federal: install, services, naming standards, go-live tests.</li>
+          <li><b>Walked loads.</b> MBFS knowledge transfer on ALFA→ODS, ODS→flat file, ODS→warehouse — not a PDF dump.</li>
+          <li><b>One room.</b> When production would not dispatch: entire technology stack plus Informatica GCS in the same room.</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <h3>The runbook stays</h3>
+        <ul>
+          <li><b>Praise in the deliverable.</b> Farmers: the team was knowledgeable, open, and could explain why the current architecture existed. That sentence is coaching.</li>
+          <li><b>Playbook adopted.</b> Mercedes tuning docs kept by TCS. Dawn Type-2 / security / upgrade path locked.</li>
+          <li><b>QA twin of production</b> so the next incident does not take prod down. Hypercare is default, not a phase you skip.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pts" style="margin-top:6px;"><b>Founding FDE translation:</b> In-place / parallel / clone = ship in their stack vs stand up a twin vs copy prod. Six-class test = operability of the agent, same outcomes, security/BAA, latency, 3rd-party systems, failover. Skill-up named in the close. <a href="#floors">Four floors →</a></p>
   </div>
+  <div class="foot"><span>Upgrade operating path · six-class test · coaching</span><span>6 / 8 · <a href="#floors">Floors →</a></span></div>
+</div>
 
-  <div class="sheet" id="founding">
-    <div class="navy"></div><div class="gold"></div>
-    <div class="pad">
-      <div class="nav">
-        <a href="#cover">Cover</a>
-        <a href="#job">The job</a>
-        <a href="#embed">Embed</a>
-        <a href="#path">The path</a>
-        <a href="#agents">Agents</a>
-        <a href="#receipts">Receipts</a>
-        <a class="on" href="#founding">Founding</a>
-        <a href="#close">Close</a>
-      </div>
-      <div class="sec">07 — Help establish playbooks, standards, operating processes</div>
-      <h2>You are hiring the first one. I write like the second one is watching.</h2>
-      <div class="grid3" style="margin-top:8px;">
-        <div class="cell"><h3>Standards</h3><p>Every engagement opens with a metric and an Environment Summary. Every close has a skill-up name and a QA twin. No tribal knowledge. Hostnames stay off the public copy; the method does not.</p></div>
-        <div class="cell"><h3>Reusable kits</h3><p>Workflow templates, agent skill patterns, integration stubs, test taxonomy. Recurring customer needs become the kit, not another hero week.</p></div>
-        <div class="cell"><h3>Internal tools</h3><p>You asked for automations that make the FDE function cheaper. I already build the tools I wish I had on night one. Then I leave them.</p></div>
-        <div class="cell"><h3>Product loop</h3><p>Field notes back to engineering weekly. If three customers hit the same wall, it is not a services problem. It is the next feature.</p></div>
-        <div class="cell"><h3>Hiring two</h3><p>This PDF is the interview. The next FDE should be able to run page 4 without me in Slack. That is how a function is founded.</p></div>
-        <div class="cell"><h3>Madison</h3><p>Hybrid 3 days onsite, Madison, WI. I live in Sand Creek. Wisconsin. I will be in the room those three days. The customer is why.</p></div>
-      </div>
-      <div class="honest" style="margin-top:10px;">
-        <div class="t">What I will not fake</div>
-        <p>I am not a career Epic analyst. I am not a staff software engineer who has never sat with a customer. I am the closer they send when the platform has to get used — now with agents I measure. Carex’s partner gets the founding motion, not a resume adjective.</p>
-      </div>
+<!-- ========== FLOORS ========== -->
+<div class="sheet" id="floors">
+  <div class="navy"></div><div class="gold"></div>
+  <div class="pad">
+    <div class="nav">
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a class="on" href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="foot"><span><a href="#receipts">← Receipts</a></span><span>7 / 8 · <a href="#close">Close →</a></span></div>
+    <div class="kicker">07 — Four floors. Same playbook. Anonymized xyz copies were teaching templates. Named copies are the work.</div>
+    <div class="grid2" style="margin-bottom:6px;">
+      <div class="cell"><h3>P1 · Northwestern Mutual · Apr 2017</h3><p>QA/prod domains brought to best practice (ulimit 64k, DB2 repo settings, concurrent jobs 500, heap, stale NFS logs). P1 workflow-start delay: GCS escalation, DB2 semaphore on the Informatica client. Grid/HA TCO path and a QA twin of production. Artifact: PowerCenter Environment Summary.</p></div>
+      <div class="cell"><h3>20–30% · Mercedes-Benz Financial · Jun 2017</h3><p>ALFA→ODS at 100% CPU. Cache RAM raised so large transformations stop spilling to disk — 20–30% runtime drop. PWX CDC POC vs bulk load. GFS2 flock gap. Performance cheat sheet and load walkthroughs left with the team. Artifact: Environment Summary + cheat sheet.</p></div>
+      <div class="cell"><h3>v9→v10 · Waddell &amp; Reed · Jun 2017</h3><p>2-node 9.1.0 grid measured for a month: 80–90% CPU, RAM under-used, disk wait 30–90 ms, SQL wait past 200 ms. UNC is not an HA filesystem. Upgrade types + six-class test plan. Adaptive dispatch, homogeneous nodes, Linux CFS. Artifact: Upgrade Roadmap v3.</p></div>
+      <div class="cell"><h3>Phase 2 · Farmers Insurance · Oct 2017</h3><p>Guidewire advanced XML and real-time consumers. 30+ repos / integration services as domain risk. NFS vs Veritas/GPFS. Skill-up named (Developer tool + Advanced XML). Outstanding demos: Operational Insight and Advanced XML on their schema. Team praised in the write-up. Artifact: Phase 2 Architecture Review.</p></div>
+    </div>
+    <h2>More receipts · same motion</h2>
+    <div class="reel">
+      <div class="n">8h→1h</div><div><b>Dawn Foods</b> — PWX CDC, AS/400 remote journals, Type 2 DW. Featured because it got used.</div>
+      <div class="n">−50%</div><div><b>West Bend</b> — live SOAP/XML quote path. Agent turnaround.</div>
+      <div class="n">+200%</div><div><b>Mercedes-Benz</b> — longest workflows. TCS kept the path.</div>
+      <div class="n">7,000h</div><div><b>Micron</b> — 2,080→7,000. $3M extensions. Zero downtime.</div>
+      <div class="n">$2.3M+</div><div><b>BNY</b> — Grid/HA. Senior VPs + CEO in the room.</div>
+      <div class="n">$10M+</div><div><b>JPMorgan</b> — DW / CoE roadmaps. Field → product.</div>
+      <div class="n">20+ nodes</div><div><b>MF Global</b> — world-first Grid/HA + DR. Four regions.</div>
+      <div class="n">3,000h</div><div><b>Navy Federal</b> — architecture through go-live tests.</div>
+      <div class="n">v9</div><div><b>Harvard</b> — Version 9. Solaris off-load. Hypercare plan.</div>
+      <div class="n">$2M</div><div><b>Kohl’s</b> — v9 Grid/HA. AIX → commodity.</div>
+      <div class="n">$600k</div><div><b>Smith &amp; Nephew</b> — FDA-validated. Control process.</div>
+      <div class="n">2 days</div><div><b>Milwaukee</b> — three-month outage. One DB2 driver.</div>
+    </div>
+    <div class="quotes" style="margin-top:6px;">
+      <div class="q">“His knowledge not only of the Informatica suite but also at the operating system level has been truly invaluable.”<span>Dawn Foods · client</span></div>
+      <div class="q">“He’s a rock star out at Dawn. The customer loves him and the sales team has been leaning on him hard.”<span>Informatica IPS · sales</span></div>
+    </div>
+    <p class="pts" style="margin-top:5px;"><b>Source artifacts (author: Jeremy Panasuk, IPS):</b> Northwestern Mutual / xyz PowerCenter Environment Summary (Apr 2017); MBFS / xyz PowerCenter Environment Summary with performance cheat sheet (Jun 2017); Waddell &amp; Reed / xyz Informatica Upgrade Roadmap v3 (Jun 2017); Farmers Insurance Phase 2 Architecture Review (Oct 2017); PowerCenter 10.0.0 Upgrade Overview (28 slides). Internal hostnames, credentials, and raw capacity tables are not published. <a href="#founding">Founding →</a></p>
   </div>
+  <div class="foot"><span>Four floors · IPS source list</span><span>7 / 8 · <a href="#founding">Founding →</a></span></div>
+</div>
 
-  <div class="sheet" id="close">
-    <div class="navy"></div><div class="gold"></div>
-    <div class="pad">
-      <div class="nav">
-        <a href="#cover">Cover</a>
-        <a href="#job">The job</a>
-        <a href="#embed">Embed</a>
-        <a href="#path">The path</a>
-        <a href="#agents">Agents</a>
-        <a href="#receipts">Receipts</a>
-        <a href="#founding">Founding</a>
-        <a class="on" href="#close">Close</a>
-      </div>
-      <div class="sec">08 — The first hire</div>
-      <h2>If you want the person who founds the FDE function — this is the path.</h2>
-      <p class="lede">Discovery through deployment, measurement, and ongoing support. Ambiguity is the job. I already treat it that way.</p>
-      <div class="quotes" style="margin-top:8px;">
-        <div class="q">“You have sent one of the best that Informatica has to offer in Jeremy.”<span>MF Global · infrastructure</span></div>
-        <div class="q">“I trusted that Jeremy would deliver, with quality… exceeded the expectations at someone of his grade level.”<span>Prime Therapeutics</span></div>
-      </div>
-      <div class="grid2" style="margin-top:10px;">
-        <div class="cell">
-          <h3>Contact</h3>
-          <p>Jeremy Panasuk<br>Sand Creek, WI · 715-970-0204<br>jpanasuk@gmail.com<br>linkedin.com/in/jeremy-p-34203322<br>github.com/jpanasuk-netizen</p>
-        </div>
-        <div class="cell">
-          <h3>This posting</h3>
-          <p>Carex Consulting Group · Job 6273<br>Founding Forward Deployed Engineer<br>Madison, WI · hybrid 3 days<br>Direct hire · fintech startup partner<br>carexconsulting.com/jobs/founding-forward-deployed-engineer-6273</p>
-        </div>
-      </div>
-      <div class="note" style="margin-top:12px;"><b>Operating line.</b> Customer satisfaction is worthless. Customer loyalty is priceless. That is the talk I gave on Dawn’s floor. That is how a founding FDE still shows up in Madison.</div>
-      <p style="margin-top:12px;text-align:center;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.08em;font-size:11pt;"><a href="#cover" style="color:#122033;text-decoration:none;">Back to cover</a> · <a href="#path" style="color:#122033;text-decoration:none;">The path</a> · <a href="#receipts" style="color:#122033;text-decoration:none;">Receipts</a></p>
+<!-- ========== FOUNDING + CLOSE ========== -->
+<div class="sheet" id="founding">
+  <div class="navy"></div><div class="gold"></div>
+  <div class="pad">
+    <div class="nav">
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a class="on" href="#founding">Founding</a>
     </div>
-    <div class="foot"><span><a href="#founding">← Founding</a></span><span>8 / 8 · <a href="#cover">Cover ↑</a></span></div>
+    <div class="kicker">08 — Agents I already run · Epic honesty · standing up the FDE function · close</div>
+    <h2>The stack I already run. The stack I will learn on the floor.</h2>
+    <div class="labg">
+      <div class="card"><h3><span class="n">4070</span> Private inference</h3><p>TabbyAPI EXL3, Ollama, Open WebUI, Compose + CUDA. Forced offload, VRAM pre-warm, failover. huggingface.co/jpanasuk/tabby-tavern-stack</p></div>
+      <div class="card"><h3><span class="n">27×</span> Local Grid Suite</h3><p>Discover, bench, GPU routing, SQLite, CLI + PDF. 1.39 → 37.47 tok/s. Same loop as MBFS: measure before claiming.</p></div>
+      <div class="card"><h3><span class="n">MCP</span> Dockroot</h3><p>Agents see Docker/network. Not host-root. Boundary, not the box — how you put an agent next to a bank or a clinic.</p></div>
+      <div class="card"><h3><span class="n">OpenClaw</span> Pipeline</h3><p>Systems → architect → validator on local Ollama. Structured output, repair retries. Production WhatsApp agents, 10+ skills. Failover routing.</p></div>
+    </div>
+    <div class="goldbox" style="margin-top:6px;"><div class="t">Epic Agent Factory · Art · Emmie · Penny — preferred, not claimed</div>
+    <p>No-code builder inside Epic EHR, previewed HIMSS 2026, wider 2027. Chronicles remains source of truth; Cogito Cloud; Nebula routes models. I have not shipped an agent inside Chronicles. I have shipped agents with boundaries, customer workflows with unofficial definitions, and go-lives in regulated rooms. The founding FDE learns the customer’s platform on the customer’s floor. I will treat Agent Factory like Grid/HA: embed, measure, write the standard, leave a team that can shape the next one.</p></div>
+    <h2>You are hiring the first one. I write like the second one is watching.</h2>
+    <div class="grid3">
+      <div class="cell"><h3>Standards</h3><p>Every engagement opens with a metric and an Environment Summary. Every close has a skill-up name and a QA twin. No tribal knowledge.</p></div>
+      <div class="cell"><h3>Reusable kits</h3><p>Workflow templates, agent skill patterns, integration stubs, six-class tests. Recurring pain becomes the kit, not another hero week.</p></div>
+      <div class="cell"><h3>Internal tools</h3><p>Automations that make the FDE function cheaper. I already build the tools I wish I had on night one. Then I leave them.</p></div>
+      <div class="cell"><h3>Product loop</h3><p>Field notes back to engineering weekly. If three customers hit the same wall, it is the next feature.</p></div>
+      <div class="cell"><h3>Hiring two</h3><p>This PDF is the interview. The next FDE should run pages 4–6 without me in Slack. That is how a function is founded.</p></div>
+      <div class="cell"><h3>Madison</h3><p>Hybrid 3 days onsite. I live in Sand Creek, WI. I will be in the room those three days. The customer is why.</p></div>
+    </div>
+    <div class="quotes" style="margin-top:6px;">
+      <div class="q">“You have sent one of the best that Informatica has to offer in Jeremy.”<span>MF Global · infrastructure</span></div>
+      <div class="q">“I trusted that Jeremy would deliver, with quality… exceeded the expectations at someone of his grade level.”<span>Prime Therapeutics</span></div>
+    </div>
+    <h2>Loyalty is the product after the product</h2>
+    <p>Talk given at Informatica while still embedded at Dawn. Satisfaction is the lowest acceptable service. The customer wants YES, or help to get to yes. BofA lost a lifetime over a policy click. John’s four daughters — shut up and listen. Dawn 8h→1h got used. That is a deploy, not an install. Founding FDE in Madison: the night operator is the customer. If they cannot run the agent Tuesday, I did not finish.</p>
+    <div class="grid2" style="margin-top:5px;">
+      <div class="cell"><h3>Contact</h3><p>Jeremy Panasuk · Sand Creek, WI · 715-970-0204 · jpanasuk@gmail.com<br>linkedin.com/in/jeremy-p-34203322 · github.com/jpanasuk-netizen · huggingface.co/jpanasuk</p></div>
+      <div class="cell"><h3>This posting</h3><p>Carex Consulting Group · Job 6273 · Founding Forward Deployed Engineer<br>Madison, WI · hybrid 3 days · Direct hire · fintech startup partner<br>carexconsulting.com/jobs/founding-forward-deployed-engineer-6273/</p></div>
+    </div>
+    <div class="strike" style="margin-top:6px;"><b>If you want the person who founds the FDE function — this is the path.</b> Discovery through deployment, measurement, and ongoing support. Ambiguity is the job. Customer satisfaction is worthless. Customer loyalty is priceless. 715-970-0204 · jpanasuk@gmail.com · Carex job 6273 · <a href="#resume" style="color:#c4a35a;">Back to resume</a></div>
   </div>
+  <div class="foot"><span>Agents · founding the function · close</span><span>8 / 8 · <a href="#resume">Cover ↑</a></span></div>
+</div>
 
 </body>
 </html>
