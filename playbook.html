@@ -13,13 +13,13 @@
     .sheet { width: 8.5in; height: 11in; overflow: hidden; page-break-after: always; position: relative; background: #f6f1e8; color: #122033; font-family: "Plus Jakarta Sans", Arial, sans-serif; }
     .navy { height: 6px; background: #122033; }
     .gold { height: 3px; background: #c4a35a; }
-    .pad { padding: 0.16in 0.32in 0.28in; }
+    .pad { padding: 0.12in 0.28in 0.24in; }
     .nav { display: flex; gap: 8px; flex-wrap: wrap; font-family: "IBM Plex Mono", monospace; font-size: 6.2pt; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 5px; padding-bottom: 4px; border-bottom: 1px solid #d9d0c0; }
     .nav a { color: #6a5c42; text-decoration: none; }
     .nav a.on { color: #122033; font-weight: 700; }
     .kicker { font-family: "IBM Plex Mono", monospace; font-size: 6.6pt; letter-spacing: 0.14em; text-transform: uppercase; color: #c4a35a; font-weight: 600; }
     h1 { font-size: 21pt; line-height: 0.9; font-weight: 800; letter-spacing: -0.03em; margin: 2px 0 3px; }
-    h2 { font-family: "IBM Plex Mono", monospace; font-size: 6.7pt; letter-spacing: 0.12em; text-transform: uppercase; color: #c4a35a; margin: 6px 0 3px; border-bottom: 1px solid #d9d0c0; padding-bottom: 2px; font-weight: 600; }
+    h2 { font-family: "IBM Plex Mono", monospace; font-size: 6.7pt; letter-spacing: 0.12em; text-transform: uppercase; color: #c4a35a; margin: 4px 0 2px; border-bottom: 1px solid #d9d0c0; padding-bottom: 2px; font-weight: 600; }
     h3 { font-size: 8pt; font-weight: 800; margin: 0 0 2px; }
     p { font-size: 7.4pt; line-height: 1.26; color: #2a3340; }
     .tag { font-size: 8.8pt; font-style: italic; color: #3a424c; margin: 2px 0 3px; max-width: 54ch; }
@@ -34,7 +34,7 @@
     .trusted { font-size: 6pt; color: #6a5c42; margin: 0 0 5px; white-space: nowrap; }
     .trusted b { font-family: "IBM Plex Mono", monospace; letter-spacing: 0.08em; text-transform: uppercase; font-size: 6pt; color: #c4a35a; }
     .who { font-size: 7.5pt; color: #122033; }
-    .layers, .success, .labg, .grid2, .grid3, .quotes, .awards { display: grid; gap: 5px; }
+    .layers, .success, .labg, .grid2, .grid3, .quotes, .awards { display: grid; gap: 4px; }
     .success, .layers, .grid3, .awards { grid-template-columns: 1fr 1fr 1fr; }
     .labg, .grid2, .quotes { grid-template-columns: 1fr 1fr; }
     .ok, .layer, .card, .cell, .award { background: #fff; border: 1px solid #d9d0c0; padding: 5px 7px; }
@@ -126,8 +126,65 @@
     .quote { font-size: 13pt; font-style: italic; line-height: 1.22; color: #122033; margin: 4px 0 2px; font-weight: 700; }
     .attrib { font-family: "IBM Plex Mono", monospace; font-size: 6.6pt; letter-spacing: 0.12em; text-transform: uppercase; color: #8a6d2e; margin-bottom: 6px; font-weight: 600; }
     .room { font-family: "IBM Plex Mono", monospace; font-size: 6.6pt; letter-spacing: 0.14em; text-transform: uppercase; color: #c4a35a; margin: 6px 0 4px; font-weight: 600; }
-    .listn p { font-size: 7.2pt; line-height: 1.28; margin: 0 0 4px; }
+    .listn p { font-size: 7.2pt; line-height: 1.28; margin: 0 0 3px; }
     .listn .n { font-family: "IBM Plex Mono", monospace; color: #8a6d2e; letter-spacing: 0.06em; font-weight: 700; }
+    .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-items: stretch; margin-top: 4px; }
+    .duo .ex { background: #fff; border: 1px solid #d9d0c0; padding: 8px 10px; }
+    .spine { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; margin: 4px 0 6px; }
+    .spine div { background: #122033; color: #f6f1e8; padding: 5px 4px 6px; text-align: center; font-size: 6.1pt; line-height: 1.15; position: relative; }
+    .spine div b { display: block; color: #c4a35a; font-size: 8.5pt; font-family: "IBM Plex Mono", monospace; letter-spacing: 0.04em; margin-bottom: 1px; }
+    .spine div.on { background: #c4a35a; color: #122033; }
+    .spine div.on b { color: #122033; }
+    .spine.loy div b { font-size: 7.4pt; }
+    .clip-sheet .spine div { background: #1b2b3e; color: #e8dfcc; }
+    .clip-sheet .spine div b { color: #c4a35a; }
+    .clip-sheet .spine div.on { background: #c4a35a; color: #122033; }
+    .clip-sheet .spine div.on b { color: #122033; }
+    .miles { display: flex; align-items: flex-start; justify-content: space-between; margin: 6px 0 7px; position: relative; padding-top: 2px; }
+    .miles::before { content: ""; position: absolute; left: 6%; right: 6%; top: 8px; height: 2px; background: #c4a35a; }
+    .miles .ms { flex: 1; text-align: center; position: relative; z-index: 1; }
+    .miles .ms i { display: block; width: 11px; height: 11px; background: #122033; border: 2px solid #c4a35a; border-radius: 50%; margin: 0 auto 3px; }
+    .miles .ms.on i { background: #c4a35a; }
+    .miles .ms b { display: block; font-size: 6.2pt; font-family: "IBM Plex Mono", monospace; color: #8a6d2e; letter-spacing: 0.04em; }
+    .miles .ms span { display: block; font-size: 6.3pt; line-height: 1.15; color: #122033; }
+    .clip-sheet .miles::before { background: #c4a35a; }
+    .clip-sheet .miles .ms i { background: #1b2b3e; border-color: #c4a35a; }
+    .clip-sheet .miles .ms.on i { background: #c4a35a; }
+    .clip-sheet .miles .ms b { color: #c4a35a; }
+    .clip-sheet .miles .ms span { color: #e8dfcc; }
+    .hbar { margin: 4px 0 6px; }
+    .hbar .row { display: grid; grid-template-columns: 0.85in 1fr 0.42in; gap: 5px; align-items: center; margin-bottom: 3px; }
+    .hbar .lab { font-size: 6.2pt; font-family: "IBM Plex Mono", monospace; text-transform: uppercase; color: #8a6d2e; letter-spacing: 0.04em; }
+    .hbar .trk { height: 13px; background: #ebe4d6; }
+    .hbar .fl { height: 13px; background: #122033; }
+    .hbar .fl.gold { background: #c4a35a; }
+    .hbar .val { font-size: 7pt; font-weight: 800; color: #122033; text-align: right; }
+    .clip-sheet .hbar .trk { background: #0c121c; }
+    .clip-sheet .hbar .lab, .clip-sheet .hbar .val { color: #c4a35a; }
+    .bridge { display: flex; gap: 8px; align-items: baseline; background: #122033; color: #f6f1e8; padding: 6px 8px; margin: 5px 0 0; font-size: 7.2pt; line-height: 1.28; }
+    .bridge b { color: #c4a35a; white-space: nowrap; font-family: "IBM Plex Mono", monospace; font-size: 6.4pt; letter-spacing: 0.1em; text-transform: uppercase; }
+    .clip-hero { display: grid; grid-template-columns: 1fr 1.02in; gap: 10px; align-items: start; }
+    .shot-clip { width: 1.02in; height: 1.28in; object-fit: cover; object-position: 50% 10%; border: 2px solid #c4a35a; }
+    .mgantt { display: flex; gap: 2px; height: 22px; margin: 4px 0 3px; }
+    .mgantt .b { display: flex; align-items: center; justify-content: center; text-align: center; font-size: 5.5pt; font-family: "IBM Plex Mono", monospace; text-transform: uppercase; color: #fff; padding: 0 3px; line-height: 1.05; font-weight: 600; }
+    .duo .exk { font-family: "IBM Plex Mono", monospace; font-size: 6.4pt; letter-spacing: 0.12em; text-transform: uppercase; color: #c4a35a; font-weight: 600; margin: 0 0 3px; }
+    .duo .ex h3 { font-size: 10pt; margin: 0 0 4px; line-height: 1.1; }
+    .duo .ex p { font-size: 7.3pt; line-height: 1.3; margin: 0 0 6px; }
+    .duo .ex .quote { font-size: 10pt; margin: 0 0 2px; }
+    .duo .ex .pulln { font-size: 7.5pt; margin: 0 0 6px; padding: 6px 8px; }
+    .duo .ex .goldbox { margin: 0 0 6px; }
+    .duo .ex .listn p { margin: 0 0 4px; font-size: 7.1pt; }
+    .worth { font-size: 30pt; }
+    .price { font-size: 30pt; margin: 3px 0 6px; }
+    .clip-lede { font-size: 9pt; margin: 0 0 6px; }
+    .yesline { font-size: 12pt; margin: 6px 0; }
+    .clip-stamp { margin: 4px 0 6px; }
+    .clip-sheet .pulln { font-size: 9.5pt; padding: 8px 10px; }
+    .quote { font-size: 10.5pt; margin: 2px 0 1px; }
+    .attrib { margin-bottom: 3px; }
+    .room { margin: 3px 0 3px; }
+    .pulln { padding: 5px 8px; margin: 4px 0; font-size: 7.6pt; }
+    .strike { margin-top: 4px; padding: 6px 8px; }
   </style>
 </head>
 <body>
@@ -157,6 +214,13 @@
       <div class="m"><b>WI</b><span>Madison hybrid</span></div>
     </div>
     <p class="trusted"><b>Deployed with</b> Dawn · West Bend · Navy Federal · Mercedes · Toyota · Micron · PepsiCo · Ace · Kohl’s · BNY · JPMorgan · Farmers · NWM · WR · Cargill · Harvard · Smith &amp; Nephew</p>
+    <div class="spine">
+      <div class="on"><b>01</b>Hear the floor</div>
+      <div><b>02</b>Wrangle what exists</div>
+      <div><b>03</b>Ship + leave a path</div>
+      <div><b>04</b>Measure after</div>
+      <div><b>05</b>They run Tuesday</div>
+    </div>
     <div class="viz">
       <div class="viz-head"><span class="stamp">Career timeline · drawn to scale</span><em>Analyst → Sr. Analyst twice in 4 yrs. Sr. Analyst → Program Manager in 10.</em></div>
       <div class="span-row"><div class="span-label">×2 in 4 yrs<small>Prime + Informatica</small></div><div class="span-track"><div class="arrow f4">Analyst → Sr. Analyst</div></div></div>
@@ -186,6 +250,26 @@
     </div>
     <p class="pts" style="margin-top:4px;"><b>Also retained through 2025</b> for Informatica production rescue: Grid/HA, PowerExchange CDC, IDQ, v9/v10, SOAP/REST, SOW/sizing, install-to-go-live. Ivy Funds · Fed Reserve Philly · Farmers Linux SOAP/REST · Giesecke REST/SOAP, VMs, GitHub, Docker.</p>
     <div class="fire"><h3>The fire department — founding FDE still does support</h3><p>Parachuted into 20 troubled accounts. Recovered 19. Milwaukee insurer: three-month outage closed in two days — one buried IBM DB2 driver. Monitor, troubleshoot, improve reliability. That is the job after the demo. <a href="#docs">IPS artifacts →</a></p></div>
+    <div class="duo">
+      <div class="ex">
+        <div class="exk">Floor example · Dawn Foods</div>
+        <h3>8h → 1h · featured because it got used</h3>
+        <div class="hbar">
+          <div class="row"><div class="lab">Before</div><div class="trk"><div class="fl" style="width:100%"></div></div><div class="val">8h</div></div>
+          <div class="row"><div class="lab">After</div><div class="trk"><div class="fl gold" style="width:12%"></div></div><div class="val">1h</div></div>
+        </div>
+        <p>PowerExchange for AS/400 via remote journals. Mentored env management, Type 2 warehouse, security, upgrades. Customer: OS-level knowledge let them automate sourcing outside ERP (~90% of source data). Velocity. IPS: rock star. Full story is the right column of page 4.</p>
+      </div>
+      <div class="ex">
+        <div class="exk">Floor example · Mercedes-Benz</div>
+        <h3>+200% · playbook TCS kept</h3>
+        <div class="hbar">
+          <div class="row"><div class="lab">Before</div><div class="trk"><div class="fl" style="width:40%"></div></div><div class="val">base</div></div>
+          <div class="row"><div class="lab">After</div><div class="trk"><div class="fl gold" style="width:100%"></div></div><div class="val">+200%</div></div>
+        </div>
+        <p>Parachute. Taught the on-the-ground TCS team Grid/HA. Longest-running workflows +200%. Software rec for DW growth → $500k deal. Performance-tuning docs stayed with TCS. Founding FDE: leave the path, not a hero week.</p>
+      </div>
+    </div>
     <div class="strike"><b>Carex 6273:</b> founding FDE. Customer satisfaction is worthless. Customer loyalty is priceless. That is the clip. That is the job. <a href="#line" style="color:#c4a35a;">Hear the line →</a></div>
   </div>
   <div class="foot"><span>Jeremy Panasuk · Founding FDE · Carex 6273 · Resume</span><span>1 / 11 · <a href="#resume2">Resume 2 →</a></span></div>
@@ -222,7 +306,7 @@
       <div class="n">$800k</div><div><b>Toyota</b> — Engine Management go-live. All consultants 5/5.</div>
       <div class="n">20+ nodes</div><div><b>MF Global</b> — world-first Grid/HA + DR on RHEL GFS. Four regions.</div>
       <div class="n">$2.3M+</div><div><b>BNY Mellon</b> — Grid/HA with senior VPs and CEO Sohaib Abbasi.</div>
-      <div class="n">$10M+</div><div><b>JPMorgan Chase</b> — DW / CoE roadmaps. Field back to product.</div>
+      <div class="n">Final 2</div><div><b>JPMorgan Chase</b> — EDW / CoE roadmaps. Final two proposals. Did not close.</div>
       <div class="n">$2M</div><div><b>Kohl’s</b> — v9 Grid/HA. AIX → commodity. Through S-VPs.</div>
       <div class="n">$600k</div><div><b>Smith &amp; Nephew</b> — FDA-validated platform. Control process.</div>
       <div class="n">3,000h</div><div><b>Navy Federal</b> — architecture through go-live training.</div>
@@ -250,6 +334,23 @@
     <strong>Code / data</strong> · Python · SQL · Docker · Linux/WSL2 · GitLab CI/CD · PowerCenter · Grid/HA · PWX CDC · Talend 8 · IDQ · SOAP/REST · Oracle · SQL Server · DB2<br />
     <strong>Education</strong> · BBA MIS, UW–Eau Claire 2004 · Informatica Certified Specialist: Admin, Big Data Admin, PowerCenter Developer I &amp; II<br />
     <strong>Operating line</strong> · Customer satisfaction is worthless. Customer loyalty is priceless. · <a href="#line">The clip / the talk →</a></p>
+    <div class="duo">
+      <div class="ex">
+        <div class="exk">Floor example · Kohl’s</div>
+        <h3>v9 Grid/HA · AIX → commodity · ~$2M</h3>
+        <div class="mgantt">
+          <div class="b" style="flex:2;background:#6a5c42">AIX now</div>
+          <div class="b" style="flex:3;background:#122033">v9 capacity + HA</div>
+          <div class="b" style="flex:3;background:#c4a35a;color:#122033">Commodity · ~$2M</div>
+        </div>
+        <p>Future data-platform utilization: Informatica v9 capacity + upgrade, multiple HA and Grid components. Target Grid/HA on commodity (Cisco or IBM); cutover off AIX. Current volumes + 3-year growth. Briefed through Senior VPs. ~$2M software close. POCs when VMs were not enough (DQ / MDM on their data).</p>
+      </div>
+      <div class="ex">
+        <div class="exk">Floor example · Navy Federal</div>
+        <h3>3,000-hour V1 · install through go-live tests</h3>
+        <p>Resourcing plan with Informatica RMO + NFCU HR. Hands-on: PowerCenter, Metadata Manager, Data Quality, PWX CDC for DB2 on mainframe, Web Services. Technical-stack test strategy for go-live / business acceptance. Mentored NFCU on install, services config, naming standards. Same motion years after Dawn: they can run it without you in the chair.</p>
+      </div>
+    </div>
   </div>
   <div class="foot"><span>Jeremy Panasuk · Founding FDE · Carex 6273 · Resume</span><span>2 / 11 · <a href="#line">THE CLIP →</a></span></div>
 </div>
@@ -261,20 +362,35 @@
     <div class="nav">
       <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a class="on" href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="clip-stamp">The clip · a talk given at Informatica · while still embedded at Dawn Foods · Jackson, Michigan · 2008</div>
-    <h1 class="worth">Customer satisfaction<br>is worthless.</h1>
-    <h1 class="price">Customer loyalty<br>is priceless.</h1>
-    <p class="clip-lede">Not a slogan on a careers page. The operating line I stood on in that room — Gitomer’s Teal Book of Trust — and the line I still run on every deploy. Founding FDE is this: the agent still running Tuesday, not a demo they clapped for once.</p>
-    <div class="pulln">“Once you realize that satisfaction is the lowest level of acceptable service, you at once understand the power of loyalty.”<span>Jeffrey Gitomer · Teal Book of Trust · 2008 — the line on the wall. The clip is the talk. The next two pages are what I actually said.</span></div>
-    <div class="yesline">Yes — or help to get to yes.</div>
-    <div class="grid3">
-      <div class="cell dead"><h3>Satisfaction · worthless</h3><p>A demo they clap for. CSAT they forget. An agent that ran once in a conference room. Policy. “We shipped.” Two clicks they would not make. That is the lowest acceptable service. That is how you lose a lifetime.</p></div>
-      <div class="cell"><h3>Loyalty · priceless</h3><p>Tuesday. The unofficial definition. Named skill-up. Playbook TCS kept. Dawn still quoting the OS-level line years later. Throughput they renew. The night operator still using it in month three.</p></div>
-      <div class="cell"><h3>FDE · Madison</h3><p>If the customer’s ops team cannot run the agent without you, you installed software. You did not found a function. Carex 6273 is hiring the first one. This talk is how I still show up.</p></div>
+    <div class="clip-hero">
+      <div>
+        <div class="clip-stamp">The clip · a talk given at Informatica · while still embedded at Dawn Foods · Jackson, Michigan · 2008</div>
+        <h1 class="worth">Customer satisfaction<br>is worthless.</h1>
+        <h1 class="price">Customer loyalty<br>is priceless.</h1>
+        <p class="clip-lede">Not a slogan on a careers page. The operating line I stood on in that room — Gitomer’s Teal Book of Trust — and the line I still run on every deploy. Founding FDE is this: the agent still running Tuesday, not a demo they clapped for once.</p>
+      </div>
+      <img class="shot-clip" src="assets/portrait.jpg" alt="Jeremy Panasuk" />
     </div>
-    <div class="grid2" style="margin-top:7px;">
-      <div class="cell"><h3>The Bank of America punch</h3><p>Customer since 1999. Lost card. Ben cannot click the button. Kari: policy. Two clicks would have kept a lifetime — home loan, car loan, hundreds of thousands in interest. Gone. They wanted policy. I wanted yes. <a href="#talk" style="color:#c4a35a;">The story →</a></p></div>
-      <div class="cell"><h3>Diamond Rule · Patterson, 1908</h3><p>If you wouldn’t want it done to you, don’t do it to someone else. A workflow that “works in UAT” is satisfaction. The night operator still using it in month three is loyalty. Founding FDE never leaves them with “the model can’t.”</p></div>
+    <div class="pulln">“Once you realize that satisfaction is the lowest level of acceptable service, you at once understand the power of loyalty.”<span>Jeffrey Gitomer · Teal Book of Trust · 2008 — the line on the wall. Two complete examples on the next page.</span></div>
+    <div class="yesline">Yes — or help to get to yes.</div>
+    <div class="spine loy">
+      <div><b>Like</b>John’s kids</div>
+      <div><b>Believe</b>Trillium lunch</div>
+      <div><b>Trust</b>the list of 6</div>
+      <div><b>Confidence</b>quick hit</div>
+      <div class="on"><b>Buy</b>they may</div>
+    </div>
+    <div class="miles">
+      <div class="ms"><i></i><b>1999</b><span>BofA customer</span></div>
+      <div class="ms on"><i></i><b>2008</b><span>This talk · Dawn</span></div>
+      <div class="ms"><i></i><b>8h→1h</b><span>Featured · used</span></div>
+      <div class="ms"><i></i><b>2017</b><span>Four floors</span></div>
+      <div class="ms"><i></i><b>2026</b><span>Founding FDE</span></div>
+    </div>
+    <div class="grid3">
+      <div class="cell dead"><h3>Satisfaction · worthless</h3><p>A demo they clap for. CSAT they forget. An agent that ran once in a conference room. Policy. “We shipped.” Two clicks they would not make.</p></div>
+      <div class="cell"><h3>Loyalty · priceless</h3><p>Tuesday. Named skill-up. Playbook TCS kept. Dawn still quoting the OS-level line. Throughput they renew. Night operator, month three.</p></div>
+      <div class="cell"><h3>FDE · Madison</h3><p>If ops cannot run the agent without you, you installed software. You did not found a function. This talk is how I still show up.</p></div>
     </div>
     <h2>The list we held ourselves to · still the FDE close</h2>
     <div class="grid3">
@@ -290,84 +406,122 @@
   <div class="foot"><span>The clip · customer satisfaction is worthless · customer loyalty is priceless</span><span>3 / 11 · <a href="#talk">Talk →</a></span></div>
 </div>
 
-<!-- ========== THE TALK · BofA + DAWN ========== -->
+<!-- ========== THE TALK · TWO EXAMPLES ========== -->
 <div class="sheet" id="talk">
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
       <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a class="on" href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="kicker">04 · The talk · Opening · Winning customers for life · what I said in the room</div>
-    <p class="quote">“Nothing happens until a sale is made.”</p>
-    <div class="attrib">Red Motley · 1946</div>
-    <div class="room">What I said in the room</div>
-    <p>Yesterday I had a problem with one of my accounts at Bank of America. I had been with them since 1999 — all of my adult life. To sign up they gave me an MSOE T-shirt. Freshman year, that was more than enough to sign just about anything. I called and asked them to take 30-day and 60-day past-due notices off the account because of a lost or stolen card. Which of course was lost or stolen.</p>
-    <p>I get Ben on the phone. Obligatory hold. Ten minutes later he comes back: he can’t click the button, but he can transfer me to Kari. I told him his iSeries profile was probably set up wrong by some goof in IT. He clicked me over fast. On hold for Kari I am already dreaming — car loan, the condo in Wrigleyville, Cubs tickets if the stock hits $20. If I won the mega-millions I would still stay at Informatica and keep working hard at Dawn. Kari greets me curt. Policy: report the credit accurately. She cannot help.</p>
-    <div class="pulln">The customer could care less about you, your company, or your company policy — and even less about why you can’t give them what they want. They want YES, or help to get to yes. If you can’t help them, they will go someplace else — and take their money and their word of mouth with them.</div>
-    <div class="goldbox"><div class="t">The Diamond Rule of Service · Patterson, 1908</div>
-    <p>If you wouldn’t want it done to you, don’t do it to someone else. BofA could have kept me for life with two clicks — home loan, car loan, hundreds of thousands in interest. Because of a “policy,” I was gone. Satisfaction is the lowest acceptable service. Loyalty is a process, not a single action. The people who earn it get past success. They get to fulfillment.</p></div>
-    <h2>Day by day · Dawn Foods · Jackson, Michigan</h2>
-    <p class="quote" style="font-size:11pt;">“You don’t earn loyalty in a day. You earn loyalty day-by-day.”</p>
-    <div class="attrib">Jeffrey Gitomer</div>
-    <p>Easy to say. Hard to do. I had been working at Dawn Foods in sparkling Jackson, Michigan. Highest unemployment in the United States at the time — something approaching 10%, and that only counts people “actively looking.” Jackson County was the worst in the state. Some economists put it at 12–14%. Customer loyalty in Jackson may mean the difference between staying in business and the unemployment line. So think about who pays you.</p>
-    <div class="pulln">“The president, CEO, or owner of your company does not pay you. It’s your customer that pays you. Your kids eat because customers buy. If your customers don’t buy, your kids don’t eat.”<span>Gitomer · The Sales Bible · 1993</span></div>
-    <p>Once you know who pays you, it is obvious: satisfaction is the minimum amount of service we can deliver. I was not in Jackson to be satisfactory. I was there so Dawn would still want Informatica in the building when I was gone — and so the warehouse load that used to take eight hours would take one. That is loyalty you can measure. They put it on informatica.com. They still quote it: “His knowledge not only of the Informatica suite but also at the operating system level has been truly invaluable.” IPS said I was a rock star out at Dawn. That is not a personality. That is day-by-day.</p>
-    <div class="goldbox"><div class="t">Why Carex’s founding FDE should care</div>
-    <p>Satisfaction is a demo they clap for once. Loyalty is the agent — human or AI — still using what you launched on Tuesday. Dawn 8h→1h got used. That is a deploy, not an install. Founding FDE never leaves the customer with “the model can’t.” Find the path. <a href="#talk2">Like, believe, trust, confidence →</a></p></div>
-    <div class="grid3" style="margin-top:8px;">
-      <div class="cell"><h3>8h → 1h · used</h3><p>Warehouse load. Featured on informatica.com because the number moved. Not a CSAT score they forget. Throughput they still quote. “Rock star out at Dawn” was the sales team leaning on the floor, not a personality.</p></div>
-      <div class="cell"><h3>Two clicks · gone</h3><p>BofA lost a lifetime over a policy they would not override. Home loan. Car loan. Word of mouth. Founding FDE: if the night operator cannot run the agent, you left them with Kari’s policy.</p></div>
-      <div class="cell"><h3>Who pays you</h3><p>Not the CEO. The customer. Kids eat because customers buy. Madison hybrid 3 days because the customer is in the room. Sand Creek to Madison is the same motion as Jackson.</p></div>
+    <div class="kicker">04 · Two complete examples · left column all the way down, then the right · same motion</div>
+    <div class="spine">
+      <div><b>01</b>Hear the floor</div>
+      <div><b>02</b>Wrangle what exists</div>
+      <div><b>03</b>Ship + leave a path</div>
+      <div class="on"><b>04</b>Measure after</div>
+      <div><b>05</b>They run Tuesday</div>
     </div>
+    <div class="duo">
+      <div class="ex">
+        <div class="exk">Example 1 · they wanted policy · I wanted yes</div>
+        <h3>Bank of America · two clicks · gone</h3>
+        <p class="quote">“Nothing happens until a sale is made.”</p>
+        <div class="attrib">Red Motley · 1946 · what I said in the room</div>
+        <p>Yesterday I had a problem with one of my accounts at Bank of America. I had been with them since 1999 — all of my adult life. To sign up they gave me an MSOE T-shirt. Freshman year, that was more than enough to sign just about anything. I called and asked them to take 30-day and 60-day past-due notices off the account because of a lost or stolen card. Which of course was lost or stolen.</p>
+        <p>I get Ben on the phone. Obligatory hold. Ten minutes later he comes back: he can’t click the button, but he can transfer me to Kari. I told him his iSeries profile was probably set up wrong by some goof in IT. He clicked me over fast. On hold for Kari I am already dreaming — car loan, the condo in Wrigleyville, Cubs tickets if the stock hits $20. Kari greets me curt. Policy: report the credit accurately. She cannot help.</p>
+        <div class="miles">
+          <div class="ms"><i></i><b>1999</b><span>MSOE T-shirt</span></div>
+          <div class="ms"><i></i><b>Hold</b><span>Ben · no click</span></div>
+          <div class="ms on"><i></i><b>Kari</b><span>Policy</span></div>
+          <div class="ms"><i></i><b>Gone</b><span>Lifetime lost</span></div>
+        </div>
+        <div class="pulln">The customer could care less about you, your company, or your company policy — and even less about why you can’t give them what they want. They want YES, or help to get to yes. If you can’t help them, they will go someplace else — and take their money and their word of mouth with them.</div>
+        <div class="goldbox end"><div class="t">Diamond Rule of Service · Patterson, 1908</div>
+        <p>If you wouldn’t want it done to you, don’t do it to someone else. BofA could have kept me for life with two clicks — home loan, car loan, hundreds of thousands in interest. Because of a “policy,” I was gone. Satisfaction is the lowest acceptable service. Loyalty is a process, not a single action. Founding FDE: if the night operator cannot run the agent, you left them with Kari’s policy. Never leave the customer with “the model can’t.” Find the path. This column is the whole example.</p></div>
+      </div>
+      <div class="ex">
+        <div class="exk">Example 2 · day by day · who pays you</div>
+        <h3>Dawn Foods · Jackson · 8 hours → 1</h3>
+        <p class="quote">“You don’t earn loyalty in a day. You earn loyalty day-by-day.”</p>
+        <div class="attrib">Jeffrey Gitomer · what I said in the room</div>
+        <p>Easy to say. Hard to do. I had been working at Dawn Foods in sparkling Jackson, Michigan. Highest unemployment in the United States at the time — something approaching 10%, and that only counts people “actively looking.” Jackson County was the worst in the state. Some economists put it at 12–14%. Customer loyalty in Jackson may mean the difference between staying in business and the unemployment line. So think about who pays you.</p>
+        <div class="pulln">“The president, CEO, or owner of your company does not pay you. It’s your customer that pays you. Your kids eat because customers buy. If your customers don’t buy, your kids don’t eat.”<span>Gitomer · The Sales Bible · 1993</span></div>
+        <p>Once you know who pays you, it is obvious: satisfaction is the minimum. I was not in Jackson to be satisfactory. I was there so Dawn would still want Informatica in the building when I was gone — and so the warehouse load that used to take eight hours would take one.</p>
+        <div class="hbar">
+          <div class="row"><div class="lab">Before</div><div class="trk"><div class="fl" style="width:100%"></div></div><div class="val">8h</div></div>
+          <div class="row"><div class="lab">After</div><div class="trk"><div class="fl gold" style="width:12%"></div></div><div class="val">1h</div></div>
+        </div>
+        <div class="miles">
+          <div class="ms"><i></i><b>Embed</b><span>Jackson floor</span></div>
+          <div class="ms"><i></i><b>Journals</b><span>PWX AS/400</span></div>
+          <div class="ms on"><i></i><b>8h→1h</b><span>The number</span></div>
+          <div class="ms"><i></i><b>Featured</b><span>informatica.com</span></div>
+        </div>
+        <p>Mentored env management, Type 2 warehouse, reporting staff. They still quote it: “His knowledge not only of the Informatica suite but also at the operating system level has been truly invaluable.” OS-level knowledge let them automate sourcing outside ERP — about 90% of source data. IPS: rock star. That is day-by-day.</p>
+        <div class="goldbox end"><div class="t">Why Carex’s founding FDE should care</div>
+        <p>Satisfaction is a demo they clap for once. Loyalty is the agent still using what you launched on Tuesday. Dawn 8h→1h got used. That is a deploy, not an install. This column is the whole example. Next page: two more, same pattern.</p></div>
+      </div>
+    </div>
+    <div class="bridge"><b>Same motion</b> Left: a policy lost a lifetime. Right: a number they still quote. Next page — like → believe → trust → confidence. The picture is one process.</div>
   </div>
-  <div class="foot"><span>The talk · Bank of America · Dawn · who pays you</span><span>4 / 11 · <a href="#talk2">Talk 2 →</a></span></div>
+  <div class="foot"><span>Two examples · Bank of America · Dawn Foods</span><span>4 / 11 · <a href="#talk2">Talk 2 →</a></span></div>
 </div>
 
-<!-- ========== THE TALK · LIKE / BELIEVE / TRUST ========== -->
+<!-- ========== THE TALK · TWO MORE EXAMPLES ========== -->
 <div class="sheet" id="talk2">
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
       <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a class="on" href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="kicker">05 · If they like you · believe in you · trust you · have confidence in you</div>
-    <p class="quote" style="font-size:11pt;">“You can make more friends in two months by becoming interested in other people than you can in two years by trying to get other people interested in you.”</p>
-    <div class="attrib">Dale Carnegie · How to Win Friends and Influence People · 1936</div>
-    <div class="grid2">
-      <div class="cell">
-        <h3>John’s four daughters · shut up and listen</h3>
+    <div class="kicker">05 · Two complete examples · left column all the way down, then the right · last slide on the right</div>
+    <div class="spine loy">
+      <div class="on"><b>Like</b>John’s kids</div>
+      <div><b>Believe</b>Trillium lunch</div>
+      <div><b>Trust</b>the list of 6</div>
+      <div><b>Confidence</b>quick hit</div>
+      <div><b>Buy</b>they may</div>
+    </div>
+    <div class="duo">
+      <div class="ex">
+        <div class="exk">Example 3 · if they like you · shut up and listen</div>
+        <h3>John’s four daughters · trusted advisor</h3>
+        <p class="quote">“You can make more friends in two months by becoming interested in other people than you can in two years by trying to get other people interested in you.”</p>
+        <div class="attrib">Dale Carnegie · How to Win Friends and Influence People · 1936</div>
         <p>The BI lead architect at Dawn, John, has four daughters. Sam in the Navy, in Japan. Amanda in 7th grade, just started track — 100-meter hurdles. Jordan at Georgia Tech. Darby living with her mom because she doesn’t like Dad’s rules. John’s line: “The Marines prepared me for everything except four teenage girls in the house at the same time.”</p>
-        <p>I am not wasting your time. This is the hardest thing I do. Shut up and listen. Ask questions. Carnegie said it. Robert Greene said it as Law 4: always say less than necessary. Being liked leads to being a trusted advisor. That is the first part of a buying atmosphere.</p>
+        <p>I am not wasting your time. This is the hardest thing I do. For me, anyway. Shut up and listen. Ask questions. Carnegie said it. Robert Greene said it as Law 4: always say less than necessary. The more you talk, the more common you appear. Being liked leads to being a trusted advisor. That is the first part of a buying atmosphere.</p>
+        <div class="goldbox"><div class="t">People love to buy. They hate to spend.</div>
+        <p>Buying a beer? Love. Buying a car? Love. “How much do I have to spend to get that part replaced?” Hate. Your favorite bar raises the price fifty cents. Does price still matter? All things being equal, people want to do business with their friends. All things not being equal — they still do. Gitomer, Little Black Book of Networking, 2007.</p></div>
+        <p class="end">I knew John’s kids because I asked. That is not a trick. That is the work. A fintech floor will have unofficial definitions of a good workflow and a night operator who invented the workaround in 2011. If you do not listen, you will ship a dashboard. If you listen, they will actually use what you launched. This column is the whole example.</p>
       </div>
-      <div class="cell">
-        <h3>People love to buy. They hate to spend.</h3>
-        <p>Buying a beer? Love. Buying a car? Love. “How much do I have to spend to get that part replaced?” Hate. Your favorite bar raises the price fifty cents. Does price still matter? All things being equal, people want to do business with their friends. All things not being equal — they still do. Gitomer, Little Black Book of Networking, 2007.</p>
-        <p>I knew John’s kids because I asked. That is not a trick. That is the work. A fintech floor will have unofficial definitions of a good workflow and a night operator who invented the workaround in 2011. If you do not listen, you will ship a dashboard. If you listen, they will actually use what you launched.</p>
+      <div class="ex">
+        <div class="exk">Example 4 · believe · trust · confidence</div>
+        <h3>Trillium did not even get a proposal</h3>
+        <p>When you are on the client site and they believe in you, they start believing in the platform. You represent the entire enterprise. At Dawn, because of their belief in Informatica, John told Trillium they were not interested. They would go with Informatica’s data-quality solution when the funds were there. How do I know? He told me. Over lunch. Why? Because he trusts me. Why does he trust me? Because we established a friendship. He was telling our competitors he did not even want a proposal. That is not a close. That is a relationship that closed the next product by itself.</p>
+        <p><b>The list we held ourselves to.</b> At Dawn a lot of things were going wrong — process and people. I did not skirt it. Gene and I delivered documentation above what was expected. On site before they arrived and after they left. Weekly email on milestones. Dawn had a sincere lack of project management — Velocity plans and WBS for BI were a major value-add.</p>
+        <div class="listn">
+          <p><span class="n">01</span> <b>Tell the truth.</b> Once truth is violated, trust evaporates and may never return.</p>
+          <p><span class="n">02</span> <b>Deliver what you promise.</b> People hope you will. Then they measure you.</p>
+          <p><span class="n">03</span> <b>Do what you say you will do.</b> Reliability is the test.</p>
+          <p><span class="n">04</span> <b>Communicate in a timely manner.</b> Rapid response shows you care.</p>
+          <p><span class="n">05</span> <b>Bring value beyond the product.</b> What you do to help them succeed is your character.</p>
+          <p><span class="n">06</span> <b>Be on time.</b> Respect for their clock. Give away what you want. If you want trust, trust them.</p>
+        </div>
+        <p>Confidence is built on work you already did. Quick hit: PowerCenter 8.6 up. When MDM install problems hit, they already believed we would resolve it. An index over an update mapping increased confidence tremendously. Then you build confidence in <em>their</em> ability to do it next time without you in the chair. Navy Federal was the same motion years later: scope the 3,000-hour V1, install, test, train, wrap, finish ahead.</p>
+        <div class="mgantt">
+          <div class="b" style="flex:2;background:#122033">8.6 up</div>
+          <div class="b" style="flex:2;background:#8a6d2e">MDM snag</div>
+          <div class="b" style="flex:2;background:#c4a35a;color:#122033">Index</div>
+          <div class="b" style="flex:3;background:#122033">They run it</div>
+        </div>
+        <p class="quote">If they like you, and they believe in you, and they trust you, and they have confidence in you… then they <em>may</em> buy from you.</p>
+        <div class="attrib">Gitomer · The Sales Bible · 1993 · last slide · people love to buy, but they hate to be sold</div>
       </div>
     </div>
-    <h2>And they believe in you</h2>
-    <p>When you are on the client site and they believe in you, they start believing in the platform. You represent the entire enterprise. At Dawn, because of their belief in Informatica, John told Trillium they were not interested. They would go with Informatica’s data-quality solution when the funds were there. How do I know? He told me. Over lunch. Why? Because he trusts me. Why does he trust me? Because we established a friendship. He was telling our competitors he did not even want a proposal. That is not a close. That is a relationship that closed the next product by itself.</p>
-    <h2>And they trust you · the list we held ourselves to</h2>
-    <div class="listn">
-      <p><span class="n">01</span> <b>Tell the truth.</b> Once truth is violated, trust evaporates and may never return. At Dawn a lot of things were going wrong — process and people. I did not skirt it.</p>
-      <p><span class="n">02</span> <b>Deliver what you promise.</b> People hope you will. Then they measure you. Gene and I delivered documentation above what was expected.</p>
-      <p><span class="n">03</span> <b>Do what you say you will do.</b> Reliability is the test. On site before they arrived and after they left. Weekly email on milestones.</p>
-      <p><span class="n">04</span> <b>Communicate in a timely manner.</b> Rapid response shows you care. Friendship is not extra. It is the channel.</p>
-      <p><span class="n">05</span> <b>Bring value beyond the product.</b> Dawn had a sincere lack of project management. Velocity plans and WBS for BI were a major value-add.</p>
-      <p><span class="n">06</span> <b>Be on time.</b> Respect for their clock. Proof you are reliable. Give away what you want. If you want trust, trust them. Gitomer.</p>
-    </div>
-    <h2>And they have confidence in you</h2>
-    <p>Confidence is built on work you already did. At Dawn we started with the easiest thing: a quick hit to get PowerCenter 8.6 up. When we hit problems installing MDM, they already had confidence we would resolve it. Adding an index over a mapping that did an update increased confidence tremendously. Then you build confidence in the customer’s ability to do it next time without you in the chair.</p>
-    <p class="quote" style="font-size:11pt;margin-top:6px;">If they like you, and they believe in you, and they trust you, and they have confidence in you… then they <em>may</em> buy from you.</p>
-    <div class="attrib">Gitomer · The Sales Bible · 1993 · last slide · people love to buy, but they hate to be sold</div>
-    <div class="grid3" style="margin-top:6px;">
-      <div class="cell"><h3>Like</h3><p>John’s daughters. Shut up and listen. A fintech floor will have unofficial definitions and a night operator who invented the workaround in 2011. If you do not ask, you ship a dashboard.</p></div>
-      <div class="cell"><h3>Believe / trust</h3><p>Trillium did not even get a proposal. Tell the truth. Deliver. Show up. Communicate. Value beyond the product. Be on time. Friendship is the channel, not extra.</p></div>
-      <div class="cell"><h3>Confidence</h3><p>Quick win. Hard problem. They watch you stay. Then they can stay. Navy Federal was the same motion years later: scope, install, test, train, wrap, finish ahead.</p></div>
-    </div>
-    <div class="strike" style="margin-top:6px;"><b>Customer satisfaction is worthless. Customer loyalty is priceless.</b> That was the title in 2008. That is still the job. Founding FDE in Madison: the night operator is the customer. If they cannot run the agent Tuesday, I did not finish. <a href="#job" style="color:#c4a35a;">Job mapped →</a></div>
+    <div class="bridge"><b>Same motion</b> Left: shut up and listen. Right: they told the competitor no. Last slide is the job — founding FDE in Madison is this process, not a demo.</div>
+    <div class="strike"><b>Customer satisfaction is worthless. Customer loyalty is priceless.</b> That was the title in 2008. That is still the job. Founding FDE in Madison: the night operator is the customer. If they cannot run the agent Tuesday, I did not finish. <a href="#job" style="color:#c4a35a;">Job mapped →</a></div>
   </div>
-  <div class="foot"><span>The talk · like · believe · trust · confidence · last slide</span><span>5 / 11 · <a href="#job">Job →</a></span></div>
+  <div class="foot"><span>Two examples · John · Trillium · last slide</span><span>5 / 11 · <a href="#job">Job →</a></span></div>
 </div>
 
 <!-- ========== JOB + TOC ========== -->
@@ -378,12 +532,19 @@
       <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a class="on" href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
     <div class="kicker">06 — Carex 6273 · fintech startup partner · Madison WI hybrid · click any line</div>
-    <h1 style="font-size:16pt;margin:4px 0 6px;">The playbook they asked the founding FDE to write</h1>
+    <div class="spine">
+      <div class="on"><b>01</b>Hear the floor</div>
+      <div class="on"><b>02</b>Wrangle what exists</div>
+      <div class="on"><b>03</b>Ship + leave a path</div>
+      <div class="on"><b>04</b>Measure after</div>
+      <div class="on"><b>05</b>They run Tuesday</div>
+    </div>
+    <h1 style="font-size:15pt;margin:2px 0 4px;">The playbook they asked the founding FDE to write</h1>
     <div class="toc">
       <a href="#resume"><span class="n">01–02</span><span>Two-page resume · timeline · lab · receipts</span><span class="pg">p. 1–2</span></a>
       <a href="#line"><span class="n">03</span><span>THE CLIP · Customer satisfaction is worthless. Customer loyalty is priceless.</span><span class="pg">p. 3</span></a>
-      <a href="#talk"><span class="n">04</span><span>THE TALK · Bank of America · Dawn · who pays you</span><span class="pg">p. 4</span></a>
-      <a href="#talk2"><span class="n">05</span><span>THE TALK · like · believe · trust · last slide</span><span class="pg">p. 5</span></a>
+      <a href="#talk"><span class="n">04</span><span>THE TALK · two examples · Bank of America · Dawn Foods</span><span class="pg">p. 4</span></a>
+      <a href="#talk2"><span class="n">05</span><span>THE TALK · two examples · John · Trillium · last slide</span><span class="pg">p. 5</span></a>
       <a href="#job"><span class="n">06</span><span>Job mapped · what you’ll do / what you’ll bring</span><span class="pg">p. 6</span></a>
       <a href="#docs"><span class="n">07</span><span>IPS documentation standards · Env Summary, Roadmap, Phase, v10 deck</span><span class="pg">p. 7</span></a>
       <a href="#perf"><span class="n">08</span><span>Performance methodology · MBFS cheat sheet · isolation tests</span><span class="pg">p. 8</span></a>
@@ -411,6 +572,30 @@
     </div>
     <div class="goldbox" style="margin-top:6px;"><div class="t">Epic Agent Factory — preferred, not claimed</div>
     <p>No-code builder inside Epic EHR (HIMSS 2026 preview; wider 2027). Art / Emmie / Penny personas. I have not deployed an agent inside Chronicles. I have deployed agents with boundaries, customer workflows, and go-lives in regulated rooms (Navy Federal, Smith &amp; Nephew FDA, Prime Medicare). I will take Agent Factory like Grid/HA: embed, measure, write the standard.</p></div>
+    <div class="duo">
+      <div class="ex">
+        <div class="exk">Mapped example · Dawn</div>
+        <h3>Define success before · measure after</h3>
+        <p>Warehouse load 8h→1h. Featured because the number moved. Unofficial definitions. Night workaround. Mentored the team that kept running it. That is “partner with customers, design/configure/build/deploy/support” on this posting.</p>
+      </div>
+      <div class="ex">
+        <div class="exk">Mapped example · Navy Federal</div>
+        <h3>Leave a kit the next person can run</h3>
+        <p>3,000-hour V1. Install, services, naming standards, go-live tests written down. Mentored NFCU so they could operate it. Recurring pain became the kit. That is “translate needs into reusable playbooks” on this posting.</p>
+      </div>
+    </div>
+    <div class="duo">
+      <div class="ex">
+        <div class="exk">Mapped example · Mercedes-Benz</div>
+        <h3>Playbook stayed · TCS ran it</h3>
+        <p>Parachute. Taught TCS Grid/HA on the floor. Longest workflows +200%. $500k DW growth rec. Tuning docs left behind. Recurring pain became the kit — not another hero week.</p>
+      </div>
+      <div class="ex">
+        <div class="exk">Mapped example · MF Global</div>
+        <h3>World-first Grid/HA · they asked for me by name</h3>
+        <p>20+ nodes India / UK / New York / Chicago. RHEL GFS + PowerCenter Grid/HA. Built DR, ran the US DR test. “One of the best that Informatica has to offer.” Relationship is the channel.</p>
+      </div>
+    </div>
   </div>
   <div class="foot"><span>Jeremy Panasuk · Founding FDE playbook · Carex 6273</span><span>6 / 11 · <a href="#docs">Docs →</a></span></div>
 </div>
@@ -423,6 +608,13 @@
       <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a class="on" href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
     <div class="kicker">07 — Real-world documentation standards · IPS artifacts 2017 floor · hostnames off this copy</div>
+    <div class="spine">
+      <div><b>01</b>Hear the floor</div>
+      <div><b>02</b>Wrangle what exists</div>
+      <div class="on"><b>03</b>Ship + leave a path</div>
+      <div><b>04</b>Measure after</div>
+      <div><b>05</b>They run Tuesday</div>
+    </div>
     <p class="who" style="margin-bottom:5px;">The parachute was never a hero hour. It was a written operating path: what is running, what is on fire, what to change, how to prove go-live, who on the customer team can run it after you leave. Same loop the RTX lab uses now. Author: Jeremy Panasuk, Informatica Professional Services.</p>
     <div class="grid2">
       <div class="cell">
@@ -490,6 +682,13 @@
     </div>
     <div class="kicker">08 — Real-world performance · left inside the MBFS Environment Summary · same loop as GPU routing</div>
     <p class="who">A baseline that is allowed to be slow. A goal. One change between runs. Notes that make the next person dangerous. Thread statistics before folklore. Do not partition until a single partition is understood. The filesystem is often the real Grid/HA product.</p>
+    <div class="spine">
+      <div><b>01</b>Hear the floor</div>
+      <div><b>02</b>Wrangle what exists</div>
+      <div><b>03</b>Ship + leave a path</div>
+      <div class="on"><b>04</b>Measure after</div>
+      <div><b>05</b>They run Tuesday</div>
+    </div>
     <div class="loop">
       <div><b>1</b>Establish baseline</div>
       <div><b>2</b>Set a goal</div>
@@ -527,6 +726,10 @@
       <div class="cell"><h3>OS evidence</h3><p>vmstat and sar. Low %idle = CPU. Non-zero si/so or page-outs = memory. Sustained %wio = disk. Notes: session time, rows/sec, config delta, CPU and disk.</p></div>
     </div>
     <div class="fire" style="margin-top:6px;"><h3>MBFS · Mercedes-Benz Financial · Jun 2017 · the cheat sheet that stayed</h3>
+    <div class="hbar">
+      <div class="row"><div class="lab">CPU before</div><div class="trk"><div class="fl" style="width:100%"></div></div><div class="val">100%</div></div>
+      <div class="row"><div class="lab">After cache</div><div class="trk"><div class="fl gold" style="width:72%"></div></div><div class="val">−20–30%</div></div>
+    </div>
     <p>ALFA→ODS at 100% CPU. Cache RAM raised so large transformations stop spilling to disk — 20–30% runtime drop. PWX CDC POC vs bulk load. GFS2 flock gap. Knowledge transfer walked ALFA→ODS, ODS→flat file, ODS→warehouse — not a PDF dump after the fact. Same loop as Local Grid Suite: baseline allowed to be slow, one change, notes the next FDE can run. <a href="#upgrade">Upgrade path →</a></p></div>
     <p class="pts" style="margin-top:5px;"><b>Founding FDE translation:</b> Agent latency, workflow duration, prior-auth cycle time, tok/s — same five steps. Measure before you add another agent. Do not change three prompts between runs.</p>
   </div>
@@ -541,7 +744,19 @@
       <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a class="on" href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
     <div class="kicker">09 — Pick the type. Then test like go-live depends on it. · PC 10 deck + coaching</div>
+    <div class="spine">
+      <div><b>01</b>Hear the floor</div>
+      <div><b>02</b>Wrangle what exists</div>
+      <div class="on"><b>03</b>Ship + leave a path</div>
+      <div><b>04</b>Measure after</div>
+      <div><b>05</b>They run Tuesday</div>
+    </div>
     <p class="who">The v10 overview is the coaching deck. The roadmap is the customer-specific evidence. Together they stop an account from “just running the installer.” Founding FDE: stop a fintech from “just turning on the agent.”</p>
+    <div class="mgantt">
+      <div class="b" style="flex:2;background:#122033">In-place · short</div>
+      <div class="b" style="flex:3;background:#8a6d2e">Parallel · new names</div>
+      <div class="b" style="flex:2;background:#c4a35a;color:#122033">Clone · like-for-like</div>
+    </div>
     <table>
       <thead><tr><th>When</th><th>Type</th><th>Why</th></tr></thead>
       <tbody>
@@ -592,6 +807,25 @@
       <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a class="on" href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
     <div class="kicker">10 — Four floors. Same playbook. Anonymized xyz copies were teaching templates. Named copies are the work.</div>
+    <div class="spine">
+      <div class="on"><b>01</b>Hear the floor</div>
+      <div class="on"><b>02</b>Wrangle what exists</div>
+      <div class="on"><b>03</b>Ship + leave a path</div>
+      <div class="on"><b>04</b>Measure after</div>
+      <div class="on"><b>05</b>They run Tuesday</div>
+    </div>
+    <div class="miles">
+      <div class="ms on"><i></i><b>Apr 2017</b><span>NWM · P1</span></div>
+      <div class="ms"><i></i><b>Jun 2017</b><span>MBFS · 20–30%</span></div>
+      <div class="ms"><i></i><b>Jun 2017</b><span>WR · v9→v10</span></div>
+      <div class="ms"><i></i><b>Oct 2017</b><span>Farmers · Phase 2</span></div>
+    </div>
+    <div class="mgantt">
+      <div class="b" style="flex:2;background:#122033">NWM Env Summary</div>
+      <div class="b" style="flex:2;background:#c4a35a;color:#122033">MBFS cheat sheet</div>
+      <div class="b" style="flex:2;background:#8a6d2e">WR Roadmap v3</div>
+      <div class="b" style="flex:3;background:#122033">Farmers Phase 2</div>
+    </div>
     <div class="grid2" style="margin-bottom:6px;">
       <div class="cell"><h3>P1 · Northwestern Mutual · Apr 2017</h3><p>QA/prod domains brought to best practice (ulimit 64k, DB2 repo settings, concurrent jobs 500, heap, stale NFS logs). P1 workflow-start delay: GCS escalation, DB2 semaphore on the Informatica client. Grid/HA TCO path and a QA twin of production. Artifact: PowerCenter Environment Summary.</p></div>
       <div class="cell"><h3>20–30% · Mercedes-Benz Financial · Jun 2017</h3><p>ALFA→ODS at 100% CPU. Cache RAM raised so large transformations stop spilling to disk — 20–30% runtime drop. PWX CDC POC vs bulk load. GFS2 flock gap. Performance cheat sheet and load walkthroughs left with the team. Artifact: Environment Summary + cheat sheet.</p></div>
@@ -605,7 +839,7 @@
       <div class="n">+200%</div><div><b>Mercedes-Benz</b> — longest workflows. TCS kept the path.</div>
       <div class="n">7,000h</div><div><b>Micron</b> — 2,080→7,000. $3M extensions. Zero downtime.</div>
       <div class="n">$2.3M+</div><div><b>BNY</b> — Grid/HA. Senior VPs + CEO in the room.</div>
-      <div class="n">$10M+</div><div><b>JPMorgan</b> — DW / CoE roadmaps. Field → product.</div>
+      <div class="n">Final 2</div><div><b>JPMorgan</b> — EDW / CoE roadmaps. Final two proposals. Did not close.</div>
       <div class="n">20+ nodes</div><div><b>MF Global</b> — world-first Grid/HA + DR. Four regions.</div>
       <div class="n">3,000h</div><div><b>Navy Federal</b> — architecture through go-live tests.</div>
       <div class="n">v9</div><div><b>Harvard</b> — Version 9. Solaris off-load. Hypercare plan.</div>
@@ -630,10 +864,22 @@
       <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a class="on" href="#founding">Founding</a>
     </div>
     <div class="kicker">11 — Agents I already run · Epic honesty · standing up the FDE function · close</div>
+    <div class="spine">
+      <div><b>01</b>Hear the floor</div>
+      <div><b>02</b>Wrangle what exists</div>
+      <div><b>03</b>Ship + leave a path</div>
+      <div><b>04</b>Measure after</div>
+      <div class="on"><b>05</b>They run Tuesday</div>
+    </div>
     <h2>The stack I already run. The stack I will learn on the floor.</h2>
     <div class="labg">
       <div class="card"><h3><span class="n">4070</span> Private inference</h3><p>TabbyAPI EXL3, Ollama, Open WebUI, Compose + CUDA. Forced offload, VRAM pre-warm, failover. huggingface.co/jpanasuk/tabby-tavern-stack</p></div>
-      <div class="card"><h3><span class="n">27×</span> Local Grid Suite</h3><p>Discover, bench, GPU routing, SQLite, CLI + PDF. 1.39 → 37.47 tok/s. Same loop as MBFS: measure before claiming.</p></div>
+      <div class="card"><h3><span class="n">27×</span> Local Grid Suite</h3>
+        <div class="hbar">
+          <div class="row"><div class="lab">Cold</div><div class="trk"><div class="fl" style="width:8%"></div></div><div class="val">1.39</div></div>
+          <div class="row"><div class="lab">Routed</div><div class="trk"><div class="fl gold" style="width:100%"></div></div><div class="val">37.47</div></div>
+        </div>
+        <p>Discover, bench, GPU routing, SQLite, CLI + PDF. Same loop as MBFS: measure before claiming.</p></div>
       <div class="card"><h3><span class="n">MCP</span> Dockroot</h3><p>Agents see Docker/network. Not host-root. Boundary, not the box — how you put an agent next to a bank or a clinic.</p></div>
       <div class="card"><h3><span class="n">OpenClaw</span> Pipeline</h3><p>Systems → architect → validator on local Ollama. Structured output, repair retries. Production WhatsApp agents, 10+ skills. Failover routing.</p></div>
     </div>
@@ -653,7 +899,34 @@
       <div class="q">“I trusted that Jeremy would deliver, with quality… exceeded the expectations at someone of his grade level.”<span>Prime Therapeutics</span></div>
     </div>
     <h2>Loyalty is the product after the product</h2>
-    <p>Talk given at Informatica while still embedded at Dawn. Satisfaction is the lowest acceptable service. The customer wants YES, or help to get to yes. BofA lost a lifetime over a policy click. John’s four daughters — shut up and listen. Dawn 8h→1h got used. That is a deploy, not an install. Founding FDE in Madison: the night operator is the customer. If they cannot run the agent Tuesday, I did not finish.</p>
+    <div class="duo">
+      <div class="ex">
+        <div class="exk">The clip · example 1 · Bank of America</div>
+        <h3>Two clicks · gone</h3>
+        <p>Customer since 1999. Ben cannot click the button. Kari: policy. Two clicks would have kept a lifetime — home loan, car loan, word of mouth. Gone. The customer wants YES, or help to get to yes. Founding FDE never leaves them with “the model can’t.” Full story is the left column of page 4. It does not cut off.</p>
+      </div>
+      <div class="ex">
+        <div class="exk">The clip · example 2 · Dawn Foods</div>
+        <h3>8h → 1h · still quoted</h3>
+        <div class="hbar">
+          <div class="row"><div class="lab">Before</div><div class="trk"><div class="fl" style="width:100%"></div></div><div class="val">8h</div></div>
+          <div class="row"><div class="lab">After</div><div class="trk"><div class="fl gold" style="width:12%"></div></div><div class="val">1h</div></div>
+        </div>
+        <p>Who pays you? The customer. Kids eat because they buy. Featured on informatica.com because it got used. John’s daughters. Trillium did not even get a proposal. If the night operator cannot run the agent Tuesday, I did not finish. Full story is the right column of page 4.</p>
+      </div>
+    </div>
+    <div class="duo">
+      <div class="ex">
+        <div class="exk">Floor example · Kohl’s</div>
+        <h3>v9 Grid/HA · AIX → commodity · ~$2M</h3>
+        <p>Capacity + upgrade, multiple HA and Grid components. Briefed through Senior VPs. Cutover off AIX onto commodity. POCs when VMs were not enough. The kit stayed.</p>
+      </div>
+      <div class="ex">
+        <div class="exk">Floor example · Navy Federal</div>
+        <h3>3,000-hour V1 · they can run it</h3>
+        <p>Install, services, naming standards, go-live tests written down. Mentored NFCU. Quick win, hard problem, they watch you stay, then they stay. Same motion as Dawn, years later.</p>
+      </div>
+    </div>
     <div class="grid2" style="margin-top:5px;">
       <div class="cell"><h3>Contact</h3><p>Jeremy Panasuk · Sand Creek, WI · 715-970-0204 · jpanasuk@gmail.com<br>linkedin.com/in/jeremy-p-34203322 · github.com/jpanasuk-netizen · huggingface.co/jpanasuk</p></div>
       <div class="cell"><h3>This posting</h3><p>Carex Consulting Group · Job 6273 · Founding Forward Deployed Engineer<br>Madison, WI · hybrid 3 days · Direct hire · fintech startup partner<br>carexconsulting.com/jobs/founding-forward-deployed-engineer-6273/</p></div>
