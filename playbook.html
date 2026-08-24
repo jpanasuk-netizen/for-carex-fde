@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jeremy Panasuk · Founding FDE Playbook · Carex 6273</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    @page { size: letter; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { background: #fff; }
+    .sheet { width: 8.5in; height: 11in; overflow: hidden; page-break-after: always; position: relative; background: #f6f1e8; color: #122033; font-family: "Libre Baskerville", Georgia, serif; }
+    .navy { height: 8px; background: #122033; }
+    .gold { height: 4px; background: #c4a35a; }
+    .pad { padding: 0.22in 0.40in 0.36in; }
+    .nav {
+      display: flex; justify-content: space-between; gap: 6px; flex-wrap: wrap;
+      font-family: "IBM Plex Mono", monospace; font-size: 6.6pt; letter-spacing: 0.08em; text-transform: uppercase;
+      margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid #d9d0c0;
+    }
+    .nav a { color: #6a5c42; text-decoration: none; }
+    .nav a.on { color: #122033; font-weight: 600; }
+    .kicker { font-family: "IBM Plex Mono", monospace; font-size: 7.4pt; letter-spacing: 0.16em; text-transform: uppercase; color: #c4a35a; }
+    h1 { font-family: "Oswald", sans-serif; font-size: 28pt; line-height: 0.92; text-transform: uppercase; letter-spacing: 0.02em; margin: 4px 0 8px; }
+    h2 { font-family: "Oswald", sans-serif; font-size: 15pt; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 8px; }
+    h3 { font-family: "Oswald", sans-serif; font-size: 10pt; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 3px; }
+    p { font-size: 9pt; line-height: 1.34; color: #2a3340; }
+    .lede { font-style: italic; font-size: 11.5pt; line-height: 1.3; max-width: 46ch; margin: 0 0 10px; }
+    .hero { display: grid; grid-template-columns: 1fr 1.72in; gap: 16px; align-items: start; }
+    .shot { width: 1.72in; height: 2.15in; object-fit: cover; object-position: 50% 12%; border: 3px solid #122033; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 10px 0; }
+    .m { background: #122033; color: #f6f1e8; padding: 8px 9px; }
+    .m b { display: block; font-family: "Oswald", sans-serif; font-size: 16pt; color: #c4a35a; line-height: 1; }
+    .m span { display: block; font-family: "IBM Plex Mono", monospace; font-size: 6.4pt; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 3px; }
+    .toc { background: #fff; border: 1px solid #d9d0c0; }
+    .toc a { display: grid; grid-template-columns: 0.62in 1fr auto; gap: 8px; padding: 7px 11px; text-decoration: none; color: #122033; border-bottom: 1px solid #d9d0c0; font-size: 9.5pt; font-family: "Libre Baskerville", Georgia, serif; }
+    .toc a:last-child { border-bottom: 0; }
+    .toc .n { font-family: "IBM Plex Mono", monospace; color: #c4a35a; font-size: 8pt; }
+    .toc .pg { font-family: "IBM Plex Mono", monospace; color: #6a5c42; font-size: 8pt; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .cell { background: #fff; border: 1px solid #d9d0c0; padding: 9px 10px; }
+    .cell p { font-size: 8.2pt; }
+    .sec { font-family: "IBM Plex Mono", monospace; font-size: 7.4pt; letter-spacing: 0.14em; text-transform: uppercase; color: #c4a35a; margin: 0 0 6px; }
+    .note { background: #122033; color: #f6f1e8; padding: 10px 12px; font-size: 8.6pt; line-height: 1.35; margin-top: 10px; }
+    .note b { color: #c4a35a; }
+    .honest { border: 2px solid #c4a35a; background: #fff; padding: 9px 11px; margin-top: 8px; }
+    .honest .t { font-family: "IBM Plex Mono", monospace; font-size: 7pt; letter-spacing: 0.12em; text-transform: uppercase; color: #c4a35a; margin-bottom: 3px; }
+    .steps { counter-reset: s; }
+    .step { background: #fff; border: 1px solid #d9d0c0; padding: 8px 10px 8px 12px; margin-bottom: 6px; display: grid; grid-template-columns: 0.42in 1fr; gap: 8px; }
+    .step .n { font-family: "Oswald", sans-serif; font-size: 16pt; color: #c4a35a; line-height: 1; }
+    .reel { display: grid; grid-template-columns: 0.78in 1fr 0.78in 1fr; gap: 3px 8px; font-size: 8pt; }
+    .reel .n { font-family: "Oswald", sans-serif; font-size: 12pt; color: #122033; }
+    .q { font-size: 8pt; font-style: italic; padding: 8px 10px; background: #fff; border-left: 3px solid #c4a35a; }
+    .q span { display: block; font-style: normal; font-family: "IBM Plex Mono", monospace; font-size: 6.6pt; letter-spacing: 0.1em; text-transform: uppercase; color: #c4a35a; margin-top: 4px; }
+    .quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+    .foot {
+      position: absolute; left: 0.40in; right: 0.40in; bottom: 0.12in;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: "IBM Plex Mono", monospace; font-size: 6.6pt; letter-spacing: 0.08em; text-transform: uppercase; color: #6a5c42;
+    }
+    .foot a { color: #122033; text-decoration: none; }
+    .contact { font-size: 8pt; color: #6a5c42; line-height: 1.4; }
+  </style>
+</head>
+<body>
+
+  <div class="sheet" id="cover">
+    <div class="navy"></div><div class="gold"></div>
+    <div class="pad">
+      <div class="nav">
+        <a class="on" href="#cover">Cover</a>
+        <a href="#job">The job</a>
+        <a href="#embed">Embed</a>
+        <a href="#path">The path</a>
+        <a href="#agents">Agents</a>
+        <a href="#receipts">Receipts</a>
+        <a href="#founding">Founding</a>
+        <a href="#close">Close</a>
+      </div>
+      <div class="hero">
+        <div>
+          <div class="kicker">Carex 6273 · Founding Forward Deployed Engineer · Madison hybrid · Direct hire</div>
+          <h1>The founding<br>FDE playbook</h1>
+          <p class="lede">They need the first Forward Deployed Engineer. I have been that person for twenty years — customer in the room, something that runs on Tuesday, a path the next person can follow.</p>
+          <div class="contact">
+            Jeremy Panasuk · Sand Creek, WI · 715-970-0204 · jpanasuk@gmail.com<br />
+            Wisconsin. Ready for Madison 3 days onsite as posted.<br />
+            linkedin.com/in/jeremy-p-34203322
+          </div>
+        </div>
+        <img class="shot" src="assets/portrait.jpg" alt="Jeremy Panasuk" />
+      </div>
+      <div class="metrics">
+        <div class="m"><b>19/20</b><span>Crisis accounts recovered</span></div>
+        <div class="m"><b>8h→1h</b><span>Dawn · measured · used</span></div>
+        <div class="m"><b>Founding</b><span>Playbooks from a blank floor</span></div>
+      </div>
+      <div class="toc">
+        <a href="#job"><span class="n">02</span><span>The job you posted — mapped</span><span class="pg">p. 2</span></a>
+        <a href="#embed"><span class="n">03</span><span>How I embed with the customer</span><span class="pg">p. 3</span></a>
+        <a href="#path"><span class="n">04</span><span>Discover → build → measure → leave</span><span class="pg">p. 4</span></a>
+        <a href="#agents"><span class="n">05</span><span>Agents, tools, honest Epic</span><span class="pg">p. 5</span></a>
+        <a href="#receipts"><span class="n">06</span><span>Receipts from the field</span><span class="pg">p. 6</span></a>
+        <a href="#founding"><span class="n">07</span><span>Standing up the FDE function</span><span class="pg">p. 7</span></a>
+        <a href="#close"><span class="n">08</span><span>Close · the first hire</span><span class="pg">p. 8</span></a>
+      </div>
+      <div class="note"><b>Click any line.</b> Use the top strip or the bookmarks panel. This is the operating path I already run — written so the next FDE can run it too.</div>
+    </div>
+    <div class="foot"><span>Jeremy Panasuk · Founding FDE playbook · Carex 6273</span><span>1 / 8 · <a href="#job">Next →</a></span></div>
+  </div>
+
+  <div class="sheet" id="job">
+    <div class="navy"></div><div class="gold"></div>
+    <div class="pad">
+      <div class="nav">
+        <a href="#cover">Cover</a>
+        <a class="on" href="#job">The job</a>
+        <a href="#embed">Embed</a>
+        <a href="#path">The path</a>
+        <a href="#agents">Agents</a>
+        <a href="#receipts">Receipts</a>
+        <a href="#founding">Founding</a>
+        <a href="#close">Close</a>
+      </div>
+      <div class="sec">02 — Carex 6273 · fintech startup partner · Madison, WI</div>
+      <h2>Founding Forward Deployed Engineer</h2>
+      <p class="lede">Sit with the customer. Find the real constraint. Build, configure, deploy, measure. Leave a playbook. Formal SWE not required — delivery is.</p>
+      <div class="grid2" style="margin-top:8px;">
+        <div class="cell"><h3>Partner with customers</h3><p>IPS / SEAL: embed until the unofficial definition is named. Dawn, Navy Federal, Mercedes, West Bend — I sat with the people who had to run it Tuesday.</p></div>
+        <div class="cell"><h3>Design, build, deploy, support</h3><p>Not a slide. Mappings, Grid/HA, SOAP/REST, agents, bounded MCP. Install-to-go-live. Hypercare default. If they cannot run it, I did not finish.</p></div>
+        <div class="cell"><h3>Metrics before, measure after</h3><p>Dawn 8h→1h. Mercedes +200%. West Bend −50%. PepsiCo v9→v10 zero data loss. Local lab: 1.39 → 37.47 tok/s. I write the number first.</p></div>
+        <div class="cell"><h3>Reusable solutions</h3><p>Environment Summary. Upgrade Roadmap. Six-class test. TCS kept Mercedes docs. Named skill-up. That is how a founding FDE seeds the function.</p></div>
+        <div class="cell"><h3>Feedback to product</h3><p>BNY with senior VPs and the CEO in the room. JPM CoE roadmaps. Field → board. Recurring pain becomes the next product, not a one-off.</p></div>
+        <div class="cell"><h3>Ambiguity is the job</h3><p>No predefined playbook is the posting. I wrote the playbook on the floor for twenty years. Wisconsin. Madison hybrid 3 days as posted.</p></div>
+      </div>
+      <div class="honest">
+        <div class="t">Epic Agent Factory — honest</div>
+        <p>Preferred, not required. I have not deployed Epic’s no-code Agent Factory inside an EHR. I have deployed agents, bounded tools, and customer workflows; I have sat in regulated rooms (Navy Federal, Smith &amp; Nephew FDA, Prime Medicare). I will take Agent Factory the same way I took Grid/HA — on the customer’s floor, measured, written down.</p>
+      </div>
+    </div>
+    <div class="foot"><span><a href="#cover">← Cover</a></span><span>2 / 8 · <a href="#embed">Embed →</a></span></div>
+  </div>
+
+  <div class="sheet" id="embed">
+    <div class="navy"></div><div class="gold"></div>
+    <div class="pad">
+      <div class="nav">
+        <a href="#cover">Cover</a>
+        <a href="#job">The job</a>
+        <a class="on" href="#embed">Embed</a>
+        <a href="#path">The path</a>
+        <a href="#agents">Agents</a>
+        <a href="#receipts">Receipts</a>
+        <a href="#founding">Founding</a>
+        <a href="#close">Close</a>
+      </div>
+      <div class="sec">03 — How I embed</div>
+      <h2>Floor to board. Same facts, two rooms.</h2>
+      <p class="lede">The founding FDE is the person who hears the unofficial definition and makes it executable. That is the only work I have done.</p>
+      <div class="steps" style="margin-top:10px;">
+        <div class="step"><div class="n">01</div><div><h3>Hear the floor</h3><p>Stand with operators until the real constraint is named. Not the slide. The load, the journal, the SKU, the prior-auth pile, the night workaround from 2011.</p></div></div>
+        <div class="step"><div class="n">02</div><div><h3>Wrangle what exists</h3><p>AS/400 journals, SOAP that never matched the WSDL, messy CSVs, agent skills, local LLMs. I do not wait for a clean ontology. I make the data operable.</p></div></div>
+        <div class="step"><div class="n">03</div><div><h3>Ship the surface</h3><p>Workflow, automation, agent, lightweight app — whatever the constraint needs. Configure first, build when configure is a lie. If they cannot run it after I drive back to Sand Creek, I did not finish.</p></div></div>
+        <div class="step"><div class="n">04</div><div><h3>Brief the board</h3><p>Same facts, two rooms. BNY with senior VPs and CEO Sohaib Abbasi. JPM roadmaps. Loyalty, not a demo. Measure after. Write the playbook so hire two can start on page one.</p></div></div>
+      </div>
+      <div class="note"><b>Madison hybrid.</b> Sand Creek, WI. Three days onsite as posted. The constraint lives with the customer. I go there.</div>
+    </div>
+    <div class="foot"><span><a href="#job">← Job</a></span><span>3 / 8 · <a href="#path">Path →</a></span></div>
+  </div>
+
+  <div class="sheet" id="path">
+    <div class="navy"></div><div class="gold"></div>
+    <div class="pad">
+      <div class="nav">
+        <a href="#cover">Cover</a>
+        <a href="#job">The job</a>
+        <a href="#embed">Embed</a>
+        <a class="on" href="#path">The path</a>
+        <a href="#agents">Agents</a>
+        <a href="#receipts">Receipts</a>
+        <a href="#founding">Founding</a>
+        <a href="#close">Close</a>
+      </div>
+      <div class="sec">04 — The path · written so the next FDE can run it</div>
+      <h2>Discover. Build. Measure. Leave.</h2>
+      <div class="grid2" style="margin-top:8px;">
+        <div class="cell">
+          <h3>Discover</h3>
+          <p><b>Artifact:</b> Environment Summary. Owner, date, unofficial definitions, what is on fire, what already works. Success metric written <i>before</i> anyone touches config. You posted that line. It is already the cover of my file.</p>
+        </div>
+        <div class="cell">
+          <h3>Decompose</h3>
+          <p><b>Artifact:</b> Upgrade / build roadmap. Configure vs automate vs build vs simplify. I pick the smallest thing that moves the metric. Formal SWE is not required. Judgment is.</p>
+        </div>
+        <div class="cell">
+          <h3>Build / configure</h3>
+          <p>Workflows, agent skills, document schemas, integrations, lightweight apps. Agentic tools in daily work: OpenClaw, local Ollama pipeline, bounded MCP. Prototype on the customer’s data, not a sandbox story.</p>
+        </div>
+        <div class="cell">
+          <h3>Prove go-live</h3>
+          <p><b>Artifact:</b> Six-class test — operability, same-data, security, performance, 3rd-party, HA/DR. QA twin of production. If it only works when I am in the chair, it is not deployed.</p>
+        </div>
+        <div class="cell">
+          <h3>Measure after</h3>
+          <p>Dawn 8h→1h. Mercedes +200%. West Bend −50%. Lab: 1.39→37.47 tok/s. Write the after next to the before. If the number did not move, we did not ship value. We shipped theater.</p>
+        </div>
+        <div class="cell">
+          <h3>Leave the team</h3>
+          <p><b>Artifact:</b> Named skill-up. Cheat sheet. Playbook. Hypercare default. TCS kept Mercedes. Farmers named the skill-up in the review. Hire two starts here, not from my Slack.</p>
+        </div>
+      </div>
+      <div class="note" style="margin-top:10px;"><b>When it burns.</b> 20 troubled accounts, 19 recovered. Milwaukee insurer: three months dark, closed in two days. Founding FDE still does support. Monitoring, troubleshooting, reliability — that is the job after the demo.</div>
+    </div>
+    <div class="foot"><span><a href="#embed">← Embed</a></span><span>4 / 8 · <a href="#agents">Agents →</a></span></div>
+  </div>
+
+  <div class="sheet" id="agents">
+    <div class="navy"></div><div class="gold"></div>
+    <div class="pad">
+      <div class="nav">
+        <a href="#cover">Cover</a>
+        <a href="#job">The job</a>
+        <a href="#embed">Embed</a>
+        <a href="#path">The path</a>
+        <a class="on" href="#agents">Agents</a>
+        <a href="#receipts">Receipts</a>
+        <a href="#founding">Founding</a>
+        <a href="#close">Close</a>
+      </div>
+      <div class="sec">05 — AI-powered platforms · workflows · automations · agent skills</div>
+      <h2>The stack I already run. The stack I will learn on the floor.</h2>
+      <div class="grid2" style="margin-top:8px;">
+        <div class="cell"><h3>4070 · private inference</h3><p>TabbyAPI EXL3, Ollama, Open WebUI, Compose + CUDA. Forced offload, VRAM pre-warm, failover. huggingface.co/jpanasuk/tabby-tavern-stack</p></div>
+        <div class="cell"><h3>27× · Local Grid Suite</h3><p>Discover, bench decode/prefill, GPU routing, SQLite, CLI + PDF. 1.39 → 37.47 tok/s. Same loop as a customer deploy: measure before claiming.</p></div>
+        <div class="cell"><h3>MCP · Dockroot</h3><p>Agents see Docker/network. They do not get host-root. Hand the agent the boundary, not the box. That is how you put an agent next to a bank or a clinic without becoming the incident.</p></div>
+        <div class="cell"><h3>OpenClaw + pipeline</h3><p>Systems → architect → validator on local Ollama: structured output, repair retries. Production WhatsApp agents, 10+ skills. Multi-provider routing with cloud failover.</p></div>
+      </div>
+      <div class="honest" style="margin-top:10px;">
+        <div class="t">Epic Agent Factory · Art · Emmie · Penny</div>
+        <p>Epic’s Agent Factory is a no-code builder inside the EHR — previewed HIMSS 2026, wider in 2027. I have not shipped an agent inside Chronicles. I have shipped agents with boundaries, customer workflows with unofficial definitions, and go-lives in regulated rooms. The founding FDE learns the customer’s platform on the customer’s floor. I will treat Agent Factory like Grid/HA: embed, measure, write the standard, leave a team that can shape the next one.</p>
+      </div>
+      <div class="note"><b>Configure, automate, build, or simplify.</b> You asked for that judgment. I have it. Most “AI projects” need a better process, not another model. I say so in the room.</div>
+    </div>
+    <div class="foot"><span><a href="#path">← Path</a></span><span>5 / 8 · <a href="#receipts">Receipts →</a></span></div>
+  </div>
+
+  <div class="sheet" id="receipts">
+    <div class="navy"></div><div class="gold"></div>
+    <div class="pad">
+      <div class="nav">
+        <a href="#cover">Cover</a>
+        <a href="#job">The job</a>
+        <a href="#embed">Embed</a>
+        <a href="#path">The path</a>
+        <a href="#agents">Agents</a>
+        <a class="on" href="#receipts">Receipts</a>
+        <a href="#founding">Founding</a>
+        <a href="#close">Close</a>
+      </div>
+      <div class="sec">06 — Field receipts · consulting · implementation · support</div>
+      <h2>Value the customer signed. Not a vibe.</h2>
+      <div class="reel" style="margin-top:8px;">
+        <div class="n">8h→1h</div><div><b>Dawn Foods</b> — CDC on AS/400 journals. Featured because it got used.</div>
+        <div class="n">−50%</div><div><b>West Bend</b> — live SOAP/XML quote path. Agent turnaround the next day.</div>
+        <div class="n">+200%</div><div><b>Mercedes</b> — longest workflows. Playbook stayed with TCS.</div>
+        <div class="n">7,000h</div><div><b>Micron</b> — 2,080 → 7,000. $3M extensions. Zero downtime.</div>
+        <div class="n">$800k</div><div><b>Toyota</b> — Engine Management go-live. Consultants 5/5.</div>
+        <div class="n">20+ nodes</div><div><b>MF Global</b> — world-first Grid/HA + DR. Four regions. Virtual team.</div>
+        <div class="n">$2.3M+</div><div><b>BNY</b> — Grid/HA with senior VPs and the CEO in the room.</div>
+        <div class="n">$10M+</div><div><b>JPMorgan</b> — DW / CoE roadmaps. Field back to product.</div>
+        <div class="n">3,000h</div><div><b>Navy Federal</b> — architecture through go-live training.</div>
+        <div class="n">P1</div><div><b>Northwestern Mutual</b> — QA twin of production. Hypercare default.</div>
+        <div class="n">Phase 2</div><div><b>Farmers</b> — Guidewire XML. Skill-up named in the review.</div>
+        <div class="n">2 days</div><div><b>Milwaukee</b> — three-month outage closed in two days.</div>
+      </div>
+      <div class="quotes" style="margin-top:10px;">
+        <div class="q">“His knowledge not only of the Informatica suite but also at the operating system level has been truly invaluable.”<span>Dawn Foods · client</span></div>
+        <div class="q">“He’s a rock star out at Dawn. The customer loves him and the sales team has been leaning on him hard.”<span>Informatica IPS · sales</span></div>
+      </div>
+      <p style="margin-top:8px;font-size:8pt;">Also: Kohl’s AIX→commodity · Harvard v9 hypercare · Smith &amp; Nephew FDA · Ace + PepsiCo Big Data · Prime Medicare/MTM · Cargill CFO Award. Retained through 2025 for production rescue.</p>
+    </div>
+    <div class="foot"><span><a href="#agents">← Agents</a></span><span>6 / 8 · <a href="#founding">Founding →</a></span></div>
+  </div>
+
+  <div class="sheet" id="founding">
+    <div class="navy"></div><div class="gold"></div>
+    <div class="pad">
+      <div class="nav">
+        <a href="#cover">Cover</a>
+        <a href="#job">The job</a>
+        <a href="#embed">Embed</a>
+        <a href="#path">The path</a>
+        <a href="#agents">Agents</a>
+        <a href="#receipts">Receipts</a>
+        <a class="on" href="#founding">Founding</a>
+        <a href="#close">Close</a>
+      </div>
+      <div class="sec">07 — Help establish playbooks, standards, operating processes</div>
+      <h2>You are hiring the first one. I write like the second one is watching.</h2>
+      <div class="grid3" style="margin-top:8px;">
+        <div class="cell"><h3>Standards</h3><p>Every engagement opens with a metric and an Environment Summary. Every close has a skill-up name and a QA twin. No tribal knowledge. Hostnames stay off the public copy; the method does not.</p></div>
+        <div class="cell"><h3>Reusable kits</h3><p>Workflow templates, agent skill patterns, integration stubs, test taxonomy. Recurring customer needs become the kit, not another hero week.</p></div>
+        <div class="cell"><h3>Internal tools</h3><p>You asked for automations that make the FDE function cheaper. I already build the tools I wish I had on night one. Then I leave them.</p></div>
+        <div class="cell"><h3>Product loop</h3><p>Field notes back to engineering weekly. If three customers hit the same wall, it is not a services problem. It is the next feature.</p></div>
+        <div class="cell"><h3>Hiring two</h3><p>This PDF is the interview. The next FDE should be able to run page 4 without me in Slack. That is how a function is founded.</p></div>
+        <div class="cell"><h3>Madison</h3><p>Hybrid 3 days onsite, Madison, WI. I live in Sand Creek. Wisconsin. I will be in the room those three days. The customer is why.</p></div>
+      </div>
+      <div class="honest" style="margin-top:10px;">
+        <div class="t">What I will not fake</div>
+        <p>I am not a career Epic analyst. I am not a staff software engineer who has never sat with a customer. I am the closer they send when the platform has to get used — now with agents I measure. Carex’s partner gets the founding motion, not a resume adjective.</p>
+      </div>
+    </div>
+    <div class="foot"><span><a href="#receipts">← Receipts</a></span><span>7 / 8 · <a href="#close">Close →</a></span></div>
+  </div>
+
+  <div class="sheet" id="close">
+    <div class="navy"></div><div class="gold"></div>
+    <div class="pad">
+      <div class="nav">
+        <a href="#cover">Cover</a>
+        <a href="#job">The job</a>
+        <a href="#embed">Embed</a>
+        <a href="#path">The path</a>
+        <a href="#agents">Agents</a>
+        <a href="#receipts">Receipts</a>
+        <a href="#founding">Founding</a>
+        <a class="on" href="#close">Close</a>
+      </div>
+      <div class="sec">08 — The first hire</div>
+      <h2>If you want the person who founds the FDE function — this is the path.</h2>
+      <p class="lede">Discovery through deployment, measurement, and ongoing support. Ambiguity is the job. I already treat it that way.</p>
+      <div class="quotes" style="margin-top:8px;">
+        <div class="q">“You have sent one of the best that Informatica has to offer in Jeremy.”<span>MF Global · infrastructure</span></div>
+        <div class="q">“I trusted that Jeremy would deliver, with quality… exceeded the expectations at someone of his grade level.”<span>Prime Therapeutics</span></div>
+      </div>
+      <div class="grid2" style="margin-top:10px;">
+        <div class="cell">
+          <h3>Contact</h3>
+          <p>Jeremy Panasuk<br>Sand Creek, WI · 715-970-0204<br>jpanasuk@gmail.com<br>linkedin.com/in/jeremy-p-34203322<br>github.com/jpanasuk-netizen</p>
+        </div>
+        <div class="cell">
+          <h3>This posting</h3>
+          <p>Carex Consulting Group · Job 6273<br>Founding Forward Deployed Engineer<br>Madison, WI · hybrid 3 days<br>Direct hire · fintech startup partner<br>carexconsulting.com/jobs/founding-forward-deployed-engineer-6273</p>
+        </div>
+      </div>
+      <div class="note" style="margin-top:12px;"><b>Operating line.</b> Customer satisfaction is worthless. Customer loyalty is priceless. That is the talk I gave on Dawn’s floor. That is how a founding FDE still shows up in Madison.</div>
+      <p style="margin-top:12px;text-align:center;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.08em;font-size:11pt;"><a href="#cover" style="color:#122033;text-decoration:none;">Back to cover</a> · <a href="#path" style="color:#122033;text-decoration:none;">The path</a> · <a href="#receipts" style="color:#122033;text-decoration:none;">Receipts</a></p>
+    </div>
+    <div class="foot"><span><a href="#founding">← Founding</a></span><span>8 / 8 · <a href="#cover">Cover ↑</a></span></div>
+  </div>
+
+</body>
+</html>
