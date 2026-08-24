@@ -51,6 +51,24 @@
     .q span { display: block; font-style: normal; font-size: 5.7pt; letter-spacing: 0.1em; text-transform: uppercase; color: #8a6d2e; margin-top: 2px; font-weight: 700; }
     .strike { margin-top: 6px; background: #122033; color: #f6f1e8; padding: 7px 9px; font-size: 7.6pt; font-weight: 700; line-height: 1.26; }
     .strike b { color: #c4a35a; }
+    .superstar {
+      margin: 6px 0 7px;
+      padding: 8px 10px 7px;
+      background: #122033;
+      color: #f6f1e8;
+      border: 2px solid #c4a35a;
+      box-shadow: 0 0 0 3px rgba(196,163,90,0.22);
+    }
+    .superstar h3 {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 6.7pt;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #c4a35a;
+      margin-bottom: 3px;
+    }
+    .superstar p { font-size: 7.4pt; line-height: 1.28; color: #f6f1e8; margin: 0; }
+    .superstar b { color: #c4a35a; }
     .goldbox { margin-top: 5px; border: 1px solid #c4a35a; padding: 5px 8px; background: #fff; }
     .goldbox .t { font-size: 6.4pt; letter-spacing: 0.1em; text-transform: uppercase; color: #8a6d2e; font-weight: 700; font-family: "IBM Plex Mono", monospace; }
     .skills { font-size: 6.8pt; line-height: 1.3; }
@@ -278,7 +296,7 @@
       <div class="card"><h3><span class="n">MCP</span> Dockroot-MCP</h3><p>Agents see Docker/network. Not host-root. Hand the agent the boundary — how you put an agent next to a bank or a clinic without becoming the incident.</p></div>
       <div class="card"><h3><span class="n">4</span> Agent runtime · local Ollama</h3><p>Systems → Architect → Synthesis → Validator. Isolated Python venvs. Pydantic JSON handoff, not free text. Self-healing validator writes/executes/debugs until the contract passes. OpenClaw WhatsApp, 10+ skills.</p></div>
     </div>
-    <p class="pts" style="margin-top:4px;"><b>Also retained through 2025</b> for Informatica production rescue: Grid/HA, PowerExchange CDC, IDQ, v9/v10, SOAP/REST, SOW/sizing, install-to-go-live. Ivy Funds · Fed Reserve Philly · Farmers Linux SOAP/REST · Giesecke REST/SOAP, VMs, GitHub, Docker.</p>
+    <p class="pts" style="margin-top:4px;"><b>Also retained through 2025</b> for Informatica production rescue: Grid/HA, PowerExchange CDC, IDQ, v9/v10, SOAP/REST, install-to-go-live. SOW story is the gold box on page 7. Ivy Funds · Fed Reserve Philly · Farmers Linux SOAP/REST · Giesecke REST/SOAP, VMs, GitHub, Docker.</p>
     <div class="fire"><h3>The fire department — founding FDE still does support</h3><p>Parachuted into 20 troubled accounts. Recovered 19. Milwaukee insurer: three-month outage closed in two days — one buried IBM DB2 driver. Monitor, troubleshoot, improve reliability. That is the job after the demo. <a href="#docs">IPS artifacts →</a></p></div>
     <div class="duo">
       <div class="ex">
@@ -578,7 +596,7 @@
       <a href="#talk"><span class="n">04</span><span>THE TALK · two examples · Bank of America · Dawn Foods</span><span class="pg">p. 4</span></a>
       <a href="#talk2"><span class="n">05</span><span>THE TALK · two examples · John · Trillium · last slide</span><span class="pg">p. 5</span></a>
       <a href="#job"><span class="n">06</span><span>Job mapped · what you’ll do / what you’ll bring</span><span class="pg">p. 6</span></a>
-      <a href="#pocs"><span class="n">07</span><span>POCs → REVENUE · Volkswagen two-week Grid/HA · local PC/DQ</span><span class="pg">p. 7</span></a>
+      <a href="#pocs"><span class="n">07</span><span>POC · SOW SUPERSTAR · Volkswagen · local PC/DQ · two weeks to close</span><span class="pg">p. 7</span></a>
       <a href="#docs"><span class="n">08</span><span>IPS documentation standards · Env Summary, Roadmap, Phase, v10 deck</span><span class="pg">p. 8</span></a>
       <a href="#perf"><span class="n">09</span><span>Performance methodology · MBFS cheat sheet · isolation tests</span><span class="pg">p. 9</span></a>
       <a href="#upgrade"><span class="n">10</span><span>Upgrade types · six-class tests · DVO · coaching</span><span class="pg">p. 10</span></a>
@@ -640,8 +658,12 @@
     <div class="nav">
       <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a class="on" href="#pocs">POCs</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="clip-stamp" style="margin:4px 0 6px;">Two weeks · smoke + use cases · close immediately · sales makes quota because the POC existed</div>
-    <h1 class="poc-h">POCs → revenue.<em>Two weeks. Deal after.</em></h1>
+    <div class="clip-stamp" style="margin:4px 0 6px;">POC · SOW superstar · two weeks · smoke + use cases · close immediately · sales makes quota because the POC existed</div>
+    <h1 class="poc-h">POC · SOW superstar.<em>POCs → revenue. Two weeks. Deal after.</em></h1>
+    <div class="superstar" id="sow">
+      <h3>The SOW is the product after the POC</h3>
+      <p>With Informatica regional managers I wrote the client <b>statements of work</b>: full contract wording, resource levels (analyst through principal), estimates and assumptions. Range was mom-and-pop duration through <b>Micron 2,080 → 7,000 hours</b> and <b>Navy Federal 3,000 hours</b> with Informatica RMO plus their HR. Harvard v9 resource plan through hypercare, not just go-live. Deliver inside the estimates. The two-week POCs on this page are how that SOW gets signed.</p>
+    </div>
     <p class="clip-lede" style="max-width:68ch;">Sales does not install PowerCenter and Data Quality on the customer’s metal. Unless the quarter is on the line. I ran the POC anyway. Full smoke. Use-case analysis. Flying colors. The deal closed immediately after. Same window at Volkswagen: complete Grid/HA, live demo a day early.</p>
     <div class="spine">
       <div><b>01</b>They ask for metal</div>
@@ -686,7 +708,7 @@
     </div>
     <div class="bridge"><b>Same motion</b> Left: VW watched Grid/HA run on their RAC a day early. Right: unnamed watched PC/DQ run on their metal. Two weeks. Smoke. Use cases. Close. Carex 6273 is this — a POC the night operator can still run Tuesday.</div>
   </div>
-  <div class="foot"><span>POCs → revenue · Volkswagen · local PC/DQ · two weeks</span><span>7 / 12 · <a href="#docs">Docs →</a></span></div>
+  <div class="foot"><span>POC · SOW superstar · Volkswagen · local PC/DQ · two weeks</span><span>7 / 12 · <a href="#docs">Docs →</a></span></div>
 </div>
 
 <!-- ========== DOCS ========== -->
