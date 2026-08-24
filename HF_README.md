@@ -5,10 +5,12 @@ colorFrom: yellow
 colorTo: blue
 sdk: static
 pinned: false
-short_description: Jeremy Panasuk founding FDE playbook for Carex 6273.
+short_description: Jeremy Panasuk founding FDE playbook — the clip, the talk, Carex 6273.
 ---
 
-# Founding FDE Playbook
+# Customer satisfaction is worthless. Customer loyalty is priceless.
+
+The clip. The talk. The founding FDE playbook for Carex 6273.
 
 Clickable PDF: [JEREMY_PANASUK_CAREX_FDE_PLAYBOOK.pdf](./JEREMY_PANASUK_CAREX_FDE_PLAYBOOK.pdf)
 
