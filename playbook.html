@@ -165,6 +165,36 @@
     .bridge b { color: #c4a35a; white-space: nowrap; font-family: "IBM Plex Mono", monospace; font-size: 6.4pt; letter-spacing: 0.1em; text-transform: uppercase; }
     .clip-hero { display: grid; grid-template-columns: 1fr 1.02in; gap: 10px; align-items: start; }
     .shot-clip { width: 1.02in; height: 1.28in; object-fit: cover; object-position: 50% 10%; border: 2px solid #c4a35a; }
+    .poc-sheet { background: #122033; color: #f6f1e8; }
+    .poc-sheet .nav { border-bottom-color: #3d4d60; }
+    .poc-sheet .nav a { color: #c4a35a; }
+    .poc-sheet .nav a.on { color: #fff; }
+    .poc-sheet .foot { color: #c4a35a; }
+    .poc-sheet .foot a { color: #fff; }
+    .poc-sheet .ex { background: #1b2b3e; border-color: #3d4d60; }
+    .poc-sheet .ex h3 { color: #c4a35a; }
+    .poc-sheet .ex p { color: #dcd3c2; }
+    .poc-sheet .exk { color: #c4a35a; }
+    .poc-sheet .goldbox { background: #0c121c; border-color: #c4a35a; color: #e8dfcc; }
+    .poc-sheet .goldbox .t { color: #c4a35a; }
+    .poc-sheet .hbar .trk { background: #0c121c; }
+    .poc-sheet .hbar .lab, .poc-sheet .hbar .val { color: #c4a35a; }
+    .poc-sheet .miles::before { background: #c4a35a; }
+    .poc-sheet .miles .ms i { background: #1b2b3e; border-color: #c4a35a; }
+    .poc-sheet .miles .ms.on i { background: #c4a35a; }
+    .poc-sheet .miles .ms b { color: #c4a35a; }
+    .poc-sheet .miles .ms span { color: #e8dfcc; }
+    .poc-sheet .spine div { background: #1b2b3e; color: #e8dfcc; }
+    .poc-sheet .spine div b { color: #c4a35a; }
+    .poc-sheet .spine div.on { background: #c4a35a; color: #122033; }
+    .poc-sheet .spine div.on b { color: #122033; }
+    .poc-h { font-size: 28pt; line-height: 0.88; letter-spacing: -0.04em; color: #fff; margin: 2px 0 4px; font-weight: 800; }
+    .poc-h em { display: block; color: #c4a35a; font-style: italic; }
+    .agents4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin: 4px 0 6px; }
+    .agents4 .ag { background: #122033; color: #f6f1e8; padding: 7px 6px; }
+    .agents4 .ag b { display: block; color: #c4a35a; font-family: "IBM Plex Mono", monospace; font-size: 8pt; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px; }
+    .agents4 .ag span { display: block; font-size: 6.5pt; line-height: 1.22; color: #e8dfcc; }
+    .agents4 .ag .n { color: #c4a35a; font-size: 11pt; font-weight: 800; }
     .mgantt { display: flex; gap: 2px; height: 22px; margin: 4px 0 3px; }
     .mgantt .b { display: flex; align-items: center; justify-content: center; text-align: center; font-size: 5.5pt; font-family: "IBM Plex Mono", monospace; text-transform: uppercase; color: #fff; padding: 0 3px; line-height: 1.05; font-weight: 600; }
     .duo .exk { font-family: "IBM Plex Mono", monospace; font-size: 6.4pt; letter-spacing: 0.12em; text-transform: uppercase; color: #c4a35a; font-weight: 600; margin: 0 0 3px; }
@@ -194,7 +224,7 @@
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
-      <a class="on" href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
+      <a class="on" href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#pocs">POCs</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
     <div class="hero">
       <div>
@@ -213,7 +243,7 @@
       <div class="m"><b>Founding</b><span>Write the playbook</span></div>
       <div class="m"><b>WI</b><span>Madison hybrid</span></div>
     </div>
-    <p class="trusted"><b>Deployed with</b> Dawn · West Bend · Navy Federal · Mercedes · Toyota · Micron · PepsiCo · Ace · Kohl’s · BNY · JPMorgan · Farmers · NWM · WR · Cargill · Harvard · Smith &amp; Nephew</p>
+    <p class="trusted"><b>Deployed with</b> Dawn · West Bend · Navy Federal · Mercedes · Volkswagen · Toyota · Micron · PepsiCo · Ace · Kohl’s · BNY · JPMorgan · Farmers · NWM · WR · Cargill · Harvard · Smith &amp; Nephew</p>
     <div class="spine">
       <div class="on"><b>01</b>Hear the floor</div>
       <div><b>02</b>Wrangle what exists</div>
@@ -246,7 +276,7 @@
       <div class="card"><h3><span class="n">4070</span> Tabby Tavern Stack</h3><p>Compose + CUDA: TabbyAPI EXL3, Ollama, Open WebUI, SillyTavern, SearXNG. Forced CUDA offload, VRAM pre-warm, failover. huggingface.co/jpanasuk/tabby-tavern-stack</p></div>
       <div class="card"><h3><span class="n">27×</span> Local Grid Suite</h3><p>Discover, bench decode/prefill, GPU routing, SQLite, CLI + PDF. 1.39 → 37.47 tok/s. Warm stream ~76 tok/s. Measure before claiming.</p></div>
       <div class="card"><h3><span class="n">MCP</span> Dockroot-MCP</h3><p>Agents see Docker/network. Not host-root. Hand the agent the boundary — how you put an agent next to a bank or a clinic without becoming the incident.</p></div>
-      <div class="card"><h3><span class="n">Agents</span> OpenClaw + pipeline</h3><p>Systems → architect → validator on local Ollama: structured output, repair retries. Production WhatsApp agents, 10+ skills. Multi-provider routing with failover.</p></div>
+      <div class="card"><h3><span class="n">4</span> Agent runtime · local Ollama</h3><p>Systems → Architect → Synthesis → Validator. Isolated Python venvs. Pydantic JSON handoff, not free text. Self-healing validator writes/executes/debugs until the contract passes. OpenClaw WhatsApp, 10+ skills.</p></div>
     </div>
     <p class="pts" style="margin-top:4px;"><b>Also retained through 2025</b> for Informatica production rescue: Grid/HA, PowerExchange CDC, IDQ, v9/v10, SOAP/REST, SOW/sizing, install-to-go-live. Ivy Funds · Fed Reserve Philly · Farmers Linux SOAP/REST · Giesecke REST/SOAP, VMs, GitHub, Docker.</p>
     <div class="fire"><h3>The fire department — founding FDE still does support</h3><p>Parachuted into 20 troubled accounts. Recovered 19. Milwaukee insurer: three-month outage closed in two days — one buried IBM DB2 driver. Monitor, troubleshoot, improve reliability. That is the job after the demo. <a href="#docs">IPS artifacts →</a></p></div>
@@ -272,7 +302,7 @@
     </div>
     <div class="strike"><b>Carex 6273:</b> founding FDE. Customer satisfaction is worthless. Customer loyalty is priceless. That is the clip. That is the job. <a href="#line" style="color:#c4a35a;">Hear the line →</a></div>
   </div>
-  <div class="foot"><span>Jeremy Panasuk · Founding FDE · Carex 6273 · Resume</span><span>1 / 11 · <a href="#resume2">Resume 2 →</a></span></div>
+  <div class="foot"><span>Jeremy Panasuk · Founding FDE · Carex 6273 · Resume</span><span>1 / 12 · <a href="#resume2">Resume 2 →</a></span></div>
 </div>
 
 <!-- ========== RESUME 2 ========== -->
@@ -280,7 +310,7 @@
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
-      <a href="#resume">Resume 1</a><a class="on" href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
+      <a href="#resume">Resume 1</a><a class="on" href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#pocs">POCs</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
     <div class="kicker">Jeremy Panasuk · 715-970-0204 · jpanasuk@gmail.com · Founding FDE · Carex 6273</div>
     <h2>04 — Sr. Software Developer, Talend · MOBE · Minneapolis</h2>
@@ -301,6 +331,8 @@
       <div class="n">8h→1h</div><div><b>Dawn Foods</b> — PWX CDC, AS/400 journals, Type 2 DW. Featured on informatica.com.</div>
       <div class="n">−50%</div><div><b>West Bend Mutual</b> — live SOAP/XML quote path. Windows service enablement.</div>
       <div class="n">+200%</div><div><b>Mercedes-Benz</b> — longest workflows. TCS trained. Playbook stayed.</div>
+      <div class="n">2 wks</div><div><b>Volkswagen</b> — full Grid/HA a day early. Bonded NIC, RAC on InfiniBand, three 8-core PC. Four consultants shadowed.</div>
+      <div class="n">2 wks</div><div><b>Unnamed · local PC/DQ</b> — sales never installs locally unless quota. Smoke + use cases. Closed immediately.</div>
       <div class="n">20–30%</div><div><b>MBFS</b> — ALFA→ODS. Cache in RAM. Cheat sheet + walked loads.</div>
       <div class="n">7,000h</div><div><b>Micron</b> — fab EDW, PWX, Grid/HA, Fast Clone. Zero downtime.</div>
       <div class="n">$800k</div><div><b>Toyota</b> — Engine Management go-live. All consultants 5/5.</div>
@@ -330,7 +362,7 @@
     <p>$800K+ seasonal inventory. Turnover under 3 months. Four full-time sales. Profit up six years. Class B shooter. No schema, no second take. Loyalty is the metric.</p></div>
     <h2>07 — Stack · this posting</h2>
     <p class="skills"><strong>FDE</strong> · customer embed · discovery / decompose / configure-or-build · metric before/after · playbooks · hypercare · Madison hybrid 3 days<br />
-    <strong>Agents</strong> · OpenClaw · Ollama · TabbyAPI EXL3 · MCP · RAG · structured pipelines · SQLite telemetry — <em>not yet Epic Agent Factory; will take it on the floor</em><br />
+    <strong>Agents</strong> · Four-agent runtime on local Ollama (Systems · Architect · Synthesis · Validator, isolated venvs, Pydantic JSON, self-heal) · OpenClaw · TabbyAPI EXL3 · MCP · RAG — <em>not yet Epic Agent Factory; will take it on the floor</em><br />
     <strong>Code / data</strong> · Python · SQL · Docker · Linux/WSL2 · GitLab CI/CD · PowerCenter · Grid/HA · PWX CDC · Talend 8 · IDQ · SOAP/REST · Oracle · SQL Server · DB2<br />
     <strong>Education</strong> · BBA MIS, UW–Eau Claire 2004 · Informatica Certified Specialist: Admin, Big Data Admin, PowerCenter Developer I &amp; II<br />
     <strong>Operating line</strong> · Customer satisfaction is worthless. Customer loyalty is priceless. · <a href="#line">The clip / the talk →</a></p>
@@ -352,7 +384,7 @@
       </div>
     </div>
   </div>
-  <div class="foot"><span>Jeremy Panasuk · Founding FDE · Carex 6273 · Resume</span><span>2 / 11 · <a href="#line">THE CLIP →</a></span></div>
+  <div class="foot"><span>Jeremy Panasuk · Founding FDE · Carex 6273 · Resume</span><span>2 / 12 · <a href="#line">THE CLIP →</a></span></div>
 </div>
 
 <!-- ========== THE CLIP · BILLBOARD ========== -->
@@ -360,7 +392,7 @@
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
-      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a class="on" href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a class="on" href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#pocs">POCs</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
     <div class="clip-hero">
       <div>
@@ -403,7 +435,7 @@
     </div>
     <div class="strike" style="margin-top:8px;"><b>The clip is the product after the product.</b> Carex’s partner is hiring a founding FDE to sit with customers and leave something they still run. Gitomer. Dawn. 19/20. Measure after. Leave the team dangerous. <a href="#talk" style="color:#122033;text-decoration:underline;">Hear the talk →</a></div>
   </div>
-  <div class="foot"><span>The clip · customer satisfaction is worthless · customer loyalty is priceless</span><span>3 / 11 · <a href="#talk">Talk →</a></span></div>
+  <div class="foot"><span>The clip · customer satisfaction is worthless · customer loyalty is priceless</span><span>3 / 12 · <a href="#talk">Talk →</a></span></div>
 </div>
 
 <!-- ========== THE TALK · TWO EXAMPLES ========== -->
@@ -411,7 +443,7 @@
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
-      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a class="on" href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a class="on" href="#talk">Talk</a><a href="#job">Job</a><a href="#pocs">POCs</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
     <div class="kicker">04 · Two complete examples · left column all the way down, then the right · same motion</div>
     <div class="spine">
@@ -464,7 +496,7 @@
     </div>
     <div class="bridge"><b>Same motion</b> Left: a policy lost a lifetime. Right: a number they still quote. Next page — like → believe → trust → confidence. The picture is one process.</div>
   </div>
-  <div class="foot"><span>Two examples · Bank of America · Dawn Foods</span><span>4 / 11 · <a href="#talk2">Talk 2 →</a></span></div>
+  <div class="foot"><span>Two examples · Bank of America · Dawn Foods</span><span>4 / 12 · <a href="#talk2">Talk 2 →</a></span></div>
 </div>
 
 <!-- ========== THE TALK · TWO MORE EXAMPLES ========== -->
@@ -472,7 +504,7 @@
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
-      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a class="on" href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a class="on" href="#talk">Talk</a><a href="#job">Job</a><a href="#pocs">POCs</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
     <div class="kicker">05 · Two complete examples · left column all the way down, then the right · last slide on the right</div>
     <div class="spine loy">
@@ -521,7 +553,7 @@
     <div class="bridge"><b>Same motion</b> Left: shut up and listen. Right: they told the competitor no. Last slide is the job — founding FDE in Madison is this process, not a demo.</div>
     <div class="strike"><b>Customer satisfaction is worthless. Customer loyalty is priceless.</b> That was the title in 2008. That is still the job. Founding FDE in Madison: the night operator is the customer. If they cannot run the agent Tuesday, I did not finish. <a href="#job" style="color:#c4a35a;">Job mapped →</a></div>
   </div>
-  <div class="foot"><span>Two examples · John · Trillium · last slide</span><span>5 / 11 · <a href="#job">Job →</a></span></div>
+  <div class="foot"><span>Two examples · John · Trillium · last slide</span><span>5 / 12 · <a href="#job">Job →</a></span></div>
 </div>
 
 <!-- ========== JOB + TOC ========== -->
@@ -529,7 +561,7 @@
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
-      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a class="on" href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a class="on" href="#job">Job</a><a href="#pocs">POCs</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
     <div class="kicker">06 — Carex 6273 · fintech startup partner · Madison WI hybrid · click any line</div>
     <div class="spine">
@@ -546,11 +578,12 @@
       <a href="#talk"><span class="n">04</span><span>THE TALK · two examples · Bank of America · Dawn Foods</span><span class="pg">p. 4</span></a>
       <a href="#talk2"><span class="n">05</span><span>THE TALK · two examples · John · Trillium · last slide</span><span class="pg">p. 5</span></a>
       <a href="#job"><span class="n">06</span><span>Job mapped · what you’ll do / what you’ll bring</span><span class="pg">p. 6</span></a>
-      <a href="#docs"><span class="n">07</span><span>IPS documentation standards · Env Summary, Roadmap, Phase, v10 deck</span><span class="pg">p. 7</span></a>
-      <a href="#perf"><span class="n">08</span><span>Performance methodology · MBFS cheat sheet · isolation tests</span><span class="pg">p. 8</span></a>
-      <a href="#upgrade"><span class="n">09</span><span>Upgrade types · six-class tests · DVO · coaching</span><span class="pg">p. 9</span></a>
-      <a href="#floors"><span class="n">10</span><span>Four floors · NWM · MBFS · WR · Farmers · source list</span><span class="pg">p. 10</span></a>
-      <a href="#founding"><span class="n">11</span><span>Agents · Epic honesty · standing up the FDE function · close</span><span class="pg">p. 11</span></a>
+      <a href="#pocs"><span class="n">07</span><span>POCs → REVENUE · Volkswagen two-week Grid/HA · local PC/DQ</span><span class="pg">p. 7</span></a>
+      <a href="#docs"><span class="n">08</span><span>IPS documentation standards · Env Summary, Roadmap, Phase, v10 deck</span><span class="pg">p. 8</span></a>
+      <a href="#perf"><span class="n">09</span><span>Performance methodology · MBFS cheat sheet · isolation tests</span><span class="pg">p. 9</span></a>
+      <a href="#upgrade"><span class="n">10</span><span>Upgrade types · six-class tests · DVO · coaching</span><span class="pg">p. 10</span></a>
+      <a href="#floors"><span class="n">11</span><span>Four floors · NWM · MBFS · WR · Farmers · source list</span><span class="pg">p. 11</span></a>
+      <a href="#founding"><span class="n">12</span><span>Four-agent runtime · Epic honesty · founding the function · close</span><span class="pg">p. 12</span></a>
     </div>
     <h2>What you’ll do · mapped</h2>
     <div class="grid2">
@@ -565,7 +598,7 @@
     <div class="grid3">
       <div class="cell"><h3>Communication / relationship</h3><p>Clients asked for me by name. “Rock star.” Loyalty talk on Dawn’s floor. Clear, honest, proactive.</p></div>
       <div class="cell"><h3>Ambiguous → practical</h3><p>No predefined playbook is the posting. I wrote the operating path on the floor for twenty years.</p></div>
-      <div class="cell"><h3>AI agents daily</h3><p>OpenClaw, Ollama pipeline, bounded MCP. Agentic tools in day-to-day work. Not a slide about agents.</p></div>
+      <div class="cell"><h3>AI agents daily</h3><p>Four-agent runtime on local Ollama: Systems → Architect → Synthesis → Validator. Isolated venvs. Pydantic JSON. Self-heal until the contract passes. Not a slide about agents.</p></div>
       <div class="cell"><h3>Configure / automate / build / simplify</h3><p>Judgment you asked for. Most “AI projects” need a better process, not another model. I say so in the room.</p></div>
       <div class="cell"><h3>Solutions / implementation / consulting</h3><p>Consulting Manager. Formal SWE not required — you said delivery matters more. That is this résumé.</p></div>
       <div class="cell"><h3>Madison 3 days</h3><p>Sand Creek, WI. Hybrid as posted. The constraint lives with the customer. I go there.</p></div>
@@ -597,7 +630,63 @@
       </div>
     </div>
   </div>
-  <div class="foot"><span>Jeremy Panasuk · Founding FDE playbook · Carex 6273</span><span>6 / 11 · <a href="#docs">Docs →</a></span></div>
+  <div class="foot"><span>Jeremy Panasuk · Founding FDE playbook · Carex 6273</span><span>6 / 12 · <a href="#pocs">POCs →</a></span></div>
+</div>
+
+<!-- ========== POCs TO REVENUE ========== -->
+<div class="sheet poc-sheet" id="pocs">
+  <div class="navy"></div><div class="gold"></div>
+  <div class="pad">
+    <div class="nav">
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a class="on" href="#pocs">POCs</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
+    </div>
+    <div class="clip-stamp" style="margin:4px 0 6px;">Two weeks · smoke + use cases · close immediately · sales makes quota because the POC existed</div>
+    <h1 class="poc-h">POCs → revenue.<em>Two weeks. Deal after.</em></h1>
+    <p class="clip-lede" style="max-width:68ch;">Sales does not install PowerCenter and Data Quality on the customer’s metal. Unless the quarter is on the line. I ran the POC anyway. Full smoke. Use-case analysis. Flying colors. The deal closed immediately after. Same window at Volkswagen: complete Grid/HA, live demo a day early.</p>
+    <div class="spine">
+      <div><b>01</b>They ask for metal</div>
+      <div><b>02</b>Two-week window</div>
+      <div class="on"><b>03</b>Smoke + use cases</div>
+      <div><b>04</b>Flying colors</div>
+      <div><b>05</b>Close · quota</div>
+    </div>
+    <div class="miles">
+      <div class="ms"><i></i><b>Day 1</b><span>On their floor</span></div>
+      <div class="ms"><i></i><b>Week 1</b><span>Install · bond · RAC</span></div>
+      <div class="ms on"><i></i><b>Week 2</b><span>Smoke · use cases</span></div>
+      <div class="ms"><i></i><b>Day 13</b><span>Demo a day early</span></div>
+      <div class="ms"><i></i><b>After</b><span>Deal closed</span></div>
+    </div>
+    <div class="duo">
+      <div class="ex">
+        <div class="exk">POC 1 · Volkswagen Group of America · two weeks</div>
+        <h3>Complete Grid/HA · live demo a day early</h3>
+        <p>They wanted the complete stack, not a subset: bonded network / dual NICs, Oracle RAC on InfiniBand, three 8-core PowerCenter servers. Two-week implementation window. Walked the live demo and finished a day early.</p>
+        <div class="mgantt">
+          <div class="b" style="flex:3;background:#1b2b3e">Bonded NIC · RAC · InfiniBand</div>
+          <div class="b" style="flex:2;background:#8a6d2e">3× 8-core PC</div>
+          <div class="b" style="flex:2;background:#c4a35a;color:#122033">Day 13 demo</div>
+        </div>
+        <p>Parallel Data Quality on the other side of VW was burning down at the same time — that was the pressure in the building, not my DQ failure. Four customer consultants shadowed the entire install and demo, taking notes. They can run the next one. That is the close.</p>
+        <div class="goldbox"><div class="t">POC → revenue</div>
+        <p>Two weeks. Day early. Four people who can repeat it. The deal does not wait for a lab VM. Founding FDE: if they will only buy what they just watched run on their floor, you install on their floor.</p></div>
+      </div>
+      <div class="ex">
+        <div class="exk">POC 2 · unnamed · PC + DQ on their systems</div>
+        <h3>Sales never does this. Unless quota.</h3>
+        <p>The customer wanted PowerCenter and Data Quality installed locally on their systems. Informatica sales does not do that. The official path is the VM lab. They would not buy from a VM. So I installed it on their metal anyway — because a sales rep needed to clear the quarter, and a two-week POC was the only thing that would.</p>
+        <div class="hbar">
+          <div class="row"><div class="lab">Sales path</div><div class="trk"><div class="fl" style="width:18%"></div></div><div class="val">VM lab</div></div>
+          <div class="row"><div class="lab">What closed</div><div class="trk"><div class="fl gold" style="width:100%"></div></div><div class="val">Their metal</div></div>
+        </div>
+        <p>Full smoke testing. Use-case analysis against their data. It passed with flying colors. Two weeks. The deal closed immediately after. That POC pushed someone over their target sales goals for the quarter. Client unnamed on this copy — the motion is the point.</p>
+        <div class="goldbox"><div class="t">POC → revenue</div>
+        <p>Policy said no. Quota said yes. I found the path. Same operating line as Kari at BofA, inverted: the customer wanted yes, so I helped them to yes. Founding FDE never leaves them with “we don’t install that locally.”</p></div>
+      </div>
+    </div>
+    <div class="bridge"><b>Same motion</b> Left: VW watched Grid/HA run on their RAC a day early. Right: unnamed watched PC/DQ run on their metal. Two weeks. Smoke. Use cases. Close. Carex 6273 is this — a POC the night operator can still run Tuesday.</div>
+  </div>
+  <div class="foot"><span>POCs → revenue · Volkswagen · local PC/DQ · two weeks</span><span>7 / 12 · <a href="#docs">Docs →</a></span></div>
 </div>
 
 <!-- ========== DOCS ========== -->
@@ -605,9 +694,9 @@
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
-      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a class="on" href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#pocs">POCs</a><a class="on" href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="kicker">07 — Real-world documentation standards · IPS artifacts 2017 floor · hostnames off this copy</div>
+    <div class="kicker">08 — Real-world documentation standards · IPS artifacts 2017 floor · hostnames off this copy</div>
     <div class="spine">
       <div><b>01</b>Hear the floor</div>
       <div><b>02</b>Wrangle what exists</div>
@@ -670,7 +759,7 @@
     </div>
     <div class="strike" style="margin-top:6px;"><b>Standard:</b> Owner on the cover. Evidence, not folklore. What was already changed. What is still open. Recommendation the customer can execute without you in the building.</div>
   </div>
-  <div class="foot"><span>IPS documentation standards · hostnames off this copy</span><span>7 / 11 · <a href="#perf">Perf →</a></span></div>
+  <div class="foot"><span>IPS documentation standards · hostnames off this copy</span><span>8 / 12 · <a href="#perf">Perf →</a></span></div>
 </div>
 
 <!-- ========== PERF ========== -->
@@ -678,9 +767,9 @@
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
-      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a class="on" href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#pocs">POCs</a><a href="#docs">Docs</a><a class="on" href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="kicker">08 — Real-world performance · left inside the MBFS Environment Summary · same loop as GPU routing</div>
+    <div class="kicker">09 — Real-world performance · left inside the MBFS Environment Summary · same loop as GPU routing</div>
     <p class="who">A baseline that is allowed to be slow. A goal. One change between runs. Notes that make the next person dangerous. Thread statistics before folklore. Do not partition until a single partition is understood. The filesystem is often the real Grid/HA product.</p>
     <div class="spine">
       <div><b>01</b>Hear the floor</div>
@@ -733,7 +822,7 @@
     <p>ALFA→ODS at 100% CPU. Cache RAM raised so large transformations stop spilling to disk — 20–30% runtime drop. PWX CDC POC vs bulk load. GFS2 flock gap. Knowledge transfer walked ALFA→ODS, ODS→flat file, ODS→warehouse — not a PDF dump after the fact. Same loop as Local Grid Suite: baseline allowed to be slow, one change, notes the next FDE can run. <a href="#upgrade">Upgrade path →</a></p></div>
     <p class="pts" style="margin-top:5px;"><b>Founding FDE translation:</b> Agent latency, workflow duration, prior-auth cycle time, tok/s — same five steps. Measure before you add another agent. Do not change three prompts between runs.</p>
   </div>
-  <div class="foot"><span>Performance methodology · MBFS cheat sheet</span><span>8 / 11 · <a href="#upgrade">Upgrade →</a></span></div>
+  <div class="foot"><span>Performance methodology · MBFS cheat sheet</span><span>9 / 12 · <a href="#upgrade">Upgrade →</a></span></div>
 </div>
 
 <!-- ========== UPGRADE ========== -->
@@ -741,9 +830,9 @@
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
-      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a class="on" href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#pocs">POCs</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a class="on" href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="kicker">09 — Pick the type. Then test like go-live depends on it. · PC 10 deck + coaching</div>
+    <div class="kicker">10 — Pick the type. Then test like go-live depends on it. · PC 10 deck + coaching</div>
     <div class="spine">
       <div><b>01</b>Hear the floor</div>
       <div><b>02</b>Wrangle what exists</div>
@@ -796,7 +885,7 @@
     </div>
     <p class="pts" style="margin-top:6px;"><b>Founding FDE translation:</b> In-place / parallel / clone = ship in their stack vs stand up a twin vs copy prod. Six-class test = operability of the agent, same outcomes, security/BAA, latency, 3rd-party systems, failover. Skill-up named in the close. <a href="#floors">Four floors →</a></p>
   </div>
-  <div class="foot"><span>Upgrade operating path · six-class test · coaching</span><span>9 / 11 · <a href="#floors">Floors →</a></span></div>
+  <div class="foot"><span>Upgrade operating path · six-class test · coaching</span><span>10 / 12 · <a href="#floors">Floors →</a></span></div>
 </div>
 
 <!-- ========== FLOORS ========== -->
@@ -804,9 +893,9 @@
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
-      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a class="on" href="#floors">Floors</a><a href="#founding">Founding</a>
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#pocs">POCs</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a class="on" href="#floors">Floors</a><a href="#founding">Founding</a>
     </div>
-    <div class="kicker">10 — Four floors. Same playbook. Anonymized xyz copies were teaching templates. Named copies are the work.</div>
+    <div class="kicker">11 — Four floors. Same playbook. Anonymized xyz copies were teaching templates. Named copies are the work.</div>
     <div class="spine">
       <div class="on"><b>01</b>Hear the floor</div>
       <div class="on"><b>02</b>Wrangle what exists</div>
@@ -844,6 +933,7 @@
       <div class="n">3,000h</div><div><b>Navy Federal</b> — architecture through go-live tests.</div>
       <div class="n">v9</div><div><b>Harvard</b> — Version 9. Solaris off-load. Hypercare plan.</div>
       <div class="n">$2M</div><div><b>Kohl’s</b> — v9 Grid/HA. AIX → commodity.</div>
+      <div class="n">2 wks</div><div><b>Volkswagen</b> — full Grid/HA. Bonded NIC, RAC / InfiniBand, 3× 8-core. Day early. Four shadowed.</div>
       <div class="n">$600k</div><div><b>Smith &amp; Nephew</b> — FDA-validated. Control process.</div>
       <div class="n">2 days</div><div><b>Milwaukee</b> — three-month outage. One DB2 driver.</div>
     </div>
@@ -853,7 +943,7 @@
     </div>
     <p class="pts" style="margin-top:5px;"><b>Source artifacts (author: Jeremy Panasuk, IPS):</b> Northwestern Mutual / xyz PowerCenter Environment Summary (Apr 2017); MBFS / xyz PowerCenter Environment Summary with performance cheat sheet (Jun 2017); Waddell &amp; Reed / xyz Informatica Upgrade Roadmap v3 (Jun 2017); Farmers Insurance Phase 2 Architecture Review (Oct 2017); PowerCenter 10.0.0 Upgrade Overview (28 slides). Internal hostnames, credentials, and raw capacity tables are not published. <a href="#founding">Founding →</a></p>
   </div>
-  <div class="foot"><span>Four floors · IPS source list</span><span>10 / 11 · <a href="#founding">Founding →</a></span></div>
+  <div class="foot"><span>Four floors · IPS source list</span><span>11 / 12 · <a href="#founding">Founding →</a></span></div>
 </div>
 
 <!-- ========== FOUNDING + CLOSE ========== -->
@@ -861,9 +951,9 @@
   <div class="navy"></div><div class="gold"></div>
   <div class="pad">
     <div class="nav">
-      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a class="on" href="#founding">Founding</a>
+      <a href="#resume">Resume 1</a><a href="#resume2">Resume 2</a><a href="#line">CLIP</a><a href="#talk">Talk</a><a href="#job">Job</a><a href="#pocs">POCs</a><a href="#docs">Docs</a><a href="#perf">Perf</a><a href="#upgrade">Upgrade</a><a href="#floors">Floors</a><a class="on" href="#founding">Founding</a>
     </div>
-    <div class="kicker">11 — Agents I already run · Epic honesty · standing up the FDE function · close</div>
+    <div class="kicker">12 — Four-agent runtime on local Ollama · Epic honesty · founding the function · close</div>
     <div class="spine">
       <div><b>01</b>Hear the floor</div>
       <div><b>02</b>Wrangle what exists</div>
@@ -881,7 +971,7 @@
         </div>
         <p>Discover, bench, GPU routing, SQLite, CLI + PDF. Same loop as MBFS: measure before claiming.</p></div>
       <div class="card"><h3><span class="n">MCP</span> Dockroot</h3><p>Agents see Docker/network. Not host-root. Boundary, not the box — how you put an agent next to a bank or a clinic.</p></div>
-      <div class="card"><h3><span class="n">OpenClaw</span> Pipeline</h3><p>Systems → architect → validator on local Ollama. Structured output, repair retries. Production WhatsApp agents, 10+ skills. Failover routing.</p></div>
+      <div class="card"><h3><span class="n">OpenClaw</span> 10+ skills</h3><p>Production WhatsApp agents. Multi-provider routing with failover. Sits on the same Ollama runtime as the four-agent pipeline.</p></div>
     </div>
     <div class="goldbox" style="margin-top:6px;"><div class="t">Epic Agent Factory · Art · Emmie · Penny — preferred, not claimed</div>
     <p>No-code builder inside Epic EHR, previewed HIMSS 2026, wider 2027. Chronicles remains source of truth; Cogito Cloud; Nebula routes models. I have not shipped an agent inside Chronicles. I have shipped agents with boundaries, customer workflows with unofficial definitions, and go-lives in regulated rooms. The founding FDE learns the customer’s platform on the customer’s floor. I will treat Agent Factory like Grid/HA: embed, measure, write the standard, leave a team that can shape the next one.</p></div>
@@ -891,40 +981,37 @@
       <div class="cell"><h3>Reusable kits</h3><p>Workflow templates, agent skill patterns, integration stubs, six-class tests. Recurring pain becomes the kit, not another hero week.</p></div>
       <div class="cell"><h3>Internal tools</h3><p>Automations that make the FDE function cheaper. I already build the tools I wish I had on night one. Then I leave them.</p></div>
       <div class="cell"><h3>Product loop</h3><p>Field notes back to engineering weekly. If three customers hit the same wall, it is the next feature.</p></div>
-      <div class="cell"><h3>Hiring two</h3><p>This PDF is the interview. The next FDE should run pages 6–8 without me in Slack. That is how a function is founded.</p></div>
+      <div class="cell"><h3>Hiring two</h3><p>This PDF is the interview. The next FDE should run pages 7–9 without me in Slack. That is how a function is founded.</p></div>
       <div class="cell"><h3>Madison</h3><p>Hybrid 3 days onsite. I live in Sand Creek, WI. I will be in the room those three days. The customer is why.</p></div>
     </div>
     <div class="quotes" style="margin-top:6px;">
       <div class="q">“You have sent one of the best that Informatica has to offer in Jeremy.”<span>MF Global · infrastructure</span></div>
       <div class="q">“I trusted that Jeremy would deliver, with quality… exceeded the expectations at someone of his grade level.”<span>Prime Therapeutics</span></div>
     </div>
-    <h2>Loyalty is the product after the product</h2>
-    <div class="duo">
-      <div class="ex">
-        <div class="exk">The clip · example 1 · Bank of America</div>
-        <h3>Two clicks · gone</h3>
-        <p>Customer since 1999. Ben cannot click the button. Kari: policy. Two clicks would have kept a lifetime — home loan, car loan, word of mouth. Gone. The customer wants YES, or help to get to yes. Founding FDE never leaves them with “the model can’t.” Full story is the left column of page 4. It does not cut off.</p>
-      </div>
-      <div class="ex">
-        <div class="exk">The clip · example 2 · Dawn Foods</div>
-        <h3>8h → 1h · still quoted</h3>
-        <div class="hbar">
-          <div class="row"><div class="lab">Before</div><div class="trk"><div class="fl" style="width:100%"></div></div><div class="val">8h</div></div>
-          <div class="row"><div class="lab">After</div><div class="trk"><div class="fl gold" style="width:12%"></div></div><div class="val">1h</div></div>
-        </div>
-        <p>Who pays you? The customer. Kids eat because they buy. Featured on informatica.com because it got used. John’s daughters. Trillium did not even get a proposal. If the night operator cannot run the agent Tuesday, I did not finish. Full story is the right column of page 4.</p>
-      </div>
+    <h2>Four-agent runtime · local Ollama · RTX 4070 / WSL2</h2>
+    <p class="who" style="margin-bottom:4px;">Each agent is an isolated Python process with its own venv and tool loop. A crash or a bad script in one does not take the others down. They hand off Pydantic JSON, not free text. Orchestrated on the same 4070 that benches 1.39 → 37.47 tok/s.</p>
+    <div class="agents4">
+      <div class="ag"><b>01 Systems</b><span class="n">Constraints</span><span>Interfaces and limits. What exists. What must not break. Same as an Environment Summary cover.</span></div>
+      <div class="ag"><b>02 Architect</b><span class="n">Contracts</span><span>Pydantic models. Structured JSON the next agent can actually consume. No prose handshake.</span></div>
+      <div class="ag"><b>03 Synthesis</b><span class="n">Ollama</span><span>Payload generation against local Ollama. The work happens on their metal — same motion as the PC/DQ POC.</span></div>
+      <div class="ag"><b>04 Validator</b><span class="n">Self-heal</span><span>Schema + graph checks. Writes, executes, and debugs Python via the local LLM until the contract passes. Same retry as Local Grid Suite.</span></div>
+    </div>
+    <div class="mgantt">
+      <div class="b" style="flex:2;background:#122033">Systems</div>
+      <div class="b" style="flex:2;background:#8a6d2e">Architect</div>
+      <div class="b" style="flex:3;background:#c4a35a;color:#122033">Synthesis · Ollama</div>
+      <div class="b" style="flex:3;background:#122033">Validator · retry until pass</div>
     </div>
     <div class="duo">
       <div class="ex">
-        <div class="exk">Floor example · Kohl’s</div>
-        <h3>v9 Grid/HA · AIX → commodity · ~$2M</h3>
-        <p>Capacity + upgrade, multiple HA and Grid components. Briefed through Senior VPs. Cutover off AIX onto commodity. POCs when VMs were not enough. The kit stayed.</p>
+        <div class="exk">Isolation · the FDE boundary</div>
+        <h3>One agent down ≠ the runtime down</h3>
+        <p>Four processes. Four venvs. Dockroot-MCP so they see Docker/network, not host-root. That is how you put an agent next to a bank or a clinic without becoming the incident. Epic Agent Factory preferred — not claimed. I will take it like Grid/HA: embed, measure, write the standard.</p>
       </div>
       <div class="ex">
-        <div class="exk">Floor example · Navy Federal</div>
-        <h3>3,000-hour V1 · they can run it</h3>
-        <p>Install, services, naming standards, go-live tests written down. Mentored NFCU. Quick win, hard problem, they watch you stay, then they stay. Same motion as Dawn, years later.</p>
+        <div class="exk">Same loop as the two-week POC</div>
+        <h3>Smoke the contract. Then they buy.</h3>
+        <p>Validator does not ship theater. It retries until the schema passes. Volkswagen watched Grid/HA run on their RAC a day early. Unnamed watched PC/DQ run on their metal. Founding FDE: the night operator can still run Tuesday, or I did not finish.</p>
       </div>
     </div>
     <div class="grid2" style="margin-top:5px;">
@@ -933,7 +1020,7 @@
     </div>
     <div class="strike" style="margin-top:6px;"><b>If you want the person who founds the FDE function — this is the path.</b> Discovery through deployment, measurement, and ongoing support. Ambiguity is the job. Customer satisfaction is worthless. Customer loyalty is priceless. 715-970-0204 · jpanasuk@gmail.com · Carex job 6273 · <a href="#resume" style="color:#c4a35a;">Back to resume</a></div>
   </div>
-  <div class="foot"><span>Agents · founding the function · close</span><span>11 / 11 · <a href="#line">THE CLIP ↑</a></span></div>
+  <div class="foot"><span>Agents · founding the function · close</span><span>12 / 12 · <a href="#line">THE CLIP ↑</a></span></div>
 </div>
 
 </body>
