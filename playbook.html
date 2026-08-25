@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jeremy Panasuk · Founding FDE · Carex 6273 · Resume + Playbook</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,6 +12,50 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     html, body { background: #fff; }
     .sheet { width: 8.5in; height: 11in; overflow: hidden; page-break-after: always; position: relative; background: #f6f1e8; color: #122033; font-family: "Plus Jakarta Sans", Arial, sans-serif; }
+    @media screen {
+      html, body { width: 100%; min-height: 0; background: #122033; }
+      body { padding: 24px 16px 88px; }
+      .sheet {
+        width: min(1040px, 100%);
+        max-width: 1040px;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+        margin: 0 auto 28px;
+      }
+      .pad { padding: 28px 36px 32px; }
+      .foot {
+        position: relative;
+        left: auto; right: auto; bottom: auto;
+        margin-top: 16px;
+        padding: 8px 36px 20px;
+      }
+      .hero, .clip-hero { grid-template-columns: minmax(0, 1fr) 140px; }
+      .shot, .shot-clip { width: 140px; height: 175px; }
+      .reel { grid-template-columns: 5.5rem minmax(0, 1fr) 5.5rem minmax(0, 1fr); }
+      .span-row { grid-template-columns: 8rem minmax(0, 1fr); }
+      .hbar .row { grid-template-columns: 7rem minmax(0, 1fr) 3.5rem; }
+      .toc a { grid-template-columns: 3rem minmax(0, 1fr) auto; }
+      .nav { font-size: 12px; }
+      h1, .bill h1, .worth, .price, .poc-h { font-size: clamp(28px, 4.2vw, 48px); line-height: 1.05; }
+      h2 { font-size: 13px; }
+      h3 { font-size: 16px; }
+      p, ul, li, td, .who, .pts, .skills { font-size: 15px; line-height: 1.45; }
+      .trusted { white-space: normal; font-size: 12px; }
+      .tag { font-size: 17px; max-width: 68ch; }
+      .contact, .kicker, .attrib, .room { font-size: 12px; }
+      .clip-lede, .bill .sub { font-size: 18px; max-width: 68ch; }
+      .quote { font-size: 22px; }
+      .yesline { font-size: 18px; }
+      .duo .ex p, .ok p, .layer p, .card p, .cell p { font-size: 14px; line-height: 1.4; }
+      @media (max-width: 760px) {
+        .hero, .clip-hero, .duo, .labg, .grid2, .quotes, .success, .layers, .grid3, .awards, .tests, .agents4, .loop, .metrics, .spine { grid-template-columns: minmax(0, 1fr); }
+        .reel { grid-template-columns: 4.5rem minmax(0, 1fr); }
+        .shot, .shot-clip { width: 110px; height: 138px; }
+        body { padding: 16px 10px 72px; }
+        .pad { padding: 20px 16px 24px; }
+      }
+    }
     .navy { height: 6px; background: #122033; }
     .gold { height: 3px; background: #c4a35a; }
     .pad { padding: 0.12in 0.28in 0.24in; }
